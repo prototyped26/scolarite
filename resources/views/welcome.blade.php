@@ -8,6 +8,7 @@
 
         <!-- Fonts -->
         <link rel="stylesheet" href="dist/css/app.css" />
+
     </head>
     <body>
         <div id="app"></div>
@@ -15,6 +16,10 @@
    {{-- <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>--}}
     <script src="dist/js/app.js"></script>
     <script src="js/app.js"></script>
+        <script src="js/feather-icons.js"></script>
+        <script>
+            feather.replace()
+        </script>
     <!-- END: JS Assets-->
     </body>
 </html>
