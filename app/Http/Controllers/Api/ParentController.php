@@ -128,11 +128,6 @@ class ParentController extends Controller
                 return response()->json(['message' => __('message.success.restored')], Response::HTTP_OK);
             else
                 return response()->json(['message' => __('message.errors.restore')], Response::HTTP_BAD_REQUEST);
-            try {
-                $this->authorize('restore', $parentEleve);
-            } catch (AuthorizationException $e) {
-                return response()->json(['message' => __('auth.forbidden')], Response::HTTP_FORBIDDEN);
-            }
         }
         return response()->json([
             'message' => __('message.errors.find', ['model' => trans('message.models.parentEleve')])
