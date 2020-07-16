@@ -13,16 +13,17 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * Class Annee
- * 
+ *
  * @property int $id
  * @property string|null $code
  * @property string|null $libelle
  * @property string|null $date_debut
  * @property string|null $dete_fin
+ * @property bool|null $is_active
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property string|null $deleted_at
- * 
+ *
  * @property Collection|Parcour[] $parcours
  *
  * @package App\Models
@@ -36,7 +37,8 @@ class Annee extends Model
 		'code',
 		'libelle',
 		'date_debut',
-		'dete_fin'
+		'dete_fin',
+        'is_active'
 	];
 
 	public function parcours()
