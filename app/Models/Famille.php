@@ -12,15 +12,15 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * Class Famille
- * 
+ *
  * @property int $id
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property string|null $deleted_at
  * @property int $parent_id
  * @property int $eleve_id
- * 
- * @property Parent $parent
+ *
+ * @property ParentEleve $parent
  * @property Eleve $eleve
  *
  * @package App\Models

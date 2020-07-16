@@ -12,7 +12,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * Class Paiement
- * 
+ *
  * @property int $id
  * @property int $caracteristique_id
  * @property int|null $user_id
@@ -26,8 +26,8 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property string|null $deleted_at
- * 
- * @property Parent $parent
+ *
+ * @property ParentEleve $parent
  * @property Parcour $parcour
  * @property Motif $motif
  * @property Caracteristique $caracteristique

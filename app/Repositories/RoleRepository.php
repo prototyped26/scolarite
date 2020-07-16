@@ -29,4 +29,5 @@ class RoleRepository extends BaseRepository
         self::$_INTENDANT = $this->model->where('code', 'INT')->get()->first();
         self::$_CAISSIER = $this->model->where('code', 'CAS')->get()->first();
     }
+
 }

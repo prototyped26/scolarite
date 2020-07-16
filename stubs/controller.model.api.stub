@@ -1,0 +1,211 @@
+<?php
+
+namespace {{ namespace }};
+
+use {{ rootNamespace }}Http\Controllers\Controller;
+use App\Repositories\{{ model }}Repository;
+use Illuminate\Auth\Access\AuthorizationException;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+use Symfony\Component\HttpFoundation\Response;
+
+class {{ class }} extends Controller
+{
+    /**
+     * @var {{ model }}Repository
+     */
+    private ${{ modelVariable }}Repository;
+
+    /**
+     * {{ model }}Controller constructor.
+     * @param {{ model }}Repository ${{ modelVariable }}Repository
+     */
+    public function __construct(
+        {{ model }}Repository ${{ modelVariable }}Repository
+    )
+    {
+        $this->{{ modelVariable }}Repository = ${{ modelVariable }}Repository;
+    }
+
+    /**
+     * Display a listing of {{ model }}.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function index(Request $request)
+    {
+        try {
+            $this->authorize('viewAny', \{{ namespacedModel }}::class);
+            return response()->json($this->{{ modelVariable }}Repository->index($request), Response::HTTP_OK);
+        } catch (AuthorizationException $e) {
+            return response()->json(['message' => __('auth.forbidden')], Response::HTTP_FORBIDDEN);
+        }
+    }
+
+    /**
+     * Store a newly created {{ model }} in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function store(Request $request)
+    {
+        try {
+            $this->authorize('create', \{{ namespacedModel }}::class);
+            $validator = Validator::make($request->all(), [
+                //todo enter validation rules
+            ]);
+            if ($validator->fails())
+                return response()->json([
+                    'message' => __('message.errors.field'), 'errors' => $validator->errors()
+                ], Response::HTTP_UNPROCESSABLE_ENTITY);
+            else {
+                ${{ modelVariable }} = $this->{{ modelVariable }}Repository->store($request->all());
+                if (${{ modelVariable }}) {
+                    //todo process to model eager load
+                    return response()->json(${{ modelVariable }}, Response::HTTP_OK);
+                }
+                return response()->json(['message' => __('message.errors.store')], Response::HTTP_BAD_REQUEST);
+            }
+        } catch (AuthorizationException $e) {
+            return response()->json(['message' => __('auth.forbidden')], Response::HTTP_FORBIDDEN);
+        }
+    }
+
+    /**
+     * Display the specified {{ model }}.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param int $id
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function show(Request $request, $id)
+    {
+        $relations = []; //todo specified model relation to eager load
+        ${{ modelVariable }} = $this->{{ modelVariable }}Repository->getById($id, $relations, $request->user()->isSuperAdmin());
+        if (${{ modelVariable }}) {
+            try {
+                $this->authorize('view', ${{ modelVariable }});
+                return response()->json(${{ modelVariable }}, Response::HTTP_OK);
+            } catch (AuthorizationException $e) {
+                return response()->json(['message' => __('auth.forbidden')], Response::HTTP_FORBIDDEN);
+            }
+        }
+        return response()->json([
+            'message' => __('message.errors.find', ['model' => trans('message.models.{{ modelVariable }}')])
+        ], Response::HTTP_BAD_REQUEST);
+    }
+
+    /**
+     * Update the specified {{ model }} in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param int $id
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function update(Request $request, $id)
+    {
+        ${{ modelVariable }} = $this->{{ modelVariable }}Repository->getById($id, [], $request->user()->isSuperAdmin());
+        if (${{ modelVariable }}) {
+            try {
+                $this->authorize('update', ${{ modelVariable }});
+                $validator = Validator::make($request->all(), [
+                    //todo enter validation rules
+                ]);
+                if ($validator->fails())
+                    return response()->json([
+                        'message' => __('message.errors.field'), 'errors' => $validator->errors()
+                    ], Response::HTTP_UNPROCESSABLE_ENTITY);
+                else {
+                    ${{ modelVariable }} = $this->{{ modelVariable }}Repository->update(${{ modelVariable }}->id, $request->all());
+                    if (${{ modelVariable }})
+                        return response()->json(${{ modelVariable }}, Response::HTTP_OK);
+
+                    return response()->json(['message' => __('message.errors.update')], Response::HTTP_BAD_REQUEST);
+                }
+            } catch (AuthorizationException $e) {
+                return response()->json(['message' => __('auth.forbidden')], Response::HTTP_FORBIDDEN);
+            }
+        }
+        return response()->json(['message' => __('message.errors.update')], Response::HTTP_BAD_REQUEST);
+    }
+
+    /**
+     * Remove the specified {{ model }} from storage.
+     *
+     * @param int $id
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function destroy($id)
+    {
+        ${{ modelVariable }} = $this->{{ modelVariable }}Repository->getById($id);
+        if (${{ modelVariable }}) {
+            try {
+                $this->authorize('delete', ${{ modelVariable }});
+                if ($this->{{ modelVariable }}Repository->destroy(${{ modelVariable }}->id))
+                    return response()->json(['message' => __('message.success.destroyed')], Response::HTTP_OK);
+                else
+                    return response()->json(['message' => __('message.errors.destroy')], Response::HTTP_BAD_REQUEST);
+            } catch (AuthorizationException $e) {
+                return response()->json(['message' => __('auth.forbidden')], Response::HTTP_FORBIDDEN);
+            }
+        }
+        return response()->json([
+            'message' => __('message.errors.find', ['model' => trans('message.models.{{ modelVariable }}')])
+        ], Response::HTTP_BAD_REQUEST);
+    }
+
+    /**
+     * Restore the specified {{ model }} from storage.
+     *
+     * @param int $id
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function restore($id)
+    {
+        ${{ modelVariable }} = $this->{{ modelVariable }}Repository->getById($id, [], true);
+        if (${{ modelVariable }}) {
+            try {
+                $this->authorize('restore', ${{ modelVariable }});
+                if ($this->{{ modelVariable }}Repository->restore(${{ modelVariable }}->id))
+                    return response()->json(['message' => __('message.success.restored')], Response::HTTP_OK);
+                else
+                    return response()->json(['message' => __('message.errors.restore')], Response::HTTP_BAD_REQUEST);
+            } catch (AuthorizationException $e) {
+                return response()->json(['message' => __('auth.forbidden')], Response::HTTP_FORBIDDEN);
+            }
+        }
+        return response()->json([
+            'message' => __('message.errors.find', ['model' => trans('message.models.{{ modelVariable }}')])
+        ], Response::HTTP_BAD_REQUEST);
+    }
+
+    /**
+     * Force delete the specified {{ model }} from storage.
+     *
+     * @param int $id
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function delete($id)
+    {
+        ${{ modelVariable }} = $this->{{ modelVariable }}Repository->getById($id, [], true);
+        if (${{ modelVariable }}) {
+            try {
+                $this->authorize('forceDelete', ${{ modelVariable }});
+
+                //If need to delete somme relation before process to the action
+
+                if ($this->{{ modelVariable }}Repository->forceDelete(${{ modelVariable }}->id))
+                    return response()->json(['message' => __('message.success.deleted')], Response::HTTP_OK);
+                else
+                    return response()->json(['message' => __('message.errors.delete')], Response::HTTP_BAD_REQUEST);
+            } catch (AuthorizationException $e) {
+                return response()->json(['message' => __('auth.forbidden')], Response::HTTP_FORBIDDEN);
+            }
+        }
+        return response()->json([
+            'message' => __('message.errors.find', ['model' => trans('message.models.{{ modelVariable }}')])
+        ], Response::HTTP_BAD_REQUEST);
+    }
+}
