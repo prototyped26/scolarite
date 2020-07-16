@@ -94,25 +94,11 @@ class UserController extends Controller
     {
         $user = $this->userRepository->getById($id);
         if ($user) {
-            try {
-                $this->authorize('update', $user);
-                $validator = Validator::make($request->all(), [
-                    //todo enter validation rules
-                ]);
-                if ($validator->fails())
-                    return response()->json([
-                        'message' => __('message.errors.field'), 'errors' => $validator->errors()
-                    ], Response::HTTP_UNPROCESSABLE_ENTITY);
-                else {
-                    $user = $this->userRepository->update($user->id, $request->all());
-                    if ($user)
-                        return response()->json($user, Response::HTTP_OK);
+            $user = $this->userRepository->update($user->id, $request->all());
+            if ($user)
+                return response()->json($user, Response::HTTP_OK);
 
-                    return response()->json(['message' => __('message.errors.update')], Response::HTTP_BAD_REQUEST);
-                }
-            } catch (AuthorizationException $e) {
-                return response()->json(['message' => __('auth.forbidden')], Response::HTTP_FORBIDDEN);
-            }
+            return response()->json(['message' => __('message.errors.update')], Response::HTTP_BAD_REQUEST);
         }
         return response()->json(['message' => __('message.errors.update')], Response::HTTP_BAD_REQUEST);
     }

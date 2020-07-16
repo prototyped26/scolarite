@@ -148,18 +148,10 @@ class ClasseController extends Controller
     {
         $classe = $this->classeRepository->getById($id, [], true);
         if ($classe) {
-            try {
-                $this->authorize('forceDelete', $classe);
-
-                //If need to delete somme relation before process to the action
-
-                if ($this->classeRepository->forceDelete($classe->id))
-                    return response()->json(['message' => __('message.success.deleted')], Response::HTTP_OK);
-                else
-                    return response()->json(['message' => __('message.errors.delete')], Response::HTTP_BAD_REQUEST);
-            } catch (AuthorizationException $e) {
-                return response()->json(['message' => __('auth.forbidden')], Response::HTTP_FORBIDDEN);
-            }
+            if ($this->classeRepository->forceDelete($classe->id))
+                return response()->json(['message' => __('message.success.deleted')], Response::HTTP_OK);
+            else
+                return response()->json(['message' => __('message.errors.delete')], Response::HTTP_BAD_REQUEST);
         }
         return response()->json([
             'message' => __('message.errors.find', ['model' => trans('message.models.classe')])
