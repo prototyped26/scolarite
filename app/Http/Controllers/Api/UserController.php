@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Repositories\UserRepository;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -25,6 +26,10 @@ class UserController extends Controller
     )
     {
         $this->userRepository = $userRepository;
+    }
+
+    public function currentUser(){
+        return \response()->json(Auth::user(), Response::HTTP_OK);
     }
 
     /**
