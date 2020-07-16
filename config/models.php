@@ -42,7 +42,7 @@ return [
 
         /*
         |--------------------------------------------------------------------------
-        | Parent Class
+        | ParentEleve Class
         |--------------------------------------------------------------------------
         |
         | All Eloquent models should inherit from Eloquent Model class. However,

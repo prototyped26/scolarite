@@ -12,8 +12,8 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
- * Class Parent
- * 
+ * Class ParentEleve
+ *
  * @property int $id
  * @property string|null $nom
  * @property string|null $prenom
@@ -24,13 +24,13 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property string|null $deleted_at
- * 
+ *
  * @property Collection|Famille[] $familles
  * @property Collection|Paiement[] $paiements
  *
  * @package App\Models
  */
-class Parent extends Model
+class ParentEleve extends Model
 {
 	use SoftDeletes;
 	protected $table = 'parent';

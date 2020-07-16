@@ -3,11 +3,11 @@ namespace App\Repositories;
 
 use Lab2view\RepositoryGenerator\BaseRepository;
 
-use App\Models\Parent;
+use App\Models\ParentEleve;
 
-class ParentRepository extends BaseRepository
+class ParentEleveRepository extends BaseRepository
 {
-    public function __construct(Parent $model)
+    public function __construct(ParentEleve $model)
     {
         parent::__construct($model);
     }
