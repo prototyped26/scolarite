@@ -1899,6 +1899,1524 @@ module.exports = {
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/App.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/App.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  name: "App"
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js&":
 /*!***************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js& ***!
@@ -37509,6 +39027,5851 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/App.vue?vue&type=template&id=332fccf4&scoped=true&":
+/*!******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/App.vue?vue&type=template&id=332fccf4&scoped=true& ***!
+  \******************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "app" }, [
+      _c("div", { staticClass: "mobile-menu md:hidden" }, [
+        _c("div", { staticClass: "mobile-menu-bar" }, [
+          _c("a", { staticClass: "flex mr-auto", attrs: { href: "" } }, [
+            _vm._v("\n                SCOL\n            ")
+          ]),
+          _vm._v(" "),
+          _c(
+            "a",
+            { attrs: { href: "javascript:;", id: "mobile-menu-toggler" } },
+            [
+              _c("i", {
+                staticClass: "w-8 h-8 text-white transform -rotate-90",
+                attrs: { "data-feather": "bar-chart-2" }
+              })
+            ]
+          )
+        ]),
+        _vm._v(" "),
+        _c("ul", { staticClass: "border-t border-theme-24 py-5 hidden" }, [
+          _c("li", [
+            _c(
+              "a",
+              {
+                staticClass: "menu menu--active",
+                attrs: { href: "index.html" }
+              },
+              [
+                _c("div", { staticClass: "menu__icon" }, [
+                  _c("i", { attrs: { "data-feather": "home" } })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "menu__title" }, [
+                  _vm._v(" Dashboard ")
+                ])
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("a", { staticClass: "menu", attrs: { href: "javascript:;" } }, [
+              _c("div", { staticClass: "menu__icon" }, [
+                _c("i", { attrs: { "data-feather": "box" } })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "menu__title" }, [
+                _vm._v(" Menu Layout "),
+                _c("i", {
+                  staticClass: "menu__sub-icon",
+                  attrs: { "data-feather": "chevron-down" }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("ul", {}, [
+              _c("li", [
+                _c(
+                  "a",
+                  { staticClass: "menu", attrs: { href: "index.html" } },
+                  [
+                    _c("div", { staticClass: "menu__icon" }, [
+                      _c("i", { attrs: { "data-feather": "activity" } })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "menu__title" }, [
+                      _vm._v(" Side Menu ")
+                    ])
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "menu",
+                    attrs: { href: "simple-menu-dashboard.html" }
+                  },
+                  [
+                    _c("div", { staticClass: "menu__icon" }, [
+                      _c("i", { attrs: { "data-feather": "activity" } })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "menu__title" }, [
+                      _vm._v(" Simple Menu ")
+                    ])
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "menu",
+                    attrs: { href: "top-menu-dashboard.html" }
+                  },
+                  [
+                    _c("div", { staticClass: "menu__icon" }, [
+                      _c("i", { attrs: { "data-feather": "activity" } })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "menu__title" }, [
+                      _vm._v(" Top Menu ")
+                    ])
+                  ]
+                )
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c(
+              "a",
+              { staticClass: "menu", attrs: { href: "side-menu-inbox.html" } },
+              [
+                _c("div", { staticClass: "menu__icon" }, [
+                  _c("i", { attrs: { "data-feather": "inbox" } })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "menu__title" }, [_vm._v(" Inbox ")])
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c(
+              "a",
+              {
+                staticClass: "menu",
+                attrs: { href: "side-menu-file-manager.html" }
+              },
+              [
+                _c("div", { staticClass: "menu__icon" }, [
+                  _c("i", { attrs: { "data-feather": "hard-drive" } })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "menu__title" }, [
+                  _vm._v(" File Manager ")
+                ])
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c(
+              "a",
+              {
+                staticClass: "menu",
+                attrs: { href: "side-menu-point-of-sale.html" }
+              },
+              [
+                _c("div", { staticClass: "menu__icon" }, [
+                  _c("i", { attrs: { "data-feather": "credit-card" } })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "menu__title" }, [
+                  _vm._v(" Point of Sale ")
+                ])
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c(
+              "a",
+              { staticClass: "menu", attrs: { href: "side-menu-chat.html" } },
+              [
+                _c("div", { staticClass: "menu__icon" }, [
+                  _c("i", { attrs: { "data-feather": "message-square" } })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "menu__title" }, [_vm._v(" Chat ")])
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c(
+              "a",
+              { staticClass: "menu", attrs: { href: "side-menu-post.html" } },
+              [
+                _c("div", { staticClass: "menu__icon" }, [
+                  _c("i", { attrs: { "data-feather": "file-text" } })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "menu__title" }, [_vm._v(" Post ")])
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("li", { staticClass: "menu__devider my-6" }),
+          _vm._v(" "),
+          _c("li", [
+            _c("a", { staticClass: "menu", attrs: { href: "javascript:;" } }, [
+              _c("div", { staticClass: "menu__icon" }, [
+                _c("i", { attrs: { "data-feather": "edit" } })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "menu__title" }, [
+                _vm._v(" Crud "),
+                _c("i", {
+                  staticClass: "menu__sub-icon",
+                  attrs: { "data-feather": "chevron-down" }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("ul", {}, [
+              _c("li", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "menu",
+                    attrs: { href: "side-menu-crud-data-list.html" }
+                  },
+                  [
+                    _c("div", { staticClass: "menu__icon" }, [
+                      _c("i", { attrs: { "data-feather": "activity" } })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "menu__title" }, [
+                      _vm._v(" Data List ")
+                    ])
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "menu",
+                    attrs: { href: "side-menu-crud-form.html" }
+                  },
+                  [
+                    _c("div", { staticClass: "menu__icon" }, [
+                      _c("i", { attrs: { "data-feather": "activity" } })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "menu__title" }, [
+                      _vm._v(" Form ")
+                    ])
+                  ]
+                )
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("a", { staticClass: "menu", attrs: { href: "javascript:;" } }, [
+              _c("div", { staticClass: "menu__icon" }, [
+                _c("i", { attrs: { "data-feather": "users" } })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "menu__title" }, [
+                _vm._v(" Users "),
+                _c("i", {
+                  staticClass: "menu__sub-icon",
+                  attrs: { "data-feather": "chevron-down" }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("ul", {}, [
+              _c("li", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "menu",
+                    attrs: { href: "side-menu-users-layout-1.html" }
+                  },
+                  [
+                    _c("div", { staticClass: "menu__icon" }, [
+                      _c("i", { attrs: { "data-feather": "activity" } })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "menu__title" }, [
+                      _vm._v(" Layout 1 ")
+                    ])
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "menu",
+                    attrs: { href: "side-menu-users-layout-2.html" }
+                  },
+                  [
+                    _c("div", { staticClass: "menu__icon" }, [
+                      _c("i", { attrs: { "data-feather": "activity" } })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "menu__title" }, [
+                      _vm._v(" Layout 2 ")
+                    ])
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "menu",
+                    attrs: { href: "side-menu-users-layout-3.html" }
+                  },
+                  [
+                    _c("div", { staticClass: "menu__icon" }, [
+                      _c("i", { attrs: { "data-feather": "activity" } })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "menu__title" }, [
+                      _vm._v(" Layout 3 ")
+                    ])
+                  ]
+                )
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("a", { staticClass: "menu", attrs: { href: "javascript:;" } }, [
+              _c("div", { staticClass: "menu__icon" }, [
+                _c("i", { attrs: { "data-feather": "trello" } })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "menu__title" }, [
+                _vm._v(" Profile "),
+                _c("i", {
+                  staticClass: "menu__sub-icon",
+                  attrs: { "data-feather": "chevron-down" }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("ul", {}, [
+              _c("li", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "menu",
+                    attrs: { href: "side-menu-profile-overview-1.html" }
+                  },
+                  [
+                    _c("div", { staticClass: "menu__icon" }, [
+                      _c("i", { attrs: { "data-feather": "activity" } })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "menu__title" }, [
+                      _vm._v(" Overview 1 ")
+                    ])
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "menu",
+                    attrs: { href: "side-menu-profile-overview-2.html" }
+                  },
+                  [
+                    _c("div", { staticClass: "menu__icon" }, [
+                      _c("i", { attrs: { "data-feather": "activity" } })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "menu__title" }, [
+                      _vm._v(" Overview 2 ")
+                    ])
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "menu",
+                    attrs: { href: "side-menu-profile-overview-3.html" }
+                  },
+                  [
+                    _c("div", { staticClass: "menu__icon" }, [
+                      _c("i", { attrs: { "data-feather": "activity" } })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "menu__title" }, [
+                      _vm._v(" Overview 3 ")
+                    ])
+                  ]
+                )
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("a", { staticClass: "menu", attrs: { href: "javascript:;" } }, [
+              _c("div", { staticClass: "menu__icon" }, [
+                _c("i", { attrs: { "data-feather": "layout" } })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "menu__title" }, [
+                _vm._v(" Pages "),
+                _c("i", {
+                  staticClass: "menu__sub-icon",
+                  attrs: { "data-feather": "chevron-down" }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("ul", {}, [
+              _c("li", [
+                _c(
+                  "a",
+                  { staticClass: "menu", attrs: { href: "javascript:;" } },
+                  [
+                    _c("div", { staticClass: "menu__icon" }, [
+                      _c("i", { attrs: { "data-feather": "activity" } })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "menu__title" }, [
+                      _vm._v(" Wizards "),
+                      _c("i", {
+                        staticClass: "menu__sub-icon",
+                        attrs: { "data-feather": "chevron-down" }
+                      })
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c("ul", {}, [
+                  _c("li", [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "menu",
+                        attrs: { href: "side-menu-wizard-layout-1.html" }
+                      },
+                      [
+                        _c("div", { staticClass: "menu__icon" }, [
+                          _c("i", { attrs: { "data-feather": "zap" } })
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "menu__title" }, [
+                          _vm._v("Layout 1")
+                        ])
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "menu",
+                        attrs: { href: "side-menu-wizard-layout-2.html" }
+                      },
+                      [
+                        _c("div", { staticClass: "menu__icon" }, [
+                          _c("i", { attrs: { "data-feather": "zap" } })
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "menu__title" }, [
+                          _vm._v("Layout 2")
+                        ])
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "menu",
+                        attrs: { href: "side-menu-wizard-layout-3.html" }
+                      },
+                      [
+                        _c("div", { staticClass: "menu__icon" }, [
+                          _c("i", { attrs: { "data-feather": "zap" } })
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "menu__title" }, [
+                          _vm._v("Layout 3")
+                        ])
+                      ]
+                    )
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  { staticClass: "menu", attrs: { href: "javascript:;" } },
+                  [
+                    _c("div", { staticClass: "menu__icon" }, [
+                      _c("i", { attrs: { "data-feather": "activity" } })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "menu__title" }, [
+                      _vm._v(" Blog "),
+                      _c("i", {
+                        staticClass: "menu__sub-icon",
+                        attrs: { "data-feather": "chevron-down" }
+                      })
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c("ul", {}, [
+                  _c("li", [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "menu",
+                        attrs: { href: "side-menu-blog-layout-1.html" }
+                      },
+                      [
+                        _c("div", { staticClass: "menu__icon" }, [
+                          _c("i", { attrs: { "data-feather": "zap" } })
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "menu__title" }, [
+                          _vm._v("Layout 1")
+                        ])
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "menu",
+                        attrs: { href: "side-menu-blog-layout-2.html" }
+                      },
+                      [
+                        _c("div", { staticClass: "menu__icon" }, [
+                          _c("i", { attrs: { "data-feather": "zap" } })
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "menu__title" }, [
+                          _vm._v("Layout 2")
+                        ])
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "menu",
+                        attrs: { href: "side-menu-blog-layout-3.html" }
+                      },
+                      [
+                        _c("div", { staticClass: "menu__icon" }, [
+                          _c("i", { attrs: { "data-feather": "zap" } })
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "menu__title" }, [
+                          _vm._v("Layout 3")
+                        ])
+                      ]
+                    )
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  { staticClass: "menu", attrs: { href: "javascript:;" } },
+                  [
+                    _c("div", { staticClass: "menu__icon" }, [
+                      _c("i", { attrs: { "data-feather": "activity" } })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "menu__title" }, [
+                      _vm._v(" Pricing "),
+                      _c("i", {
+                        staticClass: "menu__sub-icon",
+                        attrs: { "data-feather": "chevron-down" }
+                      })
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c("ul", {}, [
+                  _c("li", [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "menu",
+                        attrs: { href: "side-menu-pricing-layout-1.html" }
+                      },
+                      [
+                        _c("div", { staticClass: "menu__icon" }, [
+                          _c("i", { attrs: { "data-feather": "zap" } })
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "menu__title" }, [
+                          _vm._v("Layout 1")
+                        ])
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "menu",
+                        attrs: { href: "side-menu-pricing-layout-2.html" }
+                      },
+                      [
+                        _c("div", { staticClass: "menu__icon" }, [
+                          _c("i", { attrs: { "data-feather": "zap" } })
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "menu__title" }, [
+                          _vm._v("Layout 2")
+                        ])
+                      ]
+                    )
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  { staticClass: "menu", attrs: { href: "javascript:;" } },
+                  [
+                    _c("div", { staticClass: "menu__icon" }, [
+                      _c("i", { attrs: { "data-feather": "activity" } })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "menu__title" }, [
+                      _vm._v(" Invoice "),
+                      _c("i", {
+                        staticClass: "menu__sub-icon",
+                        attrs: { "data-feather": "chevron-down" }
+                      })
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c("ul", {}, [
+                  _c("li", [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "menu",
+                        attrs: { href: "side-menu-invoice-layout-1.html" }
+                      },
+                      [
+                        _c("div", { staticClass: "menu__icon" }, [
+                          _c("i", { attrs: { "data-feather": "zap" } })
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "menu__title" }, [
+                          _vm._v("Layout 1")
+                        ])
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "menu",
+                        attrs: { href: "side-menu-invoice-layout-2.html" }
+                      },
+                      [
+                        _c("div", { staticClass: "menu__icon" }, [
+                          _c("i", { attrs: { "data-feather": "zap" } })
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "menu__title" }, [
+                          _vm._v("Layout 2")
+                        ])
+                      ]
+                    )
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  { staticClass: "menu", attrs: { href: "javascript:;" } },
+                  [
+                    _c("div", { staticClass: "menu__icon" }, [
+                      _c("i", { attrs: { "data-feather": "activity" } })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "menu__title" }, [
+                      _vm._v(" FAQ "),
+                      _c("i", {
+                        staticClass: "menu__sub-icon",
+                        attrs: { "data-feather": "chevron-down" }
+                      })
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c("ul", {}, [
+                  _c("li", [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "menu",
+                        attrs: { href: "side-menu-faq-layout-1.html" }
+                      },
+                      [
+                        _c("div", { staticClass: "menu__icon" }, [
+                          _c("i", { attrs: { "data-feather": "zap" } })
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "menu__title" }, [
+                          _vm._v("Layout 1")
+                        ])
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "menu",
+                        attrs: { href: "side-menu-faq-layout-2.html" }
+                      },
+                      [
+                        _c("div", { staticClass: "menu__icon" }, [
+                          _c("i", { attrs: { "data-feather": "zap" } })
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "menu__title" }, [
+                          _vm._v("Layout 2")
+                        ])
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "menu",
+                        attrs: { href: "side-menu-faq-layout-3.html" }
+                      },
+                      [
+                        _c("div", { staticClass: "menu__icon" }, [
+                          _c("i", { attrs: { "data-feather": "zap" } })
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "menu__title" }, [
+                          _vm._v("Layout 3")
+                        ])
+                      ]
+                    )
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  { staticClass: "menu", attrs: { href: "login-login.html" } },
+                  [
+                    _c("div", { staticClass: "menu__icon" }, [
+                      _c("i", { attrs: { "data-feather": "activity" } })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "menu__title" }, [
+                      _vm._v(" Login ")
+                    ])
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "menu",
+                    attrs: { href: "login-register.html" }
+                  },
+                  [
+                    _c("div", { staticClass: "menu__icon" }, [
+                      _c("i", { attrs: { "data-feather": "activity" } })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "menu__title" }, [
+                      _vm._v(" Register ")
+                    ])
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "menu",
+                    attrs: { href: "main-error-page.html" }
+                  },
+                  [
+                    _c("div", { staticClass: "menu__icon" }, [
+                      _c("i", { attrs: { "data-feather": "activity" } })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "menu__title" }, [
+                      _vm._v(" Error Page ")
+                    ])
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "menu",
+                    attrs: { href: "side-menu-update-profile.html" }
+                  },
+                  [
+                    _c("div", { staticClass: "menu__icon" }, [
+                      _c("i", { attrs: { "data-feather": "activity" } })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "menu__title" }, [
+                      _vm._v(" Update profile ")
+                    ])
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "menu",
+                    attrs: { href: "side-menu-change-password.html" }
+                  },
+                  [
+                    _c("div", { staticClass: "menu__icon" }, [
+                      _c("i", { attrs: { "data-feather": "activity" } })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "menu__title" }, [
+                      _vm._v(" Change Password ")
+                    ])
+                  ]
+                )
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("li", { staticClass: "menu__devider my-6" }),
+          _vm._v(" "),
+          _c("li", [
+            _c("a", { staticClass: "menu", attrs: { href: "javascript:;" } }, [
+              _c("div", { staticClass: "menu__icon" }, [
+                _c("i", { attrs: { "data-feather": "inbox" } })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "menu__title" }, [
+                _vm._v(" Components "),
+                _c("i", {
+                  staticClass: "menu__sub-icon",
+                  attrs: { "data-feather": "chevron-down" }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("ul", {}, [
+              _c("li", [
+                _c(
+                  "a",
+                  { staticClass: "menu", attrs: { href: "javascript:;" } },
+                  [
+                    _c("div", { staticClass: "menu__icon" }, [
+                      _c("i", { attrs: { "data-feather": "activity" } })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "menu__title" }, [
+                      _vm._v(" Grid "),
+                      _c("i", {
+                        staticClass: "menu__sub-icon",
+                        attrs: { "data-feather": "chevron-down" }
+                      })
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c("ul", {}, [
+                  _c("li", [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "menu",
+                        attrs: { href: "side-menu-regular-table.html" }
+                      },
+                      [
+                        _c("div", { staticClass: "menu__icon" }, [
+                          _c("i", { attrs: { "data-feather": "zap" } })
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "menu__title" }, [
+                          _vm._v("Regular Table")
+                        ])
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "menu",
+                        attrs: { href: "side-menu-datatable.html" }
+                      },
+                      [
+                        _c("div", { staticClass: "menu__icon" }, [
+                          _c("i", { attrs: { "data-feather": "zap" } })
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "menu__title" }, [
+                          _vm._v("Datatable")
+                        ])
+                      ]
+                    )
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "menu",
+                    attrs: { href: "side-menu-accordion.html" }
+                  },
+                  [
+                    _c("div", { staticClass: "menu__icon" }, [
+                      _c("i", { attrs: { "data-feather": "activity" } })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "menu__title" }, [
+                      _vm._v(" Accordion ")
+                    ])
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "menu",
+                    attrs: { href: "side-menu-button.html" }
+                  },
+                  [
+                    _c("div", { staticClass: "menu__icon" }, [
+                      _c("i", { attrs: { "data-feather": "activity" } })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "menu__title" }, [
+                      _vm._v(" Button ")
+                    ])
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "menu",
+                    attrs: { href: "side-menu-modal.html" }
+                  },
+                  [
+                    _c("div", { staticClass: "menu__icon" }, [
+                      _c("i", { attrs: { "data-feather": "activity" } })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "menu__title" }, [
+                      _vm._v(" Modal ")
+                    ])
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "menu",
+                    attrs: { href: "side-menu-alert.html" }
+                  },
+                  [
+                    _c("div", { staticClass: "menu__icon" }, [
+                      _c("i", { attrs: { "data-feather": "activity" } })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "menu__title" }, [
+                      _vm._v(" Alert ")
+                    ])
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "menu",
+                    attrs: { href: "side-menu-progress-bar.html" }
+                  },
+                  [
+                    _c("div", { staticClass: "menu__icon" }, [
+                      _c("i", { attrs: { "data-feather": "activity" } })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "menu__title" }, [
+                      _vm._v(" Progress Bar ")
+                    ])
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "menu",
+                    attrs: { href: "side-menu-tooltip.html" }
+                  },
+                  [
+                    _c("div", { staticClass: "menu__icon" }, [
+                      _c("i", { attrs: { "data-feather": "activity" } })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "menu__title" }, [
+                      _vm._v(" Tooltip ")
+                    ])
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "menu",
+                    attrs: { href: "side-menu-dropdown.html" }
+                  },
+                  [
+                    _c("div", { staticClass: "menu__icon" }, [
+                      _c("i", { attrs: { "data-feather": "activity" } })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "menu__title" }, [
+                      _vm._v(" Dropdown ")
+                    ])
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "menu",
+                    attrs: { href: "side-menu-toast.html" }
+                  },
+                  [
+                    _c("div", { staticClass: "menu__icon" }, [
+                      _c("i", { attrs: { "data-feather": "activity" } })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "menu__title" }, [
+                      _vm._v(" Toast ")
+                    ])
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "menu",
+                    attrs: { href: "side-menu-typography.html" }
+                  },
+                  [
+                    _c("div", { staticClass: "menu__icon" }, [
+                      _c("i", { attrs: { "data-feather": "activity" } })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "menu__title" }, [
+                      _vm._v(" Typography ")
+                    ])
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "menu",
+                    attrs: { href: "side-menu-icon.html" }
+                  },
+                  [
+                    _c("div", { staticClass: "menu__icon" }, [
+                      _c("i", { attrs: { "data-feather": "activity" } })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "menu__title" }, [
+                      _vm._v(" Icon ")
+                    ])
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "menu",
+                    attrs: { href: "side-menu-loading-icon.html" }
+                  },
+                  [
+                    _c("div", { staticClass: "menu__icon" }, [
+                      _c("i", { attrs: { "data-feather": "activity" } })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "menu__title" }, [
+                      _vm._v(" Loading Icon ")
+                    ])
+                  ]
+                )
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("a", { staticClass: "menu", attrs: { href: "javascript:;" } }, [
+              _c("div", { staticClass: "menu__icon" }, [
+                _c("i", { attrs: { "data-feather": "sidebar" } })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "menu__title" }, [
+                _vm._v(" Forms "),
+                _c("i", {
+                  staticClass: "menu__sub-icon",
+                  attrs: { "data-feather": "chevron-down" }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("ul", {}, [
+              _c("li", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "menu",
+                    attrs: { href: "side-menu-regular-form.html" }
+                  },
+                  [
+                    _c("div", { staticClass: "menu__icon" }, [
+                      _c("i", { attrs: { "data-feather": "activity" } })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "menu__title" }, [
+                      _vm._v(" Regular Form ")
+                    ])
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "menu",
+                    attrs: { href: "side-menu-datepicker.html" }
+                  },
+                  [
+                    _c("div", { staticClass: "menu__icon" }, [
+                      _c("i", { attrs: { "data-feather": "activity" } })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "menu__title" }, [
+                      _vm._v(" Datepicker ")
+                    ])
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "menu",
+                    attrs: { href: "side-menu-select2.html" }
+                  },
+                  [
+                    _c("div", { staticClass: "menu__icon" }, [
+                      _c("i", { attrs: { "data-feather": "activity" } })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "menu__title" }, [
+                      _vm._v(" Select2 ")
+                    ])
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "menu",
+                    attrs: { href: "side-menu-file-upload.html" }
+                  },
+                  [
+                    _c("div", { staticClass: "menu__icon" }, [
+                      _c("i", { attrs: { "data-feather": "activity" } })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "menu__title" }, [
+                      _vm._v(" File Upload ")
+                    ])
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "menu",
+                    attrs: { href: "side-menu-wysiwyg-editor.html" }
+                  },
+                  [
+                    _c("div", { staticClass: "menu__icon" }, [
+                      _c("i", { attrs: { "data-feather": "activity" } })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "menu__title" }, [
+                      _vm._v(" Wysiwyg Editor ")
+                    ])
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "menu",
+                    attrs: { href: "side-menu-validation.html" }
+                  },
+                  [
+                    _c("div", { staticClass: "menu__icon" }, [
+                      _c("i", { attrs: { "data-feather": "activity" } })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "menu__title" }, [
+                      _vm._v(" Validation ")
+                    ])
+                  ]
+                )
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("li", [
+            _c("a", { staticClass: "menu", attrs: { href: "javascript:;" } }, [
+              _c("div", { staticClass: "menu__icon" }, [
+                _c("i", { attrs: { "data-feather": "hard-drive" } })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "menu__title" }, [
+                _vm._v(" Widgets "),
+                _c("i", {
+                  staticClass: "menu__sub-icon",
+                  attrs: { "data-feather": "chevron-down" }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("ul", {}, [
+              _c("li", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "menu",
+                    attrs: { href: "side-menu-chart.html" }
+                  },
+                  [
+                    _c("div", { staticClass: "menu__icon" }, [
+                      _c("i", { attrs: { "data-feather": "activity" } })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "menu__title" }, [
+                      _vm._v(" Chart ")
+                    ])
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "menu",
+                    attrs: { href: "side-menu-slider.html" }
+                  },
+                  [
+                    _c("div", { staticClass: "menu__icon" }, [
+                      _c("i", { attrs: { "data-feather": "activity" } })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "menu__title" }, [
+                      _vm._v(" Slider ")
+                    ])
+                  ]
+                )
+              ]),
+              _vm._v(" "),
+              _c("li", [
+                _c(
+                  "a",
+                  {
+                    staticClass: "menu",
+                    attrs: { href: "side-menu-image-zoom.html" }
+                  },
+                  [
+                    _c("div", { staticClass: "menu__icon" }, [
+                      _c("i", { attrs: { "data-feather": "activity" } })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "menu__title" }, [
+                      _vm._v(" Image Zoom ")
+                    ])
+                  ]
+                )
+              ])
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "flex" }, [
+        _c("nav", { staticClass: "side-nav" }, [
+          _c(
+            "a",
+            {
+              staticClass: "intro-x flex items-center pl-5 pt-4",
+              attrs: { href: "" }
+            },
+            [
+              _c(
+                "span",
+                { staticClass: "hidden xl:block text-white text-lg ml-3" },
+                [
+                  _vm._v(" Scola"),
+                  _c("span", { staticClass: "font-medium" }, [_vm._v("rite")])
+                ]
+              )
+            ]
+          ),
+          _vm._v(" "),
+          _c("div", { staticClass: "side-nav__devider my-6" }),
+          _vm._v(" "),
+          _c("ul", [
+            _c("li", [
+              _c(
+                "a",
+                {
+                  staticClass: "side-menu side-menu--active",
+                  attrs: { href: "index.html" }
+                },
+                [
+                  _c("div", { staticClass: "side-menu__icon" }, [
+                    _c("i", { attrs: { "data-feather": "home" } })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "side-menu__title" }, [
+                    _vm._v(" Tableau de bord ")
+                  ])
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "side-nav__devider my-6" }),
+            _vm._v(" "),
+            _c("li", [
+              _c(
+                "a",
+                { staticClass: "side-menu", attrs: { href: "index.html" } },
+                [
+                  _c("div", { staticClass: "side-menu__icon" }, [
+                    _c("i", { attrs: { "data-feather": "home" } })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "side-menu__title" }, [
+                    _vm._v(" Gestion des paiements ")
+                  ])
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c(
+                "a",
+                { staticClass: "side-menu", attrs: { href: "index.html" } },
+                [
+                  _c("div", { staticClass: "side-menu__icon" }, [
+                    _c("i", { attrs: { "data-feather": "home" } })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "side-menu__title" }, [
+                    _vm._v(" Gestion des frais (Motifs) ")
+                  ])
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "side-nav__devider my-6" }),
+            _vm._v(" "),
+            _c("li", [
+              _c(
+                "a",
+                { staticClass: "side-menu", attrs: { href: "index.html" } },
+                [
+                  _c("div", { staticClass: "side-menu__icon" }, [
+                    _c("i", { attrs: { "data-feather": "home" } })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "side-menu__title" }, [
+                    _vm._v(" Elèves ")
+                  ])
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c(
+                "a",
+                { staticClass: "side-menu", attrs: { href: "index.html" } },
+                [
+                  _c("div", { staticClass: "side-menu__icon" }, [
+                    _c("i", { attrs: { "data-feather": "home" } })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "side-menu__title" }, [
+                    _vm._v(" Classes ")
+                  ])
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c(
+                "a",
+                { staticClass: "side-menu", attrs: { href: "index.html" } },
+                [
+                  _c("div", { staticClass: "side-menu__icon" }, [
+                    _c("i", { attrs: { "data-feather": "home" } })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "side-menu__title" }, [
+                    _vm._v(" Année Académique ")
+                  ])
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c(
+                "a",
+                { staticClass: "side-menu", attrs: { href: "index.html" } },
+                [
+                  _c("div", { staticClass: "side-menu__icon" }, [
+                    _c("i", { attrs: { "data-feather": "home" } })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "side-menu__title" }, [
+                    _vm._v(" Parents ")
+                  ])
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c(
+                "a",
+                { staticClass: "side-menu", attrs: { href: "index.html" } },
+                [
+                  _c("div", { staticClass: "side-menu__icon" }, [
+                    _c("i", { attrs: { "data-feather": "home" } })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "side-menu__title" }, [
+                    _vm._v(" Utilisateurs ")
+                  ])
+                ]
+              )
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "content" }, [
+          _c("div", { staticClass: "top-bar" }, [
+            _c(
+              "div",
+              { staticClass: "-intro-x breadcrumb mr-auto hidden sm:flex" },
+              [
+                _c("a", { attrs: { href: "" } }, [_vm._v("Application")]),
+                _vm._v(" "),
+                _c("i", {
+                  staticClass: "breadcrumb__icon",
+                  attrs: { "data-feather": "chevron-right" }
+                }),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  { staticClass: "breadcrumb--active", attrs: { href: "" } },
+                  [_vm._v("Dashboard")]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "intro-x relative mr-3 sm:mr-6" }, [
+              _c("div", { staticClass: "search hidden sm:block" }, [
+                _c("input", {
+                  staticClass: "search__input input placeholder-theme-13",
+                  attrs: { type: "text", placeholder: "Search..." }
+                }),
+                _vm._v(" "),
+                _c("i", {
+                  staticClass: "search__icon",
+                  attrs: { "data-feather": "search" }
+                })
+              ]),
+              _vm._v(" "),
+              _c(
+                "a",
+                { staticClass: "notification sm:hidden", attrs: { href: "" } },
+                [
+                  _c("i", {
+                    staticClass: "notification__icon",
+                    attrs: { "data-feather": "search" }
+                  })
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "search-result" }, [
+                _c("div", { staticClass: "search-result__content" }, [
+                  _c("div", { staticClass: "search-result__content__title" }, [
+                    _vm._v("Pages")
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "mb-5" }, [
+                    _c(
+                      "a",
+                      { staticClass: "flex items-center", attrs: { href: "" } },
+                      [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "w-8 h-8 bg-theme-18 text-theme-9 flex items-center justify-center rounded-full"
+                          },
+                          [
+                            _c("i", {
+                              staticClass: "w-4 h-4",
+                              attrs: { "data-feather": "inbox" }
+                            })
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "ml-3" }, [
+                          _vm._v("Mail Settings")
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "flex items-center mt-2",
+                        attrs: { href: "" }
+                      },
+                      [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "w-8 h-8 bg-theme-17 text-theme-11 flex items-center justify-center rounded-full"
+                          },
+                          [
+                            _c("i", {
+                              staticClass: "w-4 h-4",
+                              attrs: { "data-feather": "users" }
+                            })
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "ml-3" }, [
+                          _vm._v("Users & Permissions")
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "flex items-center mt-2",
+                        attrs: { href: "" }
+                      },
+                      [
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "w-8 h-8 bg-theme-14 text-theme-10 flex items-center justify-center rounded-full"
+                          },
+                          [
+                            _c("i", {
+                              staticClass: "w-4 h-4",
+                              attrs: { "data-feather": "credit-card" }
+                            })
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "ml-3" }, [
+                          _vm._v("Transactions Report")
+                        ])
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "search-result__content__title" }, [
+                    _vm._v("Users")
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "mb-5" }, [
+                    _c(
+                      "a",
+                      {
+                        staticClass: "flex items-center mt-2",
+                        attrs: { href: "" }
+                      },
+                      [
+                        _c("div", { staticClass: "w-8 h-8 image-fit" }, [
+                          _c("img", {
+                            staticClass: "rounded-full",
+                            attrs: {
+                              alt: "Midone Tailwind HTML Admin Template",
+                              src: "dist/images/profile-13.jpg"
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "ml-3" }, [
+                          _vm._v("Angelina Jolie")
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "ml-auto w-48 truncate text-gray-600 text-xs text-right"
+                          },
+                          [_vm._v("angelinajolie@left4code.com")]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "flex items-center mt-2",
+                        attrs: { href: "" }
+                      },
+                      [
+                        _c("div", { staticClass: "w-8 h-8 image-fit" }, [
+                          _c("img", {
+                            staticClass: "rounded-full",
+                            attrs: {
+                              alt: "Midone Tailwind HTML Admin Template",
+                              src: "dist/images/profile-2.jpg"
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "ml-3" }, [
+                          _vm._v("Johnny Depp")
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "ml-auto w-48 truncate text-gray-600 text-xs text-right"
+                          },
+                          [_vm._v("johnnydepp@left4code.com")]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "flex items-center mt-2",
+                        attrs: { href: "" }
+                      },
+                      [
+                        _c("div", { staticClass: "w-8 h-8 image-fit" }, [
+                          _c("img", {
+                            staticClass: "rounded-full",
+                            attrs: {
+                              alt: "Midone Tailwind HTML Admin Template",
+                              src: "dist/images/profile-14.jpg"
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "ml-3" }, [
+                          _vm._v("Russell Crowe")
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "ml-auto w-48 truncate text-gray-600 text-xs text-right"
+                          },
+                          [_vm._v("russellcrowe@left4code.com")]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "flex items-center mt-2",
+                        attrs: { href: "" }
+                      },
+                      [
+                        _c("div", { staticClass: "w-8 h-8 image-fit" }, [
+                          _c("img", {
+                            staticClass: "rounded-full",
+                            attrs: {
+                              alt: "Midone Tailwind HTML Admin Template",
+                              src: "dist/images/profile-6.jpg"
+                            }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "ml-3" }, [
+                          _vm._v("Al Pacino")
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "ml-auto w-48 truncate text-gray-600 text-xs text-right"
+                          },
+                          [_vm._v("alpacino@left4code.com")]
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "search-result__content__title" }, [
+                    _vm._v("Products")
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass: "flex items-center mt-2",
+                      attrs: { href: "" }
+                    },
+                    [
+                      _c("div", { staticClass: "w-8 h-8 image-fit" }, [
+                        _c("img", {
+                          staticClass: "rounded-full",
+                          attrs: {
+                            alt: "Midone Tailwind HTML Admin Template",
+                            src: "dist/images/preview-9.jpg"
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "ml-3" }, [
+                        _vm._v("Samsung Galaxy S20 Ultra")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "ml-auto w-48 truncate text-gray-600 text-xs text-right"
+                        },
+                        [_vm._v("Smartphone & Tablet")]
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass: "flex items-center mt-2",
+                      attrs: { href: "" }
+                    },
+                    [
+                      _c("div", { staticClass: "w-8 h-8 image-fit" }, [
+                        _c("img", {
+                          staticClass: "rounded-full",
+                          attrs: {
+                            alt: "Midone Tailwind HTML Admin Template",
+                            src: "dist/images/preview-12.jpg"
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "ml-3" }, [
+                        _vm._v("Nike Tanjun")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "ml-auto w-48 truncate text-gray-600 text-xs text-right"
+                        },
+                        [_vm._v("Sport & Outdoor")]
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass: "flex items-center mt-2",
+                      attrs: { href: "" }
+                    },
+                    [
+                      _c("div", { staticClass: "w-8 h-8 image-fit" }, [
+                        _c("img", {
+                          staticClass: "rounded-full",
+                          attrs: {
+                            alt: "Midone Tailwind HTML Admin Template",
+                            src: "dist/images/preview-10.jpg"
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "ml-3" }, [
+                        _vm._v("Sony Master Series A9G")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "ml-auto w-48 truncate text-gray-600 text-xs text-right"
+                        },
+                        [_vm._v("Electronic")]
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    {
+                      staticClass: "flex items-center mt-2",
+                      attrs: { href: "" }
+                    },
+                    [
+                      _c("div", { staticClass: "w-8 h-8 image-fit" }, [
+                        _c("img", {
+                          staticClass: "rounded-full",
+                          attrs: {
+                            alt: "Midone Tailwind HTML Admin Template",
+                            src: "dist/images/preview-7.jpg"
+                          }
+                        })
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "ml-3" }, [
+                        _vm._v("Samsung Galaxy S20 Ultra")
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "ml-auto w-48 truncate text-gray-600 text-xs text-right"
+                        },
+                        [_vm._v("Smartphone & Tablet")]
+                      )
+                    ]
+                  )
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "intro-x dropdown relative mr-auto sm:mr-6" },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "dropdown-toggle notification notification--bullet cursor-pointer"
+                  },
+                  [
+                    _c("i", {
+                      staticClass: "notification__icon",
+                      attrs: { "data-feather": "bell" }
+                    })
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "notification-content dropdown-box mt-8 absolute top-0 left-0 sm:left-auto sm:right-0 z-20 -ml-10 sm:ml-0"
+                  },
+                  [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "notification-content__box dropdown-box__content box"
+                      },
+                      [
+                        _c(
+                          "div",
+                          { staticClass: "notification-content__title" },
+                          [_vm._v("Notifications")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "cursor-pointer relative flex items-center "
+                          },
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "w-12 h-12 flex-none image-fit mr-1"
+                              },
+                              [
+                                _c("img", {
+                                  staticClass: "rounded-full",
+                                  attrs: {
+                                    alt: "Midone Tailwind HTML Admin Template",
+                                    src: "dist/images/profile-13.jpg"
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _c("div", {
+                                  staticClass:
+                                    "w-3 h-3 bg-theme-9 absolute right-0 bottom-0 rounded-full border-2 border-white"
+                                })
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "ml-2 overflow-hidden" }, [
+                              _c("div", { staticClass: "flex items-center" }, [
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "font-medium truncate mr-5",
+                                    attrs: { href: "javascript:;" }
+                                  },
+                                  [_vm._v("Angelina Jolie")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "text-xs text-gray-500 ml-auto whitespace-no-wrap"
+                                  },
+                                  [_vm._v("05:09 AM")]
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass: "w-full truncate text-gray-600"
+                                },
+                                [
+                                  _vm._v(
+                                    "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 20"
+                                  )
+                                ]
+                              )
+                            ])
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "cursor-pointer relative flex items-center mt-5"
+                          },
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "w-12 h-12 flex-none image-fit mr-1"
+                              },
+                              [
+                                _c("img", {
+                                  staticClass: "rounded-full",
+                                  attrs: {
+                                    alt: "Midone Tailwind HTML Admin Template",
+                                    src: "dist/images/profile-2.jpg"
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _c("div", {
+                                  staticClass:
+                                    "w-3 h-3 bg-theme-9 absolute right-0 bottom-0 rounded-full border-2 border-white"
+                                })
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "ml-2 overflow-hidden" }, [
+                              _c("div", { staticClass: "flex items-center" }, [
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "font-medium truncate mr-5",
+                                    attrs: { href: "javascript:;" }
+                                  },
+                                  [_vm._v("Johnny Depp")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "text-xs text-gray-500 ml-auto whitespace-no-wrap"
+                                  },
+                                  [_vm._v("05:09 AM")]
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass: "w-full truncate text-gray-600"
+                                },
+                                [
+                                  _vm._v(
+                                    "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem "
+                                  )
+                                ]
+                              )
+                            ])
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "cursor-pointer relative flex items-center mt-5"
+                          },
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "w-12 h-12 flex-none image-fit mr-1"
+                              },
+                              [
+                                _c("img", {
+                                  staticClass: "rounded-full",
+                                  attrs: {
+                                    alt: "Midone Tailwind HTML Admin Template",
+                                    src: "dist/images/profile-14.jpg"
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _c("div", {
+                                  staticClass:
+                                    "w-3 h-3 bg-theme-9 absolute right-0 bottom-0 rounded-full border-2 border-white"
+                                })
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "ml-2 overflow-hidden" }, [
+                              _c("div", { staticClass: "flex items-center" }, [
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "font-medium truncate mr-5",
+                                    attrs: { href: "javascript:;" }
+                                  },
+                                  [_vm._v("Russell Crowe")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "text-xs text-gray-500 ml-auto whitespace-no-wrap"
+                                  },
+                                  [_vm._v("01:10 PM")]
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass: "w-full truncate text-gray-600"
+                                },
+                                [
+                                  _vm._v(
+                                    "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 20"
+                                  )
+                                ]
+                              )
+                            ])
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "cursor-pointer relative flex items-center mt-5"
+                          },
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "w-12 h-12 flex-none image-fit mr-1"
+                              },
+                              [
+                                _c("img", {
+                                  staticClass: "rounded-full",
+                                  attrs: {
+                                    alt: "Midone Tailwind HTML Admin Template",
+                                    src: "dist/images/profile-6.jpg"
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _c("div", {
+                                  staticClass:
+                                    "w-3 h-3 bg-theme-9 absolute right-0 bottom-0 rounded-full border-2 border-white"
+                                })
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "ml-2 overflow-hidden" }, [
+                              _c("div", { staticClass: "flex items-center" }, [
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "font-medium truncate mr-5",
+                                    attrs: { href: "javascript:;" }
+                                  },
+                                  [_vm._v("Al Pacino")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "text-xs text-gray-500 ml-auto whitespace-no-wrap"
+                                  },
+                                  [_vm._v("05:09 AM")]
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass: "w-full truncate text-gray-600"
+                                },
+                                [
+                                  _vm._v(
+                                    "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomi"
+                                  )
+                                ]
+                              )
+                            ])
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "cursor-pointer relative flex items-center mt-5"
+                          },
+                          [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "w-12 h-12 flex-none image-fit mr-1"
+                              },
+                              [
+                                _c("img", {
+                                  staticClass: "rounded-full",
+                                  attrs: {
+                                    alt: "Midone Tailwind HTML Admin Template",
+                                    src: "dist/images/profile-5.jpg"
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _c("div", {
+                                  staticClass:
+                                    "w-3 h-3 bg-theme-9 absolute right-0 bottom-0 rounded-full border-2 border-white"
+                                })
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "ml-2 overflow-hidden" }, [
+                              _c("div", { staticClass: "flex items-center" }, [
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass: "font-medium truncate mr-5",
+                                    attrs: { href: "javascript:;" }
+                                  },
+                                  [_vm._v("Edward Norton")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "text-xs text-gray-500 ml-auto whitespace-no-wrap"
+                                  },
+                                  [_vm._v("01:10 PM")]
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass: "w-full truncate text-gray-600"
+                                },
+                                [
+                                  _vm._v(
+                                    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500"
+                                  )
+                                ]
+                              )
+                            ])
+                          ]
+                        )
+                      ]
+                    )
+                  ]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _c("div", { staticClass: "intro-x dropdown w-8 h-8 relative" }, [
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in"
+                },
+                [
+                  _c("img", {
+                    attrs: {
+                      alt: "Midone Tailwind HTML Admin Template",
+                      src: "dist/images/profile-12.jpg"
+                    }
+                  })
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass:
+                    "dropdown-box mt-10 absolute w-56 top-0 right-0 z-20"
+                },
+                [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "dropdown-box__content box bg-theme-38 text-white"
+                    },
+                    [
+                      _c(
+                        "div",
+                        { staticClass: "p-4 border-b border-theme-40" },
+                        [
+                          _c("div", { staticClass: "font-medium" }, [
+                            _vm._v("Angelina Jolie")
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "text-xs text-theme-41" }, [
+                            _vm._v("Software Engineer")
+                          ])
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "p-2" }, [
+                        _c(
+                          "a",
+                          {
+                            staticClass:
+                              "flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md",
+                            attrs: { href: "" }
+                          },
+                          [
+                            _c("i", {
+                              staticClass: "w-4 h-4 mr-2",
+                              attrs: { "data-feather": "user" }
+                            }),
+                            _vm._v(" Profile ")
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          {
+                            staticClass:
+                              "flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md",
+                            attrs: { href: "" }
+                          },
+                          [
+                            _c("i", {
+                              staticClass: "w-4 h-4 mr-2",
+                              attrs: { "data-feather": "edit" }
+                            }),
+                            _vm._v(" Add Account ")
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          {
+                            staticClass:
+                              "flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md",
+                            attrs: { href: "" }
+                          },
+                          [
+                            _c("i", {
+                              staticClass: "w-4 h-4 mr-2",
+                              attrs: { "data-feather": "lock" }
+                            }),
+                            _vm._v(" Reset Password ")
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          {
+                            staticClass:
+                              "flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md",
+                            attrs: { href: "" }
+                          },
+                          [
+                            _c("i", {
+                              staticClass: "w-4 h-4 mr-2",
+                              attrs: { "data-feather": "help-circle" }
+                            }),
+                            _vm._v(" Help ")
+                          ]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "p-2 border-t border-theme-40" },
+                        [
+                          _c(
+                            "a",
+                            {
+                              staticClass:
+                                "flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md",
+                              attrs: { href: "" }
+                            },
+                            [
+                              _c("i", {
+                                staticClass: "w-4 h-4 mr-2",
+                                attrs: { "data-feather": "toggle-right" }
+                              }),
+                              _vm._v(" Logout ")
+                            ]
+                          )
+                        ]
+                      )
+                    ]
+                  )
+                ]
+              )
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "grid grid-cols-12 gap-6" }, [
+            _c(
+              "div",
+              {
+                staticClass:
+                  "col-span-12 xxl:col-span-9 grid grid-cols-12 gap-6"
+              },
+              [
+                _c("div", { staticClass: "col-span-12 mt-8" }, [
+                  _c("div", { staticClass: "intro-y flex items-center h-10" }, [
+                    _c(
+                      "h2",
+                      { staticClass: "text-lg font-medium truncate mr-5" },
+                      [
+                        _vm._v(
+                          "\n                                General Report\n                            "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass: "ml-auto flex text-theme-1",
+                        attrs: { href: "" }
+                      },
+                      [
+                        _c("i", {
+                          staticClass: "w-4 h-4 mr-3",
+                          attrs: { "data-feather": "refresh-ccw" }
+                        }),
+                        _vm._v(" Reload Data ")
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "grid grid-cols-12 gap-6 mt-5" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "col-span-12 sm:col-span-6 xl:col-span-3 intro-y"
+                      },
+                      [
+                        _c("div", { staticClass: "report-box zoom-in" }, [
+                          _c("div", { staticClass: "box p-5" }, [
+                            _c("div", { staticClass: "flex" }, [
+                              _c("i", {
+                                staticClass: "report-box__icon text-theme-10",
+                                attrs: { "data-feather": "shopping-cart" }
+                              }),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "ml-auto" }, [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "report-box__indicator bg-theme-9 tooltip cursor-pointer",
+                                    attrs: {
+                                      title: "33% Higher than last month"
+                                    }
+                                  },
+                                  [
+                                    _vm._v(" 33% "),
+                                    _c("i", {
+                                      staticClass: "w-4 h-4",
+                                      attrs: { "data-feather": "chevron-up" }
+                                    })
+                                  ]
+                                )
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass: "text-3xl font-bold leading-8 mt-6"
+                              },
+                              [_vm._v("4.510")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "text-base text-gray-600 mt-1" },
+                              [_vm._v("Item Sales")]
+                            )
+                          ])
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "col-span-12 sm:col-span-6 xl:col-span-3 intro-y"
+                      },
+                      [
+                        _c("div", { staticClass: "report-box zoom-in" }, [
+                          _c("div", { staticClass: "box p-5" }, [
+                            _c("div", { staticClass: "flex" }, [
+                              _c("i", {
+                                staticClass: "report-box__icon text-theme-11",
+                                attrs: { "data-feather": "credit-card" }
+                              }),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "ml-auto" }, [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "report-box__indicator bg-theme-6 tooltip cursor-pointer",
+                                    attrs: { title: "2% Lower than last month" }
+                                  },
+                                  [
+                                    _vm._v(" 2% "),
+                                    _c("i", {
+                                      staticClass: "w-4 h-4",
+                                      attrs: { "data-feather": "chevron-down" }
+                                    })
+                                  ]
+                                )
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass: "text-3xl font-bold leading-8 mt-6"
+                              },
+                              [_vm._v("3.521")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "text-base text-gray-600 mt-1" },
+                              [_vm._v("New Orders")]
+                            )
+                          ])
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "col-span-12 sm:col-span-6 xl:col-span-3 intro-y"
+                      },
+                      [
+                        _c("div", { staticClass: "report-box zoom-in" }, [
+                          _c("div", { staticClass: "box p-5" }, [
+                            _c("div", { staticClass: "flex" }, [
+                              _c("i", {
+                                staticClass: "report-box__icon text-theme-12",
+                                attrs: { "data-feather": "monitor" }
+                              }),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "ml-auto" }, [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "report-box__indicator bg-theme-9 tooltip cursor-pointer",
+                                    attrs: {
+                                      title: "12% Higher than last month"
+                                    }
+                                  },
+                                  [
+                                    _vm._v(" 12% "),
+                                    _c("i", {
+                                      staticClass: "w-4 h-4",
+                                      attrs: { "data-feather": "chevron-up" }
+                                    })
+                                  ]
+                                )
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass: "text-3xl font-bold leading-8 mt-6"
+                              },
+                              [_vm._v("2.145")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "text-base text-gray-600 mt-1" },
+                              [_vm._v("Total Products")]
+                            )
+                          ])
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "col-span-12 sm:col-span-6 xl:col-span-3 intro-y"
+                      },
+                      [
+                        _c("div", { staticClass: "report-box zoom-in" }, [
+                          _c("div", { staticClass: "box p-5" }, [
+                            _c("div", { staticClass: "flex" }, [
+                              _c("i", {
+                                staticClass: "report-box__icon text-theme-9",
+                                attrs: { "data-feather": "user" }
+                              }),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "ml-auto" }, [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "report-box__indicator bg-theme-9 tooltip cursor-pointer",
+                                    attrs: {
+                                      title: "22% Higher than last month"
+                                    }
+                                  },
+                                  [
+                                    _vm._v(" 22% "),
+                                    _c("i", {
+                                      staticClass: "w-4 h-4",
+                                      attrs: { "data-feather": "chevron-up" }
+                                    })
+                                  ]
+                                )
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass: "text-3xl font-bold leading-8 mt-6"
+                              },
+                              [_vm._v("152.000")]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "text-base text-gray-600 mt-1" },
+                              [_vm._v("Unique Visitor")]
+                            )
+                          ])
+                        ])
+                      ]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-span-12 lg:col-span-6 mt-8" }, [
+                  _c(
+                    "div",
+                    { staticClass: "intro-y block sm:flex items-center h-10" },
+                    [
+                      _c(
+                        "h2",
+                        { staticClass: "text-lg font-medium truncate mr-5" },
+                        [
+                          _vm._v(
+                            "\n                                Sales Report\n                            "
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "sm:ml-auto mt-3 sm:mt-0 relative text-gray-700"
+                        },
+                        [
+                          _c("i", {
+                            staticClass:
+                              "w-4 h-4 z-10 absolute my-auto inset-y-0 ml-3 left-0",
+                            attrs: { "data-feather": "calendar" }
+                          }),
+                          _vm._v(" "),
+                          _c("input", {
+                            staticClass:
+                              "datepicker input w-full sm:w-56 box pl-10",
+                            attrs: { type: "text", "data-daterange": "true" }
+                          })
+                        ]
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "intro-y box p-5 mt-12 sm:mt-5" }, [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "flex flex-col xl:flex-row xl:items-center"
+                      },
+                      [
+                        _c("div", { staticClass: "flex" }, [
+                          _c("div", [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "text-theme-20 text-lg xl:text-xl font-bold"
+                              },
+                              [_vm._v("$15,000")]
+                            ),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "text-gray-600" }, [
+                              _vm._v("This Month")
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("div", {
+                            staticClass:
+                              "w-px h-12 border border-r border-dashed border-gray-300 mx-4 xl:mx-6"
+                          }),
+                          _vm._v(" "),
+                          _c("div", [
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "text-gray-600 text-lg xl:text-xl font-medium"
+                              },
+                              [_vm._v("$10,000")]
+                            ),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "text-gray-600" }, [
+                              _vm._v("Last Month")
+                            ])
+                          ])
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "dropdown relative xl:ml-auto mt-5 xl:mt-0"
+                          },
+                          [
+                            _c(
+                              "button",
+                              {
+                                staticClass:
+                                  "dropdown-toggle button font-normal border text-white relative flex items-center text-gray-700"
+                              },
+                              [
+                                _vm._v(" Filter by Category "),
+                                _c("i", {
+                                  staticClass: "w-4 h-4 ml-2",
+                                  attrs: { "data-feather": "chevron-down" }
+                                })
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "dropdown-box mt-10 absolute w-40 top-0 xl:right-0 z-20"
+                              },
+                              [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "dropdown-box__content box p-2 overflow-y-auto h-32"
+                                  },
+                                  [
+                                    _c(
+                                      "a",
+                                      {
+                                        staticClass:
+                                          "flex items-center block p-2 transition duration-300 ease-in-out bg-white hover:bg-gray-200 rounded-md",
+                                        attrs: { href: "" }
+                                      },
+                                      [_vm._v("PC & Laptop")]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "a",
+                                      {
+                                        staticClass:
+                                          "flex items-center block p-2 transition duration-300 ease-in-out bg-white hover:bg-gray-200 rounded-md",
+                                        attrs: { href: "" }
+                                      },
+                                      [_vm._v("Smartphone")]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "a",
+                                      {
+                                        staticClass:
+                                          "flex items-center block p-2 transition duration-300 ease-in-out bg-white hover:bg-gray-200 rounded-md",
+                                        attrs: { href: "" }
+                                      },
+                                      [_vm._v("Electronic")]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "a",
+                                      {
+                                        staticClass:
+                                          "flex items-center block p-2 transition duration-300 ease-in-out bg-white hover:bg-gray-200 rounded-md",
+                                        attrs: { href: "" }
+                                      },
+                                      [_vm._v("Photography")]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "a",
+                                      {
+                                        staticClass:
+                                          "flex items-center block p-2 transition duration-300 ease-in-out bg-white hover:bg-gray-200 rounded-md",
+                                        attrs: { href: "" }
+                                      },
+                                      [_vm._v("Sport")]
+                                    )
+                                  ]
+                                )
+                              ]
+                            )
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "report-chart" }, [
+                      _c("canvas", {
+                        staticClass: "mt-6",
+                        attrs: { id: "report-line-chart", height: "160" }
+                      })
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "col-span-12 sm:col-span-6 lg:col-span-3 mt-8"
+                  },
+                  [
+                    _c(
+                      "div",
+                      { staticClass: "intro-y flex items-center h-10" },
+                      [
+                        _c(
+                          "h2",
+                          { staticClass: "text-lg font-medium truncate mr-5" },
+                          [
+                            _vm._v(
+                              "\n                                Weekly Top Seller\n                            "
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          {
+                            staticClass: "ml-auto text-theme-1 truncate",
+                            attrs: { href: "" }
+                          },
+                          [_vm._v("See all")]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "intro-y box p-5 mt-5" }, [
+                      _c("canvas", {
+                        staticClass: "mt-3",
+                        attrs: { id: "report-pie-chart", height: "280" }
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "mt-8" }, [
+                        _c("div", { staticClass: "flex items-center" }, [
+                          _c("div", {
+                            staticClass: "w-2 h-2 bg-theme-11 rounded-full mr-3"
+                          }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "truncate" }, [
+                            _vm._v("17 - 30 Years old")
+                          ]),
+                          _vm._v(" "),
+                          _c("div", {
+                            staticClass:
+                              "h-px flex-1 border border-r border-dashed border-gray-300 mx-3 xl:hidden"
+                          }),
+                          _vm._v(" "),
+                          _c(
+                            "span",
+                            { staticClass: "font-medium xl:ml-auto" },
+                            [_vm._v("62%")]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "flex items-center mt-4" }, [
+                          _c("div", {
+                            staticClass: "w-2 h-2 bg-theme-1 rounded-full mr-3"
+                          }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "truncate" }, [
+                            _vm._v("31 - 50 Years old")
+                          ]),
+                          _vm._v(" "),
+                          _c("div", {
+                            staticClass:
+                              "h-px flex-1 border border-r border-dashed border-gray-300 mx-3 xl:hidden"
+                          }),
+                          _vm._v(" "),
+                          _c(
+                            "span",
+                            { staticClass: "font-medium xl:ml-auto" },
+                            [_vm._v("33%")]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "flex items-center mt-4" }, [
+                          _c("div", {
+                            staticClass: "w-2 h-2 bg-theme-12 rounded-full mr-3"
+                          }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "truncate" }, [
+                            _vm._v(">= 50 Years old")
+                          ]),
+                          _vm._v(" "),
+                          _c("div", {
+                            staticClass:
+                              "h-px flex-1 border border-r border-dashed border-gray-300 mx-3 xl:hidden"
+                          }),
+                          _vm._v(" "),
+                          _c(
+                            "span",
+                            { staticClass: "font-medium xl:ml-auto" },
+                            [_vm._v("10%")]
+                          )
+                        ])
+                      ])
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "col-span-12 sm:col-span-6 lg:col-span-3 mt-8"
+                  },
+                  [
+                    _c(
+                      "div",
+                      { staticClass: "intro-y flex items-center h-10" },
+                      [
+                        _c(
+                          "h2",
+                          { staticClass: "text-lg font-medium truncate mr-5" },
+                          [
+                            _vm._v(
+                              "\n                                Sales Report\n                            "
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          {
+                            staticClass: "ml-auto text-theme-1 truncate",
+                            attrs: { href: "" }
+                          },
+                          [_vm._v("See all")]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "intro-y box p-5 mt-5" }, [
+                      _c("canvas", {
+                        staticClass: "mt-3",
+                        attrs: { id: "report-donut-chart", height: "280" }
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "mt-8" }, [
+                        _c("div", { staticClass: "flex items-center" }, [
+                          _c("div", {
+                            staticClass: "w-2 h-2 bg-theme-11 rounded-full mr-3"
+                          }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "truncate" }, [
+                            _vm._v("17 - 30 Years old")
+                          ]),
+                          _vm._v(" "),
+                          _c("div", {
+                            staticClass:
+                              "h-px flex-1 border border-r border-dashed border-gray-300 mx-3 xl:hidden"
+                          }),
+                          _vm._v(" "),
+                          _c(
+                            "span",
+                            { staticClass: "font-medium xl:ml-auto" },
+                            [_vm._v("62%")]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "flex items-center mt-4" }, [
+                          _c("div", {
+                            staticClass: "w-2 h-2 bg-theme-1 rounded-full mr-3"
+                          }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "truncate" }, [
+                            _vm._v("31 - 50 Years old")
+                          ]),
+                          _vm._v(" "),
+                          _c("div", {
+                            staticClass:
+                              "h-px flex-1 border border-r border-dashed border-gray-300 mx-3 xl:hidden"
+                          }),
+                          _vm._v(" "),
+                          _c(
+                            "span",
+                            { staticClass: "font-medium xl:ml-auto" },
+                            [_vm._v("33%")]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "flex items-center mt-4" }, [
+                          _c("div", {
+                            staticClass: "w-2 h-2 bg-theme-12 rounded-full mr-3"
+                          }),
+                          _vm._v(" "),
+                          _c("span", { staticClass: "truncate" }, [
+                            _vm._v(">= 50 Years old")
+                          ]),
+                          _vm._v(" "),
+                          _c("div", {
+                            staticClass:
+                              "h-px flex-1 border border-r border-dashed border-gray-300 mx-3 xl:hidden"
+                          }),
+                          _vm._v(" "),
+                          _c(
+                            "span",
+                            { staticClass: "font-medium xl:ml-auto" },
+                            [_vm._v("10%")]
+                          )
+                        ])
+                      ])
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-span-12 xl:col-span-8 mt-6" }, [
+                  _c(
+                    "div",
+                    { staticClass: "intro-y block sm:flex items-center h-10" },
+                    [
+                      _c(
+                        "h2",
+                        { staticClass: "text-lg font-medium truncate mr-5" },
+                        [
+                          _vm._v(
+                            "\n                                Official Store\n                            "
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "sm:ml-auto mt-3 sm:mt-0 relative text-gray-700"
+                        },
+                        [
+                          _c("i", {
+                            staticClass:
+                              "w-4 h-4 z-10 absolute my-auto inset-y-0 ml-3 left-0",
+                            attrs: { "data-feather": "map-pin" }
+                          }),
+                          _vm._v(" "),
+                          _c("input", {
+                            staticClass: "input w-full sm:w-40 box pl-10",
+                            attrs: {
+                              type: "text",
+                              placeholder: "Filter by city"
+                            }
+                          })
+                        ]
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "intro-y box p-5 mt-12 sm:mt-5" }, [
+                    _c("div", [
+                      _vm._v(
+                        "250 Official stores in 21 countries, click the marker to see location details."
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", {
+                      staticClass: "report-maps mt-5 bg-gray-200 rounded-md",
+                      attrs: {
+                        "data-center": "-6.2425342, 106.8626478",
+                        "data-sources": "/dist/json/location.json"
+                      }
+                    })
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-span-12 xl:col-span-4 mt-6" }, [
+                  _c("div", { staticClass: "intro-y flex items-center h-10" }, [
+                    _c(
+                      "h2",
+                      { staticClass: "text-lg font-medium truncate mr-5" },
+                      [
+                        _vm._v(
+                          "\n                                Weekly Best Sellers\n                            "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "mt-5" }, [
+                    _c("div", { staticClass: "intro-y" }, [
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "box px-4 py-4 mb-3 flex items-center zoom-in"
+                        },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "w-10 h-10 flex-none image-fit rounded-md overflow-hidden"
+                            },
+                            [
+                              _c("img", {
+                                attrs: {
+                                  alt: "Midone Tailwind HTML Admin Template",
+                                  src: "dist/images/profile-14.jpg"
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "ml-4 mr-auto" }, [
+                            _c("div", { staticClass: "font-medium" }, [
+                              _vm._v("Leonardo DiCaprio")
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "text-gray-600 text-xs" },
+                              [_vm._v("6 August 2022")]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "py-1 px-2 rounded-full text-xs bg-theme-9 text-white cursor-pointer font-medium"
+                            },
+                            [_vm._v("137 Sales")]
+                          )
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "intro-y" }, [
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "box px-4 py-4 mb-3 flex items-center zoom-in"
+                        },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "w-10 h-10 flex-none image-fit rounded-md overflow-hidden"
+                            },
+                            [
+                              _c("img", {
+                                attrs: {
+                                  alt: "Midone Tailwind HTML Admin Template",
+                                  src: "dist/images/profile-10.jpg"
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "ml-4 mr-auto" }, [
+                            _c("div", { staticClass: "font-medium" }, [
+                              _vm._v("Tom Cruise")
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "text-gray-600 text-xs" },
+                              [_vm._v("21 July 2020")]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "py-1 px-2 rounded-full text-xs bg-theme-9 text-white cursor-pointer font-medium"
+                            },
+                            [_vm._v("137 Sales")]
+                          )
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "intro-y" }, [
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "box px-4 py-4 mb-3 flex items-center zoom-in"
+                        },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "w-10 h-10 flex-none image-fit rounded-md overflow-hidden"
+                            },
+                            [
+                              _c("img", {
+                                attrs: {
+                                  alt: "Midone Tailwind HTML Admin Template",
+                                  src: "dist/images/profile-12.jpg"
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "ml-4 mr-auto" }, [
+                            _c("div", { staticClass: "font-medium" }, [
+                              _vm._v("Al Pacino")
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "text-gray-600 text-xs" },
+                              [_vm._v("5 January 2021")]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "py-1 px-2 rounded-full text-xs bg-theme-9 text-white cursor-pointer font-medium"
+                            },
+                            [_vm._v("137 Sales")]
+                          )
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "intro-y" }, [
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "box px-4 py-4 mb-3 flex items-center zoom-in"
+                        },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "w-10 h-10 flex-none image-fit rounded-md overflow-hidden"
+                            },
+                            [
+                              _c("img", {
+                                attrs: {
+                                  alt: "Midone Tailwind HTML Admin Template",
+                                  src: "dist/images/profile-6.jpg"
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "ml-4 mr-auto" }, [
+                            _c("div", { staticClass: "font-medium" }, [
+                              _vm._v("Russell Crowe")
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "text-gray-600 text-xs" },
+                              [_vm._v("22 April 2020")]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "py-1 px-2 rounded-full text-xs bg-theme-9 text-white cursor-pointer font-medium"
+                            },
+                            [_vm._v("137 Sales")]
+                          )
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "a",
+                      {
+                        staticClass:
+                          "intro-y w-full block text-center rounded-md py-4 border border-dotted border-theme-15 text-theme-16",
+                        attrs: { href: "" }
+                      },
+                      [_vm._v("View More")]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "col-span-12 grid grid-cols-12 gap-6 mt-8" },
+                  [
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "col-span-12 sm:col-span-6 xxl:col-span-3 intro-y"
+                      },
+                      [
+                        _c(
+                          "div",
+                          { staticClass: "mini-report-chart box p-5 zoom-in" },
+                          [
+                            _c("div", { staticClass: "flex items-center" }, [
+                              _c("div", { staticClass: "w-2/4 flex-none" }, [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass: "text-lg font-medium truncate"
+                                  },
+                                  [_vm._v("Target Sales")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "text-gray-600 mt-1" },
+                                  [_vm._v("300 Sales")]
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                { staticClass: "flex-none ml-auto relative" },
+                                [
+                                  _c("canvas", {
+                                    attrs: {
+                                      id: "report-donut-chart-1",
+                                      width: "90",
+                                      height: "90"
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "font-medium absolute w-full h-full flex items-center justify-center top-0 left-0"
+                                    },
+                                    [_vm._v("20%")]
+                                  )
+                                ]
+                              )
+                            ])
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "col-span-12 sm:col-span-6 xxl:col-span-3 intro-y"
+                      },
+                      [
+                        _c(
+                          "div",
+                          { staticClass: "mini-report-chart box p-5 zoom-in" },
+                          [
+                            _c("div", { staticClass: "flex" }, [
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "text-lg font-medium truncate mr-3"
+                                },
+                                [_vm._v("Social Media")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "py-1 px-2 rounded-full text-xs bg-gray-200 text-gray-600 cursor-pointer ml-auto truncate"
+                                },
+                                [_vm._v("320 Followers")]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "mt-4" }, [
+                              _c("canvas", {
+                                staticClass: "simple-line-chart-1 -ml-1",
+                                attrs: { height: "60" }
+                              })
+                            ])
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "col-span-12 sm:col-span-6 xxl:col-span-3 intro-y"
+                      },
+                      [
+                        _c(
+                          "div",
+                          { staticClass: "mini-report-chart box p-5 zoom-in" },
+                          [
+                            _c("div", { staticClass: "flex items-center" }, [
+                              _c("div", { staticClass: "w-2/4 flex-none" }, [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass: "text-lg font-medium truncate"
+                                  },
+                                  [_vm._v("New Products")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "text-gray-600 mt-1" },
+                                  [_vm._v("1450 Products")]
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                { staticClass: "flex-none ml-auto relative" },
+                                [
+                                  _c("canvas", {
+                                    attrs: {
+                                      id: "report-donut-chart-2",
+                                      width: "90",
+                                      height: "90"
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "font-medium absolute w-full h-full flex items-center justify-center top-0 left-0"
+                                    },
+                                    [_vm._v("45%")]
+                                  )
+                                ]
+                              )
+                            ])
+                          ]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "col-span-12 sm:col-span-6 xxl:col-span-3 intro-y"
+                      },
+                      [
+                        _c(
+                          "div",
+                          { staticClass: "mini-report-chart box p-5 zoom-in" },
+                          [
+                            _c("div", { staticClass: "flex" }, [
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "text-lg font-medium truncate mr-3"
+                                },
+                                [_vm._v("Posted Ads")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "py-1 px-2 rounded-full text-xs bg-gray-200 text-gray-600 cursor-pointer ml-auto truncate"
+                                },
+                                [_vm._v("180 Campaign")]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "mt-4" }, [
+                              _c("canvas", {
+                                staticClass: "simple-line-chart-1 -ml-1",
+                                attrs: { height: "60" }
+                              })
+                            ])
+                          ]
+                        )
+                      ]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-span-12 mt-6" }, [
+                  _c(
+                    "div",
+                    { staticClass: "intro-y block sm:flex items-center h-10" },
+                    [
+                      _c(
+                        "h2",
+                        { staticClass: "text-lg font-medium truncate mr-5" },
+                        [
+                          _vm._v(
+                            "\n                                Weekly Top Seller\n                            "
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "flex items-center sm:ml-auto mt-3 sm:mt-0"
+                        },
+                        [
+                          _c(
+                            "button",
+                            {
+                              staticClass:
+                                "button box flex items-center text-gray-700"
+                            },
+                            [
+                              _c("i", {
+                                staticClass: "hidden sm:block w-4 h-4 mr-2",
+                                attrs: { "data-feather": "file-text" }
+                              }),
+                              _vm._v(" Export to Excel ")
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "button",
+                            {
+                              staticClass:
+                                "ml-3 button box flex items-center text-gray-700"
+                            },
+                            [
+                              _c("i", {
+                                staticClass: "hidden sm:block w-4 h-4 mr-2",
+                                attrs: { "data-feather": "file-text" }
+                              }),
+                              _vm._v(" Export to PDF ")
+                            ]
+                          )
+                        ]
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "intro-y overflow-auto lg:overflow-visible mt-8 sm:mt-0"
+                    },
+                    [
+                      _c(
+                        "table",
+                        { staticClass: "table table-report sm:mt-2" },
+                        [
+                          _c("thead", [
+                            _c("tr", [
+                              _c("th", { staticClass: "whitespace-no-wrap" }, [
+                                _vm._v("IMAGES")
+                              ]),
+                              _vm._v(" "),
+                              _c("th", { staticClass: "whitespace-no-wrap" }, [
+                                _vm._v("PRODUCT NAME")
+                              ]),
+                              _vm._v(" "),
+                              _c(
+                                "th",
+                                {
+                                  staticClass: "text-center whitespace-no-wrap"
+                                },
+                                [_vm._v("STOCK")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "th",
+                                {
+                                  staticClass: "text-center whitespace-no-wrap"
+                                },
+                                [_vm._v("STATUS")]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "th",
+                                {
+                                  staticClass: "text-center whitespace-no-wrap"
+                                },
+                                [_vm._v("ACTIONS")]
+                              )
+                            ])
+                          ]),
+                          _vm._v(" "),
+                          _c("tbody", [
+                            _c("tr", { staticClass: "intro-x" }, [
+                              _c("td", { staticClass: "w-40" }, [
+                                _c("div", { staticClass: "flex" }, [
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass: "w-10 h-10 image-fit zoom-in"
+                                    },
+                                    [
+                                      _c("img", {
+                                        staticClass: "tooltip rounded-full",
+                                        attrs: {
+                                          alt:
+                                            "Midone Tailwind HTML Admin Template",
+                                          src: "dist/images/preview-2.jpg",
+                                          title: "Uploaded at 6 August 2022"
+                                        }
+                                      })
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "w-10 h-10 image-fit zoom-in -ml-5"
+                                    },
+                                    [
+                                      _c("img", {
+                                        staticClass: "tooltip rounded-full",
+                                        attrs: {
+                                          alt:
+                                            "Midone Tailwind HTML Admin Template",
+                                          src: "dist/images/preview-8.jpg",
+                                          title: "Uploaded at 1 May 2021"
+                                        }
+                                      })
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "w-10 h-10 image-fit zoom-in -ml-5"
+                                    },
+                                    [
+                                      _c("img", {
+                                        staticClass: "tooltip rounded-full",
+                                        attrs: {
+                                          alt:
+                                            "Midone Tailwind HTML Admin Template",
+                                          src: "dist/images/preview-11.jpg",
+                                          title: "Uploaded at 10 October 2020"
+                                        }
+                                      })
+                                    ]
+                                  )
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("td", [
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass:
+                                      "font-medium whitespace-no-wrap",
+                                    attrs: { href: "" }
+                                  },
+                                  [_vm._v("Apple MacBook Pro 13")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "text-gray-600 text-xs whitespace-no-wrap"
+                                  },
+                                  [_vm._v("PC & Laptop")]
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c("td", { staticClass: "text-center" }, [
+                                _vm._v("77")
+                              ]),
+                              _vm._v(" "),
+                              _c("td", { staticClass: "w-40" }, [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "flex items-center justify-center text-theme-9"
+                                  },
+                                  [
+                                    _c("i", {
+                                      staticClass: "w-4 h-4 mr-2",
+                                      attrs: { "data-feather": "check-square" }
+                                    }),
+                                    _vm._v(" Active ")
+                                  ]
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c(
+                                "td",
+                                { staticClass: "table-report__action w-56" },
+                                [
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "flex justify-center items-center"
+                                    },
+                                    [
+                                      _c(
+                                        "a",
+                                        {
+                                          staticClass: "flex items-center mr-3",
+                                          attrs: { href: "" }
+                                        },
+                                        [
+                                          _c("i", {
+                                            staticClass: "w-4 h-4 mr-1",
+                                            attrs: {
+                                              "data-feather": "check-square"
+                                            }
+                                          }),
+                                          _vm._v(" Edit ")
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "a",
+                                        {
+                                          staticClass:
+                                            "flex items-center text-theme-6",
+                                          attrs: { href: "" }
+                                        },
+                                        [
+                                          _c("i", {
+                                            staticClass: "w-4 h-4 mr-1",
+                                            attrs: { "data-feather": "trash-2" }
+                                          }),
+                                          _vm._v(" Delete ")
+                                        ]
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("tr", { staticClass: "intro-x" }, [
+                              _c("td", { staticClass: "w-40" }, [
+                                _c("div", { staticClass: "flex" }, [
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass: "w-10 h-10 image-fit zoom-in"
+                                    },
+                                    [
+                                      _c("img", {
+                                        staticClass: "tooltip rounded-full",
+                                        attrs: {
+                                          alt:
+                                            "Midone Tailwind HTML Admin Template",
+                                          src: "dist/images/preview-7.jpg",
+                                          title: "Uploaded at 21 July 2020"
+                                        }
+                                      })
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "w-10 h-10 image-fit zoom-in -ml-5"
+                                    },
+                                    [
+                                      _c("img", {
+                                        staticClass: "tooltip rounded-full",
+                                        attrs: {
+                                          alt:
+                                            "Midone Tailwind HTML Admin Template",
+                                          src: "dist/images/preview-13.jpg",
+                                          title: "Uploaded at 31 December 2021"
+                                        }
+                                      })
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "w-10 h-10 image-fit zoom-in -ml-5"
+                                    },
+                                    [
+                                      _c("img", {
+                                        staticClass: "tooltip rounded-full",
+                                        attrs: {
+                                          alt:
+                                            "Midone Tailwind HTML Admin Template",
+                                          src: "dist/images/preview-2.jpg",
+                                          title: "Uploaded at 9 September 2020"
+                                        }
+                                      })
+                                    ]
+                                  )
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("td", [
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass:
+                                      "font-medium whitespace-no-wrap",
+                                    attrs: { href: "" }
+                                  },
+                                  [_vm._v("Dell XPS 13")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "text-gray-600 text-xs whitespace-no-wrap"
+                                  },
+                                  [_vm._v("PC & Laptop")]
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c("td", { staticClass: "text-center" }, [
+                                _vm._v("100")
+                              ]),
+                              _vm._v(" "),
+                              _c("td", { staticClass: "w-40" }, [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "flex items-center justify-center text-theme-9"
+                                  },
+                                  [
+                                    _c("i", {
+                                      staticClass: "w-4 h-4 mr-2",
+                                      attrs: { "data-feather": "check-square" }
+                                    }),
+                                    _vm._v(" Active ")
+                                  ]
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c(
+                                "td",
+                                { staticClass: "table-report__action w-56" },
+                                [
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "flex justify-center items-center"
+                                    },
+                                    [
+                                      _c(
+                                        "a",
+                                        {
+                                          staticClass: "flex items-center mr-3",
+                                          attrs: { href: "" }
+                                        },
+                                        [
+                                          _c("i", {
+                                            staticClass: "w-4 h-4 mr-1",
+                                            attrs: {
+                                              "data-feather": "check-square"
+                                            }
+                                          }),
+                                          _vm._v(" Edit ")
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "a",
+                                        {
+                                          staticClass:
+                                            "flex items-center text-theme-6",
+                                          attrs: { href: "" }
+                                        },
+                                        [
+                                          _c("i", {
+                                            staticClass: "w-4 h-4 mr-1",
+                                            attrs: { "data-feather": "trash-2" }
+                                          }),
+                                          _vm._v(" Delete ")
+                                        ]
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("tr", { staticClass: "intro-x" }, [
+                              _c("td", { staticClass: "w-40" }, [
+                                _c("div", { staticClass: "flex" }, [
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass: "w-10 h-10 image-fit zoom-in"
+                                    },
+                                    [
+                                      _c("img", {
+                                        staticClass: "tooltip rounded-full",
+                                        attrs: {
+                                          alt:
+                                            "Midone Tailwind HTML Admin Template",
+                                          src: "dist/images/preview-9.jpg",
+                                          title: "Uploaded at 5 January 2021"
+                                        }
+                                      })
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "w-10 h-10 image-fit zoom-in -ml-5"
+                                    },
+                                    [
+                                      _c("img", {
+                                        staticClass: "tooltip rounded-full",
+                                        attrs: {
+                                          alt:
+                                            "Midone Tailwind HTML Admin Template",
+                                          src: "dist/images/preview-6.jpg",
+                                          title: "Uploaded at 18 November 2021"
+                                        }
+                                      })
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "w-10 h-10 image-fit zoom-in -ml-5"
+                                    },
+                                    [
+                                      _c("img", {
+                                        staticClass: "tooltip rounded-full",
+                                        attrs: {
+                                          alt:
+                                            "Midone Tailwind HTML Admin Template",
+                                          src: "dist/images/preview-13.jpg",
+                                          title: "Uploaded at 1 June 2021"
+                                        }
+                                      })
+                                    ]
+                                  )
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("td", [
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass:
+                                      "font-medium whitespace-no-wrap",
+                                    attrs: { href: "" }
+                                  },
+                                  [_vm._v("Oppo Find X2 Pro")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "text-gray-600 text-xs whitespace-no-wrap"
+                                  },
+                                  [_vm._v("Smartphone & Tablet")]
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c("td", { staticClass: "text-center" }, [
+                                _vm._v("50")
+                              ]),
+                              _vm._v(" "),
+                              _c("td", { staticClass: "w-40" }, [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "flex items-center justify-center text-theme-9"
+                                  },
+                                  [
+                                    _c("i", {
+                                      staticClass: "w-4 h-4 mr-2",
+                                      attrs: { "data-feather": "check-square" }
+                                    }),
+                                    _vm._v(" Active ")
+                                  ]
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c(
+                                "td",
+                                { staticClass: "table-report__action w-56" },
+                                [
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "flex justify-center items-center"
+                                    },
+                                    [
+                                      _c(
+                                        "a",
+                                        {
+                                          staticClass: "flex items-center mr-3",
+                                          attrs: { href: "" }
+                                        },
+                                        [
+                                          _c("i", {
+                                            staticClass: "w-4 h-4 mr-1",
+                                            attrs: {
+                                              "data-feather": "check-square"
+                                            }
+                                          }),
+                                          _vm._v(" Edit ")
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "a",
+                                        {
+                                          staticClass:
+                                            "flex items-center text-theme-6",
+                                          attrs: { href: "" }
+                                        },
+                                        [
+                                          _c("i", {
+                                            staticClass: "w-4 h-4 mr-1",
+                                            attrs: { "data-feather": "trash-2" }
+                                          }),
+                                          _vm._v(" Delete ")
+                                        ]
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("tr", { staticClass: "intro-x" }, [
+                              _c("td", { staticClass: "w-40" }, [
+                                _c("div", { staticClass: "flex" }, [
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass: "w-10 h-10 image-fit zoom-in"
+                                    },
+                                    [
+                                      _c("img", {
+                                        staticClass: "tooltip rounded-full",
+                                        attrs: {
+                                          alt:
+                                            "Midone Tailwind HTML Admin Template",
+                                          src: "dist/images/preview-11.jpg",
+                                          title: "Uploaded at 22 April 2020"
+                                        }
+                                      })
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "w-10 h-10 image-fit zoom-in -ml-5"
+                                    },
+                                    [
+                                      _c("img", {
+                                        staticClass: "tooltip rounded-full",
+                                        attrs: {
+                                          alt:
+                                            "Midone Tailwind HTML Admin Template",
+                                          src: "dist/images/preview-10.jpg",
+                                          title: "Uploaded at 12 December 2020"
+                                        }
+                                      })
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "w-10 h-10 image-fit zoom-in -ml-5"
+                                    },
+                                    [
+                                      _c("img", {
+                                        staticClass: "tooltip rounded-full",
+                                        attrs: {
+                                          alt:
+                                            "Midone Tailwind HTML Admin Template",
+                                          src: "dist/images/preview-12.jpg",
+                                          title: "Uploaded at 7 May 2020"
+                                        }
+                                      })
+                                    ]
+                                  )
+                                ])
+                              ]),
+                              _vm._v(" "),
+                              _c("td", [
+                                _c(
+                                  "a",
+                                  {
+                                    staticClass:
+                                      "font-medium whitespace-no-wrap",
+                                    attrs: { href: "" }
+                                  },
+                                  [_vm._v("Apple MacBook Pro 13")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "text-gray-600 text-xs whitespace-no-wrap"
+                                  },
+                                  [_vm._v("PC & Laptop")]
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c("td", { staticClass: "text-center" }, [
+                                _vm._v("50")
+                              ]),
+                              _vm._v(" "),
+                              _c("td", { staticClass: "w-40" }, [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "flex items-center justify-center text-theme-9"
+                                  },
+                                  [
+                                    _c("i", {
+                                      staticClass: "w-4 h-4 mr-2",
+                                      attrs: { "data-feather": "check-square" }
+                                    }),
+                                    _vm._v(" Active ")
+                                  ]
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c(
+                                "td",
+                                { staticClass: "table-report__action w-56" },
+                                [
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "flex justify-center items-center"
+                                    },
+                                    [
+                                      _c(
+                                        "a",
+                                        {
+                                          staticClass: "flex items-center mr-3",
+                                          attrs: { href: "" }
+                                        },
+                                        [
+                                          _c("i", {
+                                            staticClass: "w-4 h-4 mr-1",
+                                            attrs: {
+                                              "data-feather": "check-square"
+                                            }
+                                          }),
+                                          _vm._v(" Edit ")
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "a",
+                                        {
+                                          staticClass:
+                                            "flex items-center text-theme-6",
+                                          attrs: { href: "" }
+                                        },
+                                        [
+                                          _c("i", {
+                                            staticClass: "w-4 h-4 mr-1",
+                                            attrs: { "data-feather": "trash-2" }
+                                          }),
+                                          _vm._v(" Delete ")
+                                        ]
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ])
+                          ])
+                        ]
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "intro-y flex flex-wrap sm:flex-row sm:flex-no-wrap items-center mt-3"
+                    },
+                    [
+                      _c("ul", { staticClass: "pagination" }, [
+                        _c("li", [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "pagination__link",
+                              attrs: { href: "" }
+                            },
+                            [
+                              _c("i", {
+                                staticClass: "w-4 h-4",
+                                attrs: { "data-feather": "chevrons-left" }
+                              })
+                            ]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "pagination__link",
+                              attrs: { href: "" }
+                            },
+                            [
+                              _c("i", {
+                                staticClass: "w-4 h-4",
+                                attrs: { "data-feather": "chevron-left" }
+                              })
+                            ]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "pagination__link",
+                              attrs: { href: "" }
+                            },
+                            [_vm._v("...")]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "pagination__link",
+                              attrs: { href: "" }
+                            },
+                            [_vm._v("1")]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c(
+                            "a",
+                            {
+                              staticClass:
+                                "pagination__link pagination__link--active",
+                              attrs: { href: "" }
+                            },
+                            [_vm._v("2")]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "pagination__link",
+                              attrs: { href: "" }
+                            },
+                            [_vm._v("3")]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "pagination__link",
+                              attrs: { href: "" }
+                            },
+                            [_vm._v("...")]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "pagination__link",
+                              attrs: { href: "" }
+                            },
+                            [
+                              _c("i", {
+                                staticClass: "w-4 h-4",
+                                attrs: { "data-feather": "chevron-right" }
+                              })
+                            ]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("li", [
+                          _c(
+                            "a",
+                            {
+                              staticClass: "pagination__link",
+                              attrs: { href: "" }
+                            },
+                            [
+                              _c("i", {
+                                staticClass: "w-4 h-4",
+                                attrs: { "data-feather": "chevrons-right" }
+                              })
+                            ]
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "select",
+                        { staticClass: "w-20 input box mt-3 sm:mt-0" },
+                        [
+                          _c("option", [_vm._v("10")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("25")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("35")]),
+                          _vm._v(" "),
+                          _c("option", [_vm._v("50")])
+                        ]
+                      )
+                    ]
+                  )
+                ])
+              ]
+            ),
+            _vm._v(" "),
+            _c(
+              "div",
+              {
+                staticClass:
+                  "col-span-12 xxl:col-span-3 xxl:border-l border-theme-5 -mb-10 pb-10"
+              },
+              [
+                _c("div", { staticClass: "xxl:pl-6 grid grid-cols-12 gap-6" }, [
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "col-span-12 md:col-span-6 xl:col-span-4 xxl:col-span-12 mt-3 xxl:mt-8"
+                    },
+                    [
+                      _c(
+                        "div",
+                        { staticClass: "intro-x flex items-center h-10" },
+                        [
+                          _c(
+                            "h2",
+                            {
+                              staticClass: "text-lg font-medium truncate mr-5"
+                            },
+                            [
+                              _vm._v(
+                                "\n                                    Transactions\n                                "
+                              )
+                            ]
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "mt-5" }, [
+                        _c("div", { staticClass: "intro-x" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "box px-5 py-3 mb-3 flex items-center zoom-in"
+                            },
+                            [
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "w-10 h-10 flex-none image-fit rounded-full overflow-hidden"
+                                },
+                                [
+                                  _c("img", {
+                                    attrs: {
+                                      alt:
+                                        "Midone Tailwind HTML Admin Template",
+                                      src: "dist/images/profile-14.jpg"
+                                    }
+                                  })
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "ml-4 mr-auto" }, [
+                                _c("div", { staticClass: "font-medium" }, [
+                                  _vm._v("Leonardo DiCaprio")
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "text-gray-600 text-xs" },
+                                  [_vm._v("6 August 2022")]
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "text-theme-9" }, [
+                                _vm._v("+$23")
+                              ])
+                            ]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "intro-x" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "box px-5 py-3 mb-3 flex items-center zoom-in"
+                            },
+                            [
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "w-10 h-10 flex-none image-fit rounded-full overflow-hidden"
+                                },
+                                [
+                                  _c("img", {
+                                    attrs: {
+                                      alt:
+                                        "Midone Tailwind HTML Admin Template",
+                                      src: "dist/images/profile-10.jpg"
+                                    }
+                                  })
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "ml-4 mr-auto" }, [
+                                _c("div", { staticClass: "font-medium" }, [
+                                  _vm._v("Tom Cruise")
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "text-gray-600 text-xs" },
+                                  [_vm._v("21 July 2020")]
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "text-theme-9" }, [
+                                _vm._v("+$83")
+                              ])
+                            ]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "intro-x" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "box px-5 py-3 mb-3 flex items-center zoom-in"
+                            },
+                            [
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "w-10 h-10 flex-none image-fit rounded-full overflow-hidden"
+                                },
+                                [
+                                  _c("img", {
+                                    attrs: {
+                                      alt:
+                                        "Midone Tailwind HTML Admin Template",
+                                      src: "dist/images/profile-12.jpg"
+                                    }
+                                  })
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "ml-4 mr-auto" }, [
+                                _c("div", { staticClass: "font-medium" }, [
+                                  _vm._v("Al Pacino")
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "text-gray-600 text-xs" },
+                                  [_vm._v("5 January 2021")]
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "text-theme-9" }, [
+                                _vm._v("+$199")
+                              ])
+                            ]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "intro-x" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "box px-5 py-3 mb-3 flex items-center zoom-in"
+                            },
+                            [
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "w-10 h-10 flex-none image-fit rounded-full overflow-hidden"
+                                },
+                                [
+                                  _c("img", {
+                                    attrs: {
+                                      alt:
+                                        "Midone Tailwind HTML Admin Template",
+                                      src: "dist/images/profile-6.jpg"
+                                    }
+                                  })
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "ml-4 mr-auto" }, [
+                                _c("div", { staticClass: "font-medium" }, [
+                                  _vm._v("Russell Crowe")
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "text-gray-600 text-xs" },
+                                  [_vm._v("22 April 2020")]
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "text-theme-9" }, [
+                                _vm._v("+$43")
+                              ])
+                            ]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "intro-x" }, [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "box px-5 py-3 mb-3 flex items-center zoom-in"
+                            },
+                            [
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "w-10 h-10 flex-none image-fit rounded-full overflow-hidden"
+                                },
+                                [
+                                  _c("img", {
+                                    attrs: {
+                                      alt:
+                                        "Midone Tailwind HTML Admin Template",
+                                      src: "dist/images/profile-15.jpg"
+                                    }
+                                  })
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "ml-4 mr-auto" }, [
+                                _c("div", { staticClass: "font-medium" }, [
+                                  _vm._v("Al Pacino")
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "text-gray-600 text-xs" },
+                                  [_vm._v("8 October 2022")]
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "text-theme-9" }, [
+                                _vm._v("+$112")
+                              ])
+                            ]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "a",
+                          {
+                            staticClass:
+                              "intro-x w-full block text-center rounded-md py-3 border border-dotted border-theme-15 text-theme-16",
+                            attrs: { href: "" }
+                          },
+                          [_vm._v("View More")]
+                        )
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "col-span-12 md:col-span-6 xl:col-span-4 xxl:col-span-12 mt-3"
+                    },
+                    [
+                      _c(
+                        "div",
+                        { staticClass: "intro-x flex items-center h-10" },
+                        [
+                          _c(
+                            "h2",
+                            {
+                              staticClass: "text-lg font-medium truncate mr-5"
+                            },
+                            [
+                              _vm._v(
+                                "\n                                    Recent Activities\n                                "
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "a",
+                            {
+                              staticClass: "ml-auto text-theme-1 truncate",
+                              attrs: { href: "" }
+                            },
+                            [_vm._v("See all")]
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "report-timeline mt-5 relative" },
+                        [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "intro-x relative flex items-center mb-3"
+                            },
+                            [
+                              _c(
+                                "div",
+                                { staticClass: "report-timeline__image" },
+                                [
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "w-10 h-10 flex-none image-fit rounded-full overflow-hidden"
+                                    },
+                                    [
+                                      _c("img", {
+                                        attrs: {
+                                          alt:
+                                            "Midone Tailwind HTML Admin Template",
+                                          src: "dist/images/profile-9.jpg"
+                                        }
+                                      })
+                                    ]
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "box px-5 py-3 ml-4 flex-1 zoom-in"
+                                },
+                                [
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex items-center" },
+                                    [
+                                      _c(
+                                        "div",
+                                        { staticClass: "font-medium" },
+                                        [_vm._v("Johnny Depp")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass:
+                                            "text-xs text-gray-500 ml-auto"
+                                        },
+                                        [_vm._v("07:00 PM")]
+                                      )
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "text-gray-600 mt-1" },
+                                    [_vm._v("Has joined the team")]
+                                  )
+                                ]
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "intro-x relative flex items-center mb-3"
+                            },
+                            [
+                              _c(
+                                "div",
+                                { staticClass: "report-timeline__image" },
+                                [
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "w-10 h-10 flex-none image-fit rounded-full overflow-hidden"
+                                    },
+                                    [
+                                      _c("img", {
+                                        attrs: {
+                                          alt:
+                                            "Midone Tailwind HTML Admin Template",
+                                          src: "dist/images/profile-10.jpg"
+                                        }
+                                      })
+                                    ]
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "box px-5 py-3 ml-4 flex-1 zoom-in"
+                                },
+                                [
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex items-center" },
+                                    [
+                                      _c(
+                                        "div",
+                                        { staticClass: "font-medium" },
+                                        [_vm._v("Brad Pitt")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass:
+                                            "text-xs text-gray-500 ml-auto"
+                                        },
+                                        [_vm._v("07:00 PM")]
+                                      )
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "text-gray-600" }, [
+                                    _c("div", { staticClass: "mt-1" }, [
+                                      _vm._v("Added 3 new photos")
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "flex mt-2" }, [
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass:
+                                            "tooltip w-8 h-8 image-fit mr-1 zoom-in",
+                                          attrs: {
+                                            title: "Apple MacBook Pro 13"
+                                          }
+                                        },
+                                        [
+                                          _c("img", {
+                                            staticClass:
+                                              "rounded-md border border-white",
+                                            attrs: {
+                                              alt:
+                                                "Midone Tailwind HTML Admin Template",
+                                              src: "dist/images/preview-8.jpg"
+                                            }
+                                          })
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass:
+                                            "tooltip w-8 h-8 image-fit mr-1 zoom-in",
+                                          attrs: { title: "Dell XPS 13" }
+                                        },
+                                        [
+                                          _c("img", {
+                                            staticClass:
+                                              "rounded-md border border-white",
+                                            attrs: {
+                                              alt:
+                                                "Midone Tailwind HTML Admin Template",
+                                              src: "dist/images/preview-14.jpg"
+                                            }
+                                          })
+                                        ]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass:
+                                            "tooltip w-8 h-8 image-fit mr-1 zoom-in",
+                                          attrs: { title: "Oppo Find X2 Pro" }
+                                        },
+                                        [
+                                          _c("img", {
+                                            staticClass:
+                                              "rounded-md border border-white",
+                                            attrs: {
+                                              alt:
+                                                "Midone Tailwind HTML Admin Template",
+                                              src: "dist/images/preview-5.jpg"
+                                            }
+                                          })
+                                        ]
+                                      )
+                                    ])
+                                  ])
+                                ]
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "intro-x text-gray-500 text-xs text-center my-4"
+                            },
+                            [_vm._v("12 November")]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "intro-x relative flex items-center mb-3"
+                            },
+                            [
+                              _c(
+                                "div",
+                                { staticClass: "report-timeline__image" },
+                                [
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "w-10 h-10 flex-none image-fit rounded-full overflow-hidden"
+                                    },
+                                    [
+                                      _c("img", {
+                                        attrs: {
+                                          alt:
+                                            "Midone Tailwind HTML Admin Template",
+                                          src: "dist/images/profile-4.jpg"
+                                        }
+                                      })
+                                    ]
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "box px-5 py-3 ml-4 flex-1 zoom-in"
+                                },
+                                [
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex items-center" },
+                                    [
+                                      _c(
+                                        "div",
+                                        { staticClass: "font-medium" },
+                                        [_vm._v("Al Pacino")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass:
+                                            "text-xs text-gray-500 ml-auto"
+                                        },
+                                        [_vm._v("07:00 PM")]
+                                      )
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "text-gray-600 mt-1" },
+                                    [
+                                      _vm._v("Has changed "),
+                                      _c(
+                                        "a",
+                                        {
+                                          staticClass: "text-theme-1",
+                                          attrs: { href: "" }
+                                        },
+                                        [_vm._v("Sony Master Series A9G")]
+                                      ),
+                                      _vm._v(" price and description")
+                                    ]
+                                  )
+                                ]
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "intro-x relative flex items-center mb-3"
+                            },
+                            [
+                              _c(
+                                "div",
+                                { staticClass: "report-timeline__image" },
+                                [
+                                  _c(
+                                    "div",
+                                    {
+                                      staticClass:
+                                        "w-10 h-10 flex-none image-fit rounded-full overflow-hidden"
+                                    },
+                                    [
+                                      _c("img", {
+                                        attrs: {
+                                          alt:
+                                            "Midone Tailwind HTML Admin Template",
+                                          src: "dist/images/profile-12.jpg"
+                                        }
+                                      })
+                                    ]
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass:
+                                    "box px-5 py-3 ml-4 flex-1 zoom-in"
+                                },
+                                [
+                                  _c(
+                                    "div",
+                                    { staticClass: "flex items-center" },
+                                    [
+                                      _c(
+                                        "div",
+                                        { staticClass: "font-medium" },
+                                        [_vm._v("Sylvester Stallone")]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "div",
+                                        {
+                                          staticClass:
+                                            "text-xs text-gray-500 ml-auto"
+                                        },
+                                        [_vm._v("07:00 PM")]
+                                      )
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "text-gray-600 mt-1" },
+                                    [
+                                      _vm._v("Has changed "),
+                                      _c(
+                                        "a",
+                                        {
+                                          staticClass: "text-theme-1",
+                                          attrs: { href: "" }
+                                        },
+                                        [_vm._v("Sony Master Series A9G")]
+                                      ),
+                                      _vm._v(" description")
+                                    ]
+                                  )
+                                ]
+                              )
+                            ]
+                          )
+                        ]
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "col-span-12 md:col-span-6 xl:col-span-12 xxl:col-span-12 xl:col-start-1 xl:row-start-1 xxl:col-start-auto xxl:row-start-auto mt-3"
+                    },
+                    [
+                      _c(
+                        "div",
+                        { staticClass: "intro-x flex items-center h-10" },
+                        [
+                          _c(
+                            "h2",
+                            {
+                              staticClass:
+                                "text-lg font-medium truncate mr-auto"
+                            },
+                            [
+                              _vm._v(
+                                "\n                                    Important Notes\n                                "
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "button",
+                            {
+                              staticClass:
+                                "slick-navigator button px-2 border border-gray-400 flex items-center text-gray-700 mr-2",
+                              attrs: {
+                                "data-carousel": "important-notes",
+                                "data-target": "prev"
+                              }
+                            },
+                            [
+                              _c("i", {
+                                staticClass: "w-4 h-4",
+                                attrs: { "data-feather": "chevron-left" }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "button",
+                            {
+                              staticClass:
+                                "slick-navigator button px-2 border border-gray-400 flex items-center text-gray-700",
+                              attrs: {
+                                "data-carousel": "important-notes",
+                                "data-target": "next"
+                              }
+                            },
+                            [
+                              _c("i", {
+                                staticClass: "w-4 h-4",
+                                attrs: { "data-feather": "chevron-right" }
+                              })
+                            ]
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "mt-5 intro-x" }, [
+                        _c(
+                          "div",
+                          {
+                            staticClass: "slick-carousel box zoom-in",
+                            attrs: { id: "important-notes" }
+                          },
+                          [
+                            _c("div", { staticClass: "p-5" }, [
+                              _c(
+                                "div",
+                                {
+                                  staticClass: "text-base font-medium truncate"
+                                },
+                                [_vm._v("Lorem Ipsum is simply dummy text")]
+                              ),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "text-gray-500 mt-1" }, [
+                                _vm._v("20 Hours ago")
+                              ]),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass: "text-gray-600 text-justify mt-1"
+                                },
+                                [
+                                  _vm._v(
+                                    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                { staticClass: "font-medium flex mt-5" },
+                                [
+                                  _c(
+                                    "button",
+                                    {
+                                      staticClass:
+                                        "button button--sm bg-gray-200 text-gray-600",
+                                      attrs: { type: "button" }
+                                    },
+                                    [_vm._v("View Notes")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "button",
+                                    {
+                                      staticClass:
+                                        "button button--sm border border-gray-300 text-gray-600 ml-auto",
+                                      attrs: { type: "button" }
+                                    },
+                                    [_vm._v("Dismiss")]
+                                  )
+                                ]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "p-5" }, [
+                              _c(
+                                "div",
+                                { staticClass: "font-medium truncate" },
+                                [_vm._v("Lorem Ipsum is simply dummy text")]
+                              ),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "text-gray-500 mt-1" }, [
+                                _vm._v("20 Hours ago")
+                              ]),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass: "text-gray-600 text-justify mt-1"
+                                },
+                                [
+                                  _vm._v(
+                                    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                { staticClass: "font-medium flex mt-5" },
+                                [
+                                  _c(
+                                    "button",
+                                    {
+                                      staticClass:
+                                        "button button--sm bg-gray-200 text-gray-600",
+                                      attrs: { type: "button" }
+                                    },
+                                    [_vm._v("View Notes")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "button",
+                                    {
+                                      staticClass:
+                                        "button button--sm border border-gray-300 text-gray-600 ml-auto",
+                                      attrs: { type: "button" }
+                                    },
+                                    [_vm._v("Dismiss")]
+                                  )
+                                ]
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "p-5" }, [
+                              _c(
+                                "div",
+                                { staticClass: "font-medium truncate" },
+                                [_vm._v("Lorem Ipsum is simply dummy text")]
+                              ),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "text-gray-500 mt-1" }, [
+                                _vm._v("20 Hours ago")
+                              ]),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                {
+                                  staticClass: "text-gray-600 text-justify mt-1"
+                                },
+                                [
+                                  _vm._v(
+                                    "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s."
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                { staticClass: "font-medium flex mt-5" },
+                                [
+                                  _c(
+                                    "button",
+                                    {
+                                      staticClass:
+                                        "button button--sm bg-gray-200 text-gray-600",
+                                      attrs: { type: "button" }
+                                    },
+                                    [_vm._v("View Notes")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "button",
+                                    {
+                                      staticClass:
+                                        "button button--sm border border-gray-300 text-gray-600 ml-auto",
+                                      attrs: { type: "button" }
+                                    },
+                                    [_vm._v("Dismiss")]
+                                  )
+                                ]
+                              )
+                            ])
+                          ]
+                        )
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    {
+                      staticClass:
+                        "col-span-12 md:col-span-6 xl:col-span-4 xxl:col-span-12 xl:col-start-1 xl:row-start-2 xxl:col-start-auto xxl:row-start-auto mt-3"
+                    },
+                    [
+                      _c(
+                        "div",
+                        { staticClass: "intro-x flex items-center h-10" },
+                        [
+                          _c(
+                            "h2",
+                            {
+                              staticClass: "text-lg font-medium truncate mr-5"
+                            },
+                            [
+                              _vm._v(
+                                "\n                                    Schedules\n                                "
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "a",
+                            {
+                              staticClass:
+                                "ml-auto text-theme-1 truncate flex items-center",
+                              attrs: { href: "" }
+                            },
+                            [
+                              _c("i", {
+                                staticClass: "w-4 h-4 mr-1",
+                                attrs: { "data-feather": "plus" }
+                              }),
+                              _vm._v(" Add New Schedules ")
+                            ]
+                          )
+                        ]
+                      ),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "mt-5" }, [
+                        _c("div", { staticClass: "intro-x box" }, [
+                          _c("div", { staticClass: "p-5" }, [
+                            _c("div", { staticClass: "flex" }, [
+                              _c("i", {
+                                staticClass: "w-5 h-5 text-gray-600",
+                                attrs: { "data-feather": "chevron-left" }
+                              }),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                { staticClass: "font-medium mx-auto" },
+                                [_vm._v("April")]
+                              ),
+                              _vm._v(" "),
+                              _c("i", {
+                                staticClass: "w-5 h-5 text-gray-600",
+                                attrs: { "data-feather": "chevron-right" }
+                              })
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              {
+                                staticClass:
+                                  "grid grid-cols-7 gap-4 mt-5 text-center"
+                              },
+                              [
+                                _c("div", { staticClass: "font-medium" }, [
+                                  _vm._v("Su")
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "font-medium" }, [
+                                  _vm._v("Mo")
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "font-medium" }, [
+                                  _vm._v("Tu")
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "font-medium" }, [
+                                  _vm._v("We")
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "font-medium" }, [
+                                  _vm._v("Th")
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "font-medium" }, [
+                                  _vm._v("Fr")
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "font-medium" }, [
+                                  _vm._v("Sa")
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "py-1 rounded relative text-gray-600"
+                                  },
+                                  [_vm._v("29")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "py-1 rounded relative text-gray-600"
+                                  },
+                                  [_vm._v("30")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "py-1 rounded relative text-gray-600"
+                                  },
+                                  [_vm._v("31")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "py-1 rounded relative" },
+                                  [_vm._v("1")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "py-1 rounded relative" },
+                                  [_vm._v("2")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "py-1 rounded relative" },
+                                  [_vm._v("3")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "py-1 rounded relative" },
+                                  [_vm._v("4")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "py-1 rounded relative" },
+                                  [_vm._v("5")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "py-1 bg-theme-18 rounded relative"
+                                  },
+                                  [_vm._v("6")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "py-1 rounded relative" },
+                                  [_vm._v("7")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "py-1 bg-theme-1 text-white rounded relative"
+                                  },
+                                  [_vm._v("8")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "py-1 rounded relative" },
+                                  [_vm._v("9")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "py-1 rounded relative" },
+                                  [_vm._v("10")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "py-1 rounded relative" },
+                                  [_vm._v("11")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "py-1 rounded relative" },
+                                  [_vm._v("12")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "py-1 rounded relative" },
+                                  [_vm._v("13")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "py-1 rounded relative" },
+                                  [_vm._v("14")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "py-1 rounded relative" },
+                                  [_vm._v("15")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "py-1 rounded relative" },
+                                  [_vm._v("16")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "py-1 rounded relative" },
+                                  [_vm._v("17")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "py-1 rounded relative" },
+                                  [_vm._v("18")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "py-1 rounded relative" },
+                                  [_vm._v("19")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "py-1 rounded relative" },
+                                  [_vm._v("20")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "py-1 rounded relative" },
+                                  [_vm._v("21")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "py-1 rounded relative" },
+                                  [_vm._v("22")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "py-1 bg-theme-17 rounded relative"
+                                  },
+                                  [_vm._v("23")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "py-1 rounded relative" },
+                                  [_vm._v("24")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "py-1 rounded relative" },
+                                  [_vm._v("25")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "py-1 rounded relative" },
+                                  [_vm._v("26")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "py-1 bg-theme-14 rounded relative"
+                                  },
+                                  [_vm._v("27")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "py-1 rounded relative" },
+                                  [_vm._v("28")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "py-1 rounded relative" },
+                                  [_vm._v("29")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "py-1 rounded relative" },
+                                  [_vm._v("30")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "py-1 rounded relative text-gray-600"
+                                  },
+                                  [_vm._v("1")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "py-1 rounded relative text-gray-600"
+                                  },
+                                  [_vm._v("2")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "py-1 rounded relative text-gray-600"
+                                  },
+                                  [_vm._v("3")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "py-1 rounded relative text-gray-600"
+                                  },
+                                  [_vm._v("4")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "py-1 rounded relative text-gray-600"
+                                  },
+                                  [_vm._v("5")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "py-1 rounded relative text-gray-600"
+                                  },
+                                  [_vm._v("6")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "py-1 rounded relative text-gray-600"
+                                  },
+                                  [_vm._v("7")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "py-1 rounded relative text-gray-600"
+                                  },
+                                  [_vm._v("8")]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "py-1 rounded relative text-gray-600"
+                                  },
+                                  [_vm._v("9")]
+                                )
+                              ]
+                            )
+                          ]),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            { staticClass: "border-t border-gray-200 p-5" },
+                            [
+                              _c("div", { staticClass: "flex items-center" }, [
+                                _c("div", {
+                                  staticClass:
+                                    "w-2 h-2 bg-theme-11 rounded-full mr-3"
+                                }),
+                                _vm._v(" "),
+                                _c("span", { staticClass: "truncate" }, [
+                                  _vm._v("UI/UX Workshop")
+                                ]),
+                                _vm._v(" "),
+                                _c("div", {
+                                  staticClass:
+                                    "h-px flex-1 border border-r border-dashed border-gray-300 mx-3 xl:hidden"
+                                }),
+                                _vm._v(" "),
+                                _c(
+                                  "span",
+                                  { staticClass: "font-medium xl:ml-auto" },
+                                  [_vm._v("23th")]
+                                )
+                              ]),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                { staticClass: "flex items-center mt-4" },
+                                [
+                                  _c("div", {
+                                    staticClass:
+                                      "w-2 h-2 bg-theme-1 rounded-full mr-3"
+                                  }),
+                                  _vm._v(" "),
+                                  _c("span", { staticClass: "truncate" }, [
+                                    _vm._v("VueJs Frontend Development")
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", {
+                                    staticClass:
+                                      "h-px flex-1 border border-r border-dashed border-gray-300 mx-3 xl:hidden"
+                                  }),
+                                  _vm._v(" "),
+                                  _c(
+                                    "span",
+                                    { staticClass: "font-medium xl:ml-auto" },
+                                    [_vm._v("10th")]
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                { staticClass: "flex items-center mt-4" },
+                                [
+                                  _c("div", {
+                                    staticClass:
+                                      "w-2 h-2 bg-theme-12 rounded-full mr-3"
+                                  }),
+                                  _vm._v(" "),
+                                  _c("span", { staticClass: "truncate" }, [
+                                    _vm._v("Laravel Rest API")
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", {
+                                    staticClass:
+                                      "h-px flex-1 border border-r border-dashed border-gray-300 mx-3 xl:hidden"
+                                  }),
+                                  _vm._v(" "),
+                                  _c(
+                                    "span",
+                                    { staticClass: "font-medium xl:ml-auto" },
+                                    [_vm._v("31th")]
+                                  )
+                                ]
+                              )
+                            ]
+                          )
+                        ])
+                      ])
+                    ]
+                  )
+                ])
+              ]
+            )
+          ])
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e&":
 /*!*******************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ExampleComponent.vue?vue&type=template&id=299e239e& ***!
@@ -49722,9 +57085,12 @@ module.exports = function(module) {
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
   \*****************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _components_App_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/App.vue */ "./resources/js/components/App.vue");
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -49740,7 +57106,8 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
  *
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
-// const files = require.context('./', true, /\.vue$/i)
+
+ // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('example-component', __webpack_require__(/*! ./components/ExampleComponent.vue */ "./resources/js/components/ExampleComponent.vue")["default"]);
@@ -49751,7 +57118,11 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
  */
 
 var app = new Vue({
-  el: '#app'
+  el: '#app',
+  components: {
+    App: _components_App_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+  },
+  template: '<App />'
 });
 
 /***/ }),
@@ -49798,6 +57169,75 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/components/App.vue":
+/*!*****************************************!*\
+  !*** ./resources/js/components/App.vue ***!
+  \*****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _App_vue_vue_type_template_id_332fccf4_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./App.vue?vue&type=template&id=332fccf4&scoped=true& */ "./resources/js/components/App.vue?vue&type=template&id=332fccf4&scoped=true&");
+/* harmony import */ var _App_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./App.vue?vue&type=script&lang=js& */ "./resources/js/components/App.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _App_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _App_vue_vue_type_template_id_332fccf4_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _App_vue_vue_type_template_id_332fccf4_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  "332fccf4",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/App.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/App.vue?vue&type=script&lang=js&":
+/*!******************************************************************!*\
+  !*** ./resources/js/components/App.vue?vue&type=script&lang=js& ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./App.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/App.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/App.vue?vue&type=template&id=332fccf4&scoped=true&":
+/*!************************************************************************************!*\
+  !*** ./resources/js/components/App.vue?vue&type=template&id=332fccf4&scoped=true& ***!
+  \************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_template_id_332fccf4_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./App.vue?vue&type=template&id=332fccf4&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/App.vue?vue&type=template&id=332fccf4&scoped=true&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_template_id_332fccf4_scoped_true___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_template_id_332fccf4_scoped_true___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
 
 /***/ }),
 
