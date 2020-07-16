@@ -31,18 +31,18 @@ class Famille extends Model
 	protected $table = 'famille';
 
 	protected $casts = [
-		'parent_id' => 'int',
+		'parent_eleve_id' => 'int',
 		'eleve_id' => 'int'
 	];
 
 	protected $fillable = [
-		'parent_id',
+		'parent_eleve_id',
 		'eleve_id'
 	];
 
 	public function parent()
 	{
-		return $this->belongsTo(Parent::class);
+		return $this->belongsTo(ParentEleve::class);
 	}
 
 	public function eleve()

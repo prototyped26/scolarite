@@ -35,7 +35,7 @@ class EleveController extends Controller
      */
     public function index(Request $request)
     {
-        return response()->json($this->eleveRepository->index($request), Response::HTTP_OK);
+        return response()->json($this->eleveRepository->getAll()->load(['familles', 'paiements']), Response::HTTP_OK);
 
     }
 
