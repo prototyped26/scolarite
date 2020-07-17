@@ -13,7 +13,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * Class Parcour
- * 
+ *
  * @property int $id
  * @property int $classe_id
  * @property int $eleve_id
@@ -22,7 +22,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property string|null $deleted_at
- * 
+ *
  * @property Classe $classe
  * @property Eleve $eleve
  * @property Annee $annee
@@ -48,6 +48,8 @@ class Parcour extends Model
 		'annee_id',
 		'redouble'
 	];
+
+	protected $with = ['eleve'];
 
 	public function classe()
 	{

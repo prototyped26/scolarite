@@ -65,6 +65,8 @@ class Paiement extends Model
 		'libelle'
 	];
 
+	protected $with = ['parent', 'parcour', 'motif', 'caracteristique', 'user'];
+
 	public function parent()
 	{
 		return $this->belongsTo(ParentEleve::class);

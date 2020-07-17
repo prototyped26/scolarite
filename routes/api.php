@@ -19,7 +19,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::group(['middleware' => ['auth:api']], function () {
+    Route::group(['prefix' => 'users'], function (){
+        Route::get('/current', 'Api\UserController@currentUser');
+    });
 
+    Route::apiResources([
+        'paiements' => 'Api\PaiementController',
+    ]);
 });
 
 Route::apiResources([
@@ -30,12 +36,13 @@ Route::apiResources([
     'parcours' => 'Api\ParcourController',
     'roles' => 'Api\RoleController',
     'parents' => 'Api\ParentController',
-    'paiements' => 'Api\PaiementController',
     'classes' => 'Api\ClasseController',
     'caracteristiques' => 'Api\CaracteristiqueController',
     'motifs' => 'Api\MotifController',
 ]);
 
-Route::group(['prefix' => 'users'], function (){
-   Route::get('current', 'Api\UserController@currentUser');
-});
+
+
+Route::get('/annee-active', 'Api\AnneeController@active');
+Route::get('/eleve-classe/{classe}', 'Api\EleveController@eleveClasse');
+Route::get('/frais-caracteristiques/{frais}', 'Api\CaracteristiqueController@list');

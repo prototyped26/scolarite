@@ -60,6 +60,8 @@ class User extends Authenticatable
 		'profession'
 	];
 
+	protected $with = ['role'];
+
 	public function role()
 	{
 		return $this->belongsTo(Role::class);

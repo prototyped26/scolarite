@@ -477,53 +477,53 @@
                <div class="side-nav__devider my-6"></div>
                <ul>
                    <li>
-                       <router-link tag="a" to="home" class="side-menu side-menu--active">
+                       <router-link tag="a" to="/home" class="side-menu " :class="{ 'side-menu--active' : urlContaint('/home') }">
                            <div class="side-menu__icon"> <i data-feather="home"></i> </div>
                            <div class="side-menu__title"> Tableau de bord </div>
                        </router-link>
                    </li>
                    <li class="side-nav__devider my-6"></li>
                    <li>
-                       <a href="index.html" class="side-menu">
-                           <div class="side-menu__icon"> <i data-feather="home"></i> </div>
+                       <router-link to="/paiements" tag="a" class="side-menu"  :class="{ 'side-menu--active' : urlContaint('/paiements') }">
+                           <div class="side-menu__icon"> <i data-feather="dollar-sign"></i> </div>
                            <div class="side-menu__title"> Gestion des paiements </div>
-                       </a>
+                       </router-link>
                    </li>
                    <li>
-                       <a href="index.html" class="side-menu">
-                           <div class="side-menu__icon"> <i data-feather="home"></i> </div>
+                       <router-link to="/frais"  tag="a" class="side-menu" :class="{ 'side-menu--active' : urlContaint('/frais') }">
+                           <div class="side-menu__icon"> <i data-feather="hash"></i> </div>
                            <div class="side-menu__title"> Gestion des frais (Motifs) </div>
-                       </a>
+                       </router-link>
                    </li>
 
                    <li class="side-nav__devider my-6"></li>
-                   <li>
+                   <!--<li>
                        <a href="index.html" class="side-menu">
                            <div class="side-menu__icon"> <i data-feather="home"></i> </div>
                            <div class="side-menu__title"> Elèves </div>
                        </a>
-                   </li>
+                   </li>-->
                    <li>
-                       <a href="index.html" class="side-menu">
-                           <div class="side-menu__icon"> <i data-feather="home"></i> </div>
+                       <router-link tag="a" to="/classes" class="side-menu" :class="{ 'side-menu--active' : urlContaint('/classes') }">
+                           <div class="side-menu__icon"> <i data-feather="grid"></i> </div>
                            <div class="side-menu__title"> Classes </div>
-                       </a>
+                       </router-link>
                    </li>
-                   <li>
+                   <!--<li>
                        <a href="index.html" class="side-menu">
                            <div class="side-menu__icon"> <i data-feather="home"></i> </div>
                            <div class="side-menu__title"> Année Académique </div>
                        </a>
-                   </li>
+                   </li>-->
                    <li>
-                       <a href="index.html" class="side-menu">
-                           <div class="side-menu__icon"> <i data-feather="home"></i> </div>
+                       <router-link tag="a" to="/parents" href="index.html" class="side-menu" :class="{ 'side-menu--active' : urlContaint('/parents') }">
+                           <div class="side-menu__icon"> <i data-feather="umbrella"></i> </div>
                            <div class="side-menu__title"> Parents </div>
-                       </a>
+                       </router-link>
                    </li>
                    <li>
-                       <router-link tag="a" to="/utilisateurs" class="side-menu">
-                           <div class="side-menu__icon"> <i data-feather="home"></i> </div>
+                       <router-link tag="a" to="/utilisateurs" class="side-menu" :class="{ 'side-menu--active' : urlContaint('/utilisateurs') }">
+                           <div class="side-menu__icon"> <i data-feather="users"></i> </div>
                            <div class="side-menu__title"> Utilisateurs </div>
                        </router-link>
                    </li>
@@ -535,7 +535,7 @@
                <!-- BEGIN: Top Bar -->
                <div class="top-bar">
                    <!-- BEGIN: Breadcrumb -->
-                   <div class="-intro-x breadcrumb mr-auto hidden sm:flex">  </div>
+                   <div class="-intro-x breadcrumb mr-auto hidden sm:flex"> <b><h2 v-if="annee"> ANNEE ACADEMIQUE : {{ annee.code }} </h2></b>   </div>
                    <!-- END: Breadcrumb -->
                    <!-- BEGIN: Search -->
                    <div class="intro-x relative mr-3 sm:mr-6">
@@ -703,13 +703,13 @@
                    <!-- BEGIN: Account Menu -->
                    <div class="intro-x dropdown w-8 h-8 relative">
                        <div class="dropdown-toggle w-8 h-8 rounded-full overflow-hidden shadow-lg image-fit zoom-in">
-                           <img alt="Midone Tailwind HTML Admin Template" src="dist/images/profile-12.jpg">
+                           <i data-feather="user" class="ml-1"></i>
                        </div>
                        <div class="dropdown-box mt-10 absolute w-56 top-0 right-0 z-20">
                            <div class="dropdown-box__content box bg-theme-38 text-white">
-                               <div class="p-4 border-b border-theme-40">
-                                   <div class="font-medium">Angelina Jolie</div>
-                                   <div class="text-xs text-theme-41">Software Engineer</div>
+                               <div v-if="user" class="p-4 border-b border-theme-40">
+                                   <div class="font-medium">{{ user.nom + " " + ( user.prenom === null ? ' ' : user.prenom) }}</div>
+                                   <div class="text-xs text-theme-41"> {{ user.role.libelle }} </div>
                                </div>
                                <div class="p-2">
                                    <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md"> <i data-feather="user" class="w-4 h-4 mr-2"></i> Profil </a>
@@ -740,7 +740,44 @@
 
 <script>
     export default {
-        name: "App"
+        name: "App",
+
+        data() {
+            return {
+                annee: null,
+                user: null
+            }
+        },
+
+        mounted() {
+
+            this.getAnneeActive();
+            this.getUser();
+        },
+
+        methods: {
+
+            getAnneeActive() {
+                axios.get('/api/annee-active').then(res => {
+                    this.annee = res.data;
+                }).catch(err => {
+                    console.log(err.response);
+                });
+            },
+
+            urlContaint(string) {
+                return window.location.href.toLowerCase().includes('' + string);
+            },
+
+            getUser() {
+                axios.get('/api/users/current').then(res => {
+                    this.user = res.data;
+                }).catch(err => {
+                    console.log(err.response);
+                });
+            }
+
+        }
     }
 </script>
 

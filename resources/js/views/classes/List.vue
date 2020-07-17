@@ -1,14 +1,14 @@
 <template>
     <div>
         <h2 class="intro-y text-lg font-medium mt-10">
-            Liste des utilisateurs
+            Liste des classes
         </h2>
         <div class="grid grid-cols-12 gap-6 mt-5">
             <div class="intro-y col-span-12 flex flex-wrap sm:flex-no-wrap items-center mt-2">
-                <router-link tag="button" to="/utilisateurs/new" class="button text-white bg-theme-1 shadow-md mr-2">
-                    Nouvel Utilisateur
+                <router-link tag="button" to="/classes/new" class="button text-white bg-theme-1 shadow-md mr-2">
+                    Nouvelle classe
                 </router-link>
-                <!--<button class="button text-white bg-theme-1 shadow-md mr-2">Nouvel Utilisateur</button>-->
+                <!--<button class="button text-white bg-theme-1 shadow-md mr-2">Nouvel classe</button>-->
                 <div class="dropdown relative">
                     <button class="dropdown-toggle button px-2 box text-gray-700">
                         <span class="w-5 h-5 flex items-center justify-center"> <i class="w-4 h-4" data-feather="plus"></i> </span>
@@ -33,41 +33,35 @@
             <!-- BEGIN: Data List -->
             <div class="intro-y col-span-12 overflow-auto lg:overflow-visible">
 
-                <div v-if="utilisateursSort.length === 0" class="rounded-md flex items-center px-5 py-4 mb-2 bg-gray-200 text-gray-600 mt-5 "> <i data-feather="alert-triangle" class="w-6 h-6 mr-2"></i> Aucune données dans le système. <i data-feather="x" class="w-4 h-4 ml-auto"></i> </div>
+                <div v-if="classesSort.length === 0" class="rounded-md flex items-center px-5 py-4 mb-2 bg-gray-200 text-gray-600 mt-5 "> <i data-feather="alert-triangle" class="w-6 h-6 mr-2"></i> Aucune données dans le système. <i data-feather="x" class="w-4 h-4 ml-auto"></i> </div>
 
 
                 <table v-else class="table table-report -mt-2">
                     <thead>
                     <tr>
-                        <th class="whitespace-no-wrap">NOM & PRENOM</th>
-                        <th class="text-center whitespace-no-wrap">LOGIN</th>
-                        <th class="text-center whitespace-no-wrap">PROFESSION</th>
-                        <th class="text-center whitespace-no-wrap">TELEPHONE</th>
+                        <th class="whitespace-no-wrap">CODE</th>
+                        <th class="text-center whitespace-no-wrap">LIBELLE</th>
                         <th class="text-center whitespace-no-wrap">ACTIONS</th>
                     </tr>
                     </thead>
                     <tbody>
-                        <tr v-for="(utilisateur, index) in utilisateursSort" class="intro-x">
+                        <tr v-for="(classe, index) in classesSort" class="intro-x">
                             <td>
-                                <a href="javascript:void(0)" class="font-medium whitespace-no-wrap"> {{ utilisateur.nom === null ? '' : utilisateur.nom }} {{ utilisateur.prenom === null ? '' : ' ' + utilisateur.prenom }} </a>
-                                <div class="text-gray-600 text-xs whitespace-no-wrap">{{ utilisateur.role.libelle }}</div>
-                            </td>
-                            <td class="text-center">{{ utilisateur.login }}</td>
-                            <td>
-                                {{ utilisateur.profession === null ? 'non définie' : utilisateur.profession }}
-                            </td>
-                            <td>
-                                {{ utilisateur.telephone === null ? 'non définie' : utilisateur.telephone }}
-                            </td>
+                                <a href="javascript:void(0)" class="font-medium whitespace-no-wrap"> {{ classe.code }}  </a>
+                             </td>
+                            <td class="text-center">{{ classe.libelle }}</td>
+
                            <!-- <td class="w-40">
                                 <div class="flex items-center justify-center text-theme-6"> <i data-feather="check-square" class="w-4 h-4 mr-2"></i> Inactive </div>
                             </td>-->
                             <td class="table-report__action w-56">
                                 <div class="flex justify-center items-center">
-                                    <router-link  :to="'/utilisateurs/edit/' + utilisateur.id" tag="a" class="flex items-center mr-3" href="javascript:;"> <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Modifier </router-link>
+                                    <router-link  :to="'/classes/infos/' + classe.id" tag="a" class="flex items-center text-theme-3 mr-3" href="javascript:;" > <i data-feather="info" class="w-4 h-4 mr-1"></i> Info </router-link>
+                                    -
+                                    <router-link  :to="'/classes/edit/' + classe.id" tag="a" class="flex items-center mr-3" href="javascript:;"> <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Modifier </router-link>
                                     <!--<a class="flex items-center text-theme-6" href="javascript:;" data-toggle="modal" data-target="#delete-confirmation-modal"> <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> Supprimer </a>
                                 -->
-                                    <confirm-delete :elt="utilisateur" v-on:confirm-del="deleteElt"></confirm-delete>
+                                    <confirm-delete :elt="classe" v-on:confirm-del="deleteElt"></confirm-delete>
 
                                 </div>
                             </td>
@@ -80,20 +74,7 @@
 
             <!-- END: Pagination -->
         </div>
-        <!-- BEGIN: Delete Confirmation Modal -->
-        <div class="modal" id="delete-confirmation-modal">
-            <div class="modal__content">
-                <div class="p-5 text-center">
-                    <i data-feather="x-circle" class="w-16 h-16 text-theme-6 mx-auto mt-3"></i>
-                    <div class="text-3xl mt-5">Are you sure?</div>
-                    <div class="text-gray-600 mt-2">Do you really want to delete these records? This process cannot be undone.</div>
-                </div>
-                <div class="px-5 pb-8 text-center">
-                    <button type="button" data-dismiss="modal" class="button w-24 border text-gray-700 mr-1">Cancel</button>
-                    <button type="button" class="button w-24 bg-theme-6 text-white">Delete</button>
-                </div>
-            </div>
-        </div>
+
     </div>
 </template>
 
@@ -109,23 +90,23 @@
 
         data() {
             return {
-                utilisateurs: [],
-                utilisateursSort: [],
-                utilisateur: null,
+                classes: [],
+                classesSort: [],
+                classe: null,
             }
         },
 
         mounted() {
             feather.replace();
 
-            this.getUtilisateurs();
+            this.getclasses();
         },
 
         methods: {
-            getUtilisateurs() {
-                axios.get('/api/users').then(res => {
-                    this.utilisateurs = res.data;
-                    this.utilisateursSort = res.data;
+            getclasses() {
+                axios.get('/api/classes').then(res => {
+                    this.classes = res.data;
+                    this.classesSort = res.data;
 
                     setTimeout(() => {
                         feather.replace();
@@ -136,17 +117,17 @@
             },
 
             deleteElt(id) {
-                axios.delete('/api/users/' + id).then(res => {
+                axios.delete('/api/classes/' + id).then(res => {
 
-                    this.utilisateursSort.forEach((elt, index) => {
+                    this.classesSort.forEach((elt, index) => {
                         if (elt.id === id) {
-                            this.utilisateurs.splice(index, 1);
+                            this.classes.splice(index, 1);
 
                         }
                     });
 
                     setTimeout(() => {
-                        this.utilisateursSort = this.utilisateurs;
+                        this.classesSort = this.classes;
                         feather.replace();
                     }, 200);
                 }).catch(err => {
@@ -159,9 +140,9 @@
                 let string = $event.target.value;
                 // console.log(string);
                 if (string === "") {
-                    this.utilisateursSort = this.utilisateurs;
+                    this.classesSort = this.classes;
                 } else {
-                    this.utilisateursSort = this.utilisateurs.filter(data =>
+                    this.classesSort = this.classes.filter(data =>
                         JSON.stringify(data).toLowerCase().indexOf(string.toLowerCase()) !== -1
                     );
                 }

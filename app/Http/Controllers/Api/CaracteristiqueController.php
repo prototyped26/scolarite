@@ -38,6 +38,11 @@ class CaracteristiqueController extends Controller
         return response()->json($this->caracteristiqueRepository->getAll(), Response::HTTP_OK);
     }
 
+    public function list(Request $request, $frais)
+    {
+        return response()->json($this->caracteristiqueRepository->byFrais($frais), Response::HTTP_OK);
+    }
+
     /**
      * Store a newly created Caracteristique in storage.
      *

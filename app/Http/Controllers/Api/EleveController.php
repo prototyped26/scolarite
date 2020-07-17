@@ -3,9 +3,12 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Repositories\AnneeRepository;
 use App\Repositories\EleveRepository;
+use App\Repositories\ParcourRepository;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -15,16 +18,31 @@ class EleveController extends Controller
      * @var EleveRepository
      */
     private $eleveRepository;
+    /**
+     * @var ParcourController
+     */
+    private $parcourController;
+    /**
+     * @var AnneeRepository
+     */
+    private $anneeRepository;
+    /**
+     * @var ParcourRepository
+     */
+    private $parcourRepository;
 
     /**
      * EleveController constructor.
      * @param EleveRepository $eleveRepository
+     * @param AnneeRepository $anneeRepository
      */
     public function __construct(
-        EleveRepository $eleveRepository
+        EleveRepository $eleveRepository, ParcourRepository $parcourRepository, AnneeRepository $anneeRepository
     )
     {
         $this->eleveRepository = $eleveRepository;
+        $this->anneeRepository = $anneeRepository;
+        $this->parcourRepository = $parcourRepository;
     }
 
     /**
@@ -35,7 +53,7 @@ class EleveController extends Controller
      */
     public function index(Request $request)
     {
-        return response()->json($this->eleveRepository->getAll()->load(['familles', 'paiements']), Response::HTTP_OK);
+        return response()->json($this->eleveRepository->getAll()->load(['familles', 'parcours']), Response::HTTP_OK);
 
     }
 
@@ -50,7 +68,19 @@ class EleveController extends Controller
         $eleve = $this->eleveRepository->store($request->all());
         if ($eleve) {
             //todo process to model eager load
-            return response()->json($eleve, Response::HTTP_OK);
+
+            $data = [
+                'eleve_id' => $eleve->id,
+                'classe_id' => $request->input('classe_id'),
+                'annee_id' => $this->anneeRepository->active()->id,
+                'redouble' => false,
+            ];
+
+            Log::info(json_encode($data));
+
+            $res = $this->parcourRepository->store($data);
+
+            return response()->json($res, Response::HTTP_OK);
         }
         return response()->json(['message' => __('message.errors.store')], Response::HTTP_BAD_REQUEST);
     }
@@ -64,7 +94,7 @@ class EleveController extends Controller
      */
     public function show(Request $request, $id)
     {
-        $eleve = $this->eleveRepository->getById($id);
+        $eleve = $this->eleveRepository->getById($id, ['parcours']);
         if ($eleve) {
             return response()->json($eleve, Response::HTTP_OK);
         }
@@ -131,6 +161,14 @@ class EleveController extends Controller
         return response()->json([
             'message' => __('message.errors.find', ['model' => trans('message.models.eleve')])
         ], Response::HTTP_BAD_REQUEST);
+    }
+
+    public function eleveClasse(Request $request, $classe) {
+
+        $annee = $this->anneeRepository->active();
+
+        return \response()->json($this->eleveRepository->classe($classe, $annee));
+
     }
 
     /**

@@ -40,6 +40,8 @@ class Famille extends Model
 		'eleve_id'
 	];
 
+	protected $with = ['eleve'];
+
 	public function parent()
 	{
 		return $this->belongsTo(ParentEleve::class);

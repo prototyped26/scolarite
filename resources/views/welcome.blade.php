@@ -8,7 +8,6 @@
 
         <!-- Fonts -->
         <link rel="stylesheet" href="{{ asset("dist/css/app.css") }}" />
-
     </head>
     <body>
         <div id="app"></div>

@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Repositories\EleveRepository;
 use App\Repositories\PaiementRepository;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -15,16 +17,22 @@ class PaiementController extends Controller
      * @var PaiementRepository
      */
     private $paiementRepository;
+    /**
+     * @var EleveRepository
+     */
+    private $eleveRepository;
 
     /**
      * PaiementController constructor.
      * @param PaiementRepository $paiementRepository
+     * @param EleveRepository $eleveRepository
      */
     public function __construct(
-        PaiementRepository $paiementRepository
+        PaiementRepository $paiementRepository, EleveRepository $eleveRepository
     )
     {
         $this->paiementRepository = $paiementRepository;
+        $this->eleveRepository = $eleveRepository;
     }
 
     /**
@@ -46,6 +54,14 @@ class PaiementController extends Controller
      */
     public function store(Request $request)
     {
+
+        $eleve = $this->eleveRepository->getById($request->input('eleve_id'));
+
+        $request->merge([
+            'parcours_id' => $eleve->parcours[sizeof($eleve->parcours) - 1]->id,
+            'user_id' => Auth::user()->id
+        ]);
+
         $paiement = $this->paiementRepository->store($request->all());
         if ($paiement) {
             //todo process to model eager load

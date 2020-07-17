@@ -24,43 +24,47 @@
                 <div class="intro-y box p-5">
                     <div>
                         <label>Nom</label>
-                        <input type="text" v-model="utilisateur.nom" class="input w-full border mt-2" placeholder="Saisir le nom">
+                        <input type="text" v-model="parent.nom" class="input w-full border mt-2" placeholder="Saisir le nom">
                     </div>
 
                     <div>
                         <label>Prénom</label>
-                        <input type="text" v-model="utilisateur.prenom" class="input w-full border mt-2" placeholder="Le prénom">
+                        <input type="text" v-model="parent.prenom" class="input w-full border mt-2" placeholder="Le prénom">
                     </div>
 
                     <div>
-                        <label>Profession</label>
-                        <input type="text" v-model="utilisateur.profession" class="input w-full border mt-2" placeholder="...">
+                        <label>Ville</label>
+                        <input type="text" v-model="parent.ville" class="input w-full border mt-2" placeholder="...">
+                    </div>
+
+                    <div>
+                        <label>Adresse</label>
+                        <input type="text" v-model="parent.adresse" class="input w-full border mt-2" placeholder="Sable, Deido, ...">
                     </div>
 
                     <div>
                         <label>Téléphone</label>
-                        <input type="number" v-model="utilisateur.telephone" class="input w-full border mt-2" placeholder="685xxxx">
+                        <input type="number" v-model="parent.telephone" class="input w-full border mt-2" placeholder="685xxxx">
+                    </div>
+
+
+                    <div>
+                        <label>Email</label>
+                        <input type="email" v-model="parent.email" class="input w-full border mt-2" placeholder="email ">
                     </div>
 
                     <div>
-                        <label>Rôle</label>
-                        <select name="role" v-model="utilisateur.role_id" class="input w-full border mt-2" id="role">
-                            <option v-for="role in roles" :value="role.id"> {{ role.libelle }} </option>
-                        </select>
+                        <label>Parent de : </label>
+                        <multi-select :options="options"
+                                      :selected-options="items"
+                                      placeholder="Parent de ????"
+                                      @select="onSelect">
+                        </multi-select>
                     </div>
 
-                    <div>
-                        <label>Login</label>
-                        <input type="email" v-model="utilisateur.login" class="input w-full border mt-2" placeholder="email de connexion / login">
-                    </div>
-
-                    <div v-if="utilisateur.id === undefined">
-                        <label>Mot de passe </label>
-                        <input type="password" v-model="utilisateur.password" class="input w-full border mt-2" placeholder="">
-                    </div>
 
                     <div class="text-right mt-5">
-                        <router-link to="/utilisateurs" tag="button" class="button w-24 border text-gray-700 mr-1">
+                        <router-link to="/parents" tag="button" class="button w-24 border text-gray-700 mr-1">
                             Annuler
                         </router-link>
                         <button v-if="!loading" @click="action()" class="button w-24 bg-theme-1 text-white inline-flex items-center ">
@@ -76,65 +80,108 @@
 </template>
 
 <script>
+
+    import _ from 'lodash'
+    import { MultiSelect } from 'vue-search-select'
+
     export default {
         name: "AddAndEdit",
 
+        components: {
+            MultiSelect
+        },
+
         data() {
             return {
-                utilisateur: null,
+                parent: null,
                 open: false,
                 loading: false,
                 headerTitle: '',
                 roles: [],
                 success: null,
                 error: null,
+                options: [
+                ],
+                searchText: '', // If value is falsy, reset searchText & searchItem
+                items: [],
+                lastSelectItem: {}
             }
         },
 
         mounted() {
             feather.replace();
 
-            this.getRoles();
+            this.getEleves();
             this.lookUrl();
         },
 
         methods: {
 
+            onSelect (items, lastSelectItem) {
+                this.items = items
+                this.lastSelectItem = lastSelectItem
+            },
+            // deselect option
+            reset () {
+                this.items = [] // reset
+            },
+            // select option from parent component
+            selectFromParentComponent () {
+                this.items = _.unionWith(this.items, [this.options[0]], _.isEqual)
+            },
+
             lookUrl() {
                 if (this.$route.params.id === undefined) {
-                    this.utilisateur = {};
-                    this.headerTitle = 'Ajout d\'un nouvel utilisateur';
+                    this.parent = {};
+                    this.headerTitle = 'Ajout d\'un nouvel parent';
                     this.open = true;
                 } else {
                     this.getUser(this.$route.params.id);
                 }
             },
 
-            getRoles() {
-                axios.get('/api/roles').then(res => {
-                    this.roles = res.data;
+            nameWithLang ({ nom, prenom }) {
+                return `${nom}  ${prenom}`
+            },
+
+            getEleves() {
+                axios.get('/api/eleves').then(res => {
+                    res.data.forEach(item => {
+                        this.options.push({
+                            value: item.id,
+                            text: item.nom + ' ' + (item.prenom === null ? '' : item.prenom)
+                        })
+                    });
                 }).catch(err => {
-                    console.log(err);
-                });
+                    this.showError(err.response.data.message)
+                })
             },
 
             getUser(id) {
-                axios.get('/api/users/' + id).then(res => {
-                    this.utilisateur = res.data;
+                axios.get('/api/parents/' + id).then(res => {
+                    this.parent = res.data;
 
-                    this.headerTitle = 'Modification de l\'utilisateur : ' + this.utilisateur.nom;
+                    this.parent.familles.forEach(famille => {
+                        this.items.push({ value: famille.eleve.id, text: famille.eleve.nom + ' ' + (famille.eleve.prenom === null ? '' : famille.eleve.prenom) })
+                    });
+
+                    this.headerTitle = 'Modification du parent : ' + this.parent.nom;
                     this.open = true;
                 }).catch(err => {
-                    console.log(err);
+                    this.showError(err.response.data.message)
                 });
             },
 
             action() {
 
                 this.loading = true;
-                this.utilisateur.email = this.utilisateur.login;
+                let tab = [];
+                this.items.forEach(item => {
+                    tab.push(item.value);
+                });
+                this.parent.famille = tab;
 
-                if (this.utilisateur.id !== undefined) {
+                if (this.parent.id !== undefined) {
                     this.update();
                 } else {
                     this.save();
@@ -142,13 +189,13 @@
             },
 
             save() {
-                axios.post('/api/users', this.utilisateur).then(res => {
-                    this.utilisateur = res.data;
+                axios.post('/api/parents', this.parent).then(res => {
+                    this.parent = res.data;
 
                     this.showSucces();
 
                     setTimeout(() => {
-                        this.$router.push('/utilisateurs/edit/' + this.utilisateur.id);
+                        this.$router.push('/parents/edit/' + this.parent.id);
                         location.reload();
                     }, 100);
 
@@ -159,8 +206,8 @@
             },
 
             update() {
-                axios.put('/api/users/'  + this.utilisateur.id, this.utilisateur).then(res => {
-                    this.utilisateur = res.data;
+                axios.put('/api/parents/'  + this.parent.id, this.parent).then(res => {
+                    this.parent = res.data;
 
                     this.showSucces();
                     this.loading = false;

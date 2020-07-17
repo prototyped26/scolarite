@@ -11,4 +11,9 @@ class AnneeRepository extends BaseRepository
     {
         parent::__construct($model);
     }
+
+    public function active()
+    {
+        return $this->model->where('is_active', true)->get()->first();
+    }
 }

@@ -13,7 +13,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * Class Eleve
- * 
+ *
  * @property int $id
  * @property string|null $nom
  * @property string|null $prenom
@@ -24,7 +24,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property string|null $deleted_at
- * 
+ *
  * @property Collection|Famille[] $familles
  * @property Collection|Parcour[] $parcours
  *
@@ -43,6 +43,8 @@ class Eleve extends Model
 		'date_naissance',
 		'matricule'
 	];
+
+	// protected $with = ['parcours'];
 
 	public function familles()
 	{

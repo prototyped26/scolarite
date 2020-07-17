@@ -13,15 +13,18 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
  * Class Caracteristique
- * 
+ *
  * @property int $id
  * @property int $motif_id
  * @property string|null $code
+ * @property float|null $montant
  * @property string|null $libelle
+ * @property string|null $date_debut
+ * @property string|null $date_fin
  * @property Carbon|null $created_at
  * @property Carbon|null $updated_at
  * @property string|null $deleted_at
- * 
+ *
  * @property Motif $motif
  * @property Collection|Paiement[] $paiements
  *
@@ -39,7 +42,10 @@ class Caracteristique extends Model
 	protected $fillable = [
 		'motif_id',
 		'code',
-		'libelle'
+		'libelle',
+        'montant',
+        'date_debut',
+        'date_fin'
 	];
 
 	public function motif()

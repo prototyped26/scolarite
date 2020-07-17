@@ -3,9 +3,11 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Repositories\FamilleRepository;
 use App\Repositories\ParentEleveRepository;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Validator;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -15,16 +17,22 @@ class ParentController extends Controller
      * @var ParentEleveRepository
      */
     private $parentEleveRepository;
+    /**
+     * @var FamilleRepository
+     */
+    private $familleRepository;
 
     /**
      * ParentEleveController constructor.
      * @param ParentEleveRepository $parentEleveRepository
+     * @param FamilleRepository $familleRepository
      */
     public function __construct(
-        ParentEleveRepository $parentEleveRepository
+        ParentEleveRepository $parentEleveRepository, FamilleRepository $familleRepository
     )
     {
         $this->parentEleveRepository = $parentEleveRepository;
+        $this->familleRepository = $familleRepository;
     }
 
     /**
@@ -49,6 +57,19 @@ class ParentController extends Controller
     {
         $parentEleve = $this->parentEleveRepository->store($request->all());
         if ($parentEleve) {
+            $list = [];
+
+            foreach ($request->input('famille') as $id_eleve) {
+                $list[] = [
+                    'eleve_id' => $id_eleve,
+                    'parent_eleve_id' => $parentEleve->id
+                ];
+            }
+
+            foreach ($list as $data) {
+                $res = $this->familleRepository->store($data);
+                Log::info(json_encode($res));
+            }
             //todo process to model eager load
             return response()->json($parentEleve, Response::HTTP_OK);
         }
@@ -64,7 +85,7 @@ class ParentController extends Controller
      */
     public function show(Request $request, $id)
     {
-        $parentEleve = $this->parentEleveRepository->getById($id);
+        $parentEleve = $this->parentEleveRepository->getById($id, ['familles', 'paiements']);
         if ($parentEleve) {
             return response()->json($parentEleve, Response::HTTP_OK);
         }
@@ -84,9 +105,33 @@ class ParentController extends Controller
     {
         $parentEleve = $this->parentEleveRepository->getById($id);
         if ($parentEleve) {
+
+            // delete les familles
+            $familles = $parentEleve->familles;
+
+            foreach ($familles as $famille) {
+                $this->familleRepository->forceDelete($famille->id);
+            }
+
             $parentEleve = $this->parentEleveRepository->update($parentEleve->id, $request->all());
-            if ($parentEleve)
+            if ($parentEleve) {
+                $list = [];
+
+                foreach ($request->input('famille') as $id_eleve) {
+                    $list[] = [
+                        'eleve_id' => $id_eleve,
+                        'parent_id' => $parentEleve->id
+                    ];
+                }
+
+                foreach ($list as $data) {
+                    Log::info(json_encode($data));
+                    $this->familleRepository->store($data);
+                }
+
                 return response()->json($parentEleve, Response::HTTP_OK);
+            }
+
 
             return response()->json(['message' => __('message.errors.update')], Response::HTTP_BAD_REQUEST);
         }

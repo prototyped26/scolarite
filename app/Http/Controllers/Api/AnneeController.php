@@ -38,6 +38,10 @@ class AnneeController extends Controller
         return response()->json($this->anneeRepository->getAll(), Response::HTTP_OK);
     }
 
+    public function active(Request $request) {
+        return response()->json($this->anneeRepository->active(), Response::HTTP_OK);
+    }
+
     /**
      * Store a newly created Annee in storage.
      *

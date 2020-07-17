@@ -11,4 +11,8 @@ class CaracteristiqueRepository extends BaseRepository
     {
         parent::__construct($model);
     }
+
+    public function byFrais($id_frais) {
+        return $this->model->where('motif_id', $id_frais)->get();
+    }
 }

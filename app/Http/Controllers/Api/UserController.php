@@ -29,7 +29,7 @@ class UserController extends Controller
     }
 
     public function currentUser(){
-        return \response()->json(Auth::user(), Response::HTTP_OK);
+        return \response()->json(Auth::user()->load('role'), Response::HTTP_OK);
     }
 
     /**
@@ -53,6 +53,7 @@ class UserController extends Controller
     {
         $validator = Validator::make($request->all(), [
             //todo enter validation rules
+            'nom' => 'required', 'login' => 'required', 'password' => 'required'
         ]);
         if ($validator->fails())
             return response()->json([
@@ -113,15 +114,26 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $user = $this->userRepository->getById($id);
-        if ($user) {
-            $user = $this->userRepository->update($user->id, $request->all());
-            if ($user)
-                return response()->json($user, Response::HTTP_OK);
 
+        $validator = Validator::make($request->all(), [
+            //todo enter validation rules
+            'telephone' => 'required'
+        ]);
+        if ($validator->fails())
+            return response()->json([
+                'message' => __('message.errors.field'), 'errors' => $validator->errors()
+            ], Response::HTTP_UNPROCESSABLE_ENTITY);
+        else {
+            $user = $this->userRepository->getById($id);
+            if ($user) {
+                $user = $this->userRepository->update($user->id, $request->all());
+                if ($user)
+                    return response()->json($user, Response::HTTP_OK);
+
+                return response()->json(['message' => __('message.errors.update')], Response::HTTP_BAD_REQUEST);
+            }
             return response()->json(['message' => __('message.errors.update')], Response::HTTP_BAD_REQUEST);
         }
-        return response()->json(['message' => __('message.errors.update')], Response::HTTP_BAD_REQUEST);
     }
 
     /**
