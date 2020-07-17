@@ -91,6 +91,11 @@ class UserController extends Controller
         return response()->json(['message' => __('message.errors.update')], Response::HTTP_BAD_REQUEST);
     }
 
+    public function logout(Request $request) {
+        Auth::logout();
+        return redirect('/login');
+    }
+
     /**
      * Display the specified User.
      *

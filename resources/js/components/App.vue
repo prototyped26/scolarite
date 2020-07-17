@@ -718,11 +718,9 @@
                                    <a href="" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md"> <i data-feather="help-circle" class="w-4 h-4 mr-2"></i> Aide </a>
                                </div>
                                <div class="p-2 border-t border-theme-40">
-                                   <form method="post" action="/logout">
-                                       <button type="submit" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md">
-                                           <i data-feather="toggle-right" class="w-4 h-4 mr-2"></i> Déconnexion
-                                       </button>
-                                   </form>
+                                   <a href="/logout" class="flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md">
+                                       <i data-feather="toggle-right" class="w-4 h-4 mr-2"></i> Déconnexion
+                                   </a>
                                </div>
                            </div>
                        </div>

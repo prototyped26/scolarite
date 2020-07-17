@@ -2646,8 +2646,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "App",
   data: function data() {
@@ -44472,23 +44470,21 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "p-2 border-t border-theme-40" }, [
-      _c("form", { attrs: { method: "post", action: "/logout" } }, [
-        _c(
-          "button",
-          {
-            staticClass:
-              "flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md",
-            attrs: { type: "submit" }
-          },
-          [
-            _c("i", {
-              staticClass: "w-4 h-4 mr-2",
-              attrs: { "data-feather": "toggle-right" }
-            }),
-            _vm._v(" Déconnexion\n                                    ")
-          ]
-        )
-      ])
+      _c(
+        "a",
+        {
+          staticClass:
+            "flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md",
+          attrs: { href: "/logout" }
+        },
+        [
+          _c("i", {
+            staticClass: "w-4 h-4 mr-2",
+            attrs: { "data-feather": "toggle-right" }
+          }),
+          _vm._v(" Déconnexion\n                                ")
+        ]
+      )
     ])
   }
 ]
@@ -49408,38 +49404,7 @@ var render = function() {
                         )
                       ]),
                       _vm._v(" "),
-                      _c("td", { staticClass: "table-report__action w-56" }, [
-                        _c(
-                          "div",
-                          { staticClass: "flex justify-center items-center" },
-                          [
-                            _c(
-                              "router-link",
-                              {
-                                staticClass: "flex items-center mr-3",
-                                attrs: {
-                                  to: "/paiements/edit/" + paiement.id,
-                                  tag: "a",
-                                  href: "javascript:;"
-                                }
-                              },
-                              [
-                                _c("i", {
-                                  staticClass: "w-4 h-4 mr-1",
-                                  attrs: { "data-feather": "check-square" }
-                                }),
-                                _vm._v(" Modifier ")
-                              ]
-                            ),
-                            _vm._v(" "),
-                            _c("confirm-delete", {
-                              attrs: { elt: paiement },
-                              on: { "confirm-del": _vm.deleteElt }
-                            })
-                          ],
-                          1
-                        )
-                      ])
+                      _vm._m(2, true)
                     ])
                   }),
                   0
@@ -49449,7 +49414,7 @@ var render = function() {
       )
     ]),
     _vm._v(" "),
-    _vm._m(2)
+    _vm._m(3)
   ])
 }
 var staticRenderFns = [
@@ -49536,6 +49501,14 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", { staticClass: " whitespace-no-wrap" }, [_vm._v("Actions")])
       ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", { staticClass: "table-report__action w-56" }, [
+      _c("div", { staticClass: "flex justify-center items-center" })
     ])
   },
   function() {

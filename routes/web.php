@@ -17,13 +17,19 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/logout', 'Api\UserController@logout')->name('out');
 
-Route::get('/{any?}', "HomeController@index")->where('any', '.*');
+//Route::get('/{any?}', "HomeController@index")->where('any', '.*');
 Route::get('/utilisateurs/{any}', "HomeController@index")->where('any', '.*');
 Route::get('/parents/{any}', "HomeController@index")->where('any', '.*');
 Route::get('/classes/{any}', "HomeController@index")->where('any', '.*');
+Route::get('/eleves/{any}', "HomeController@index")->where('any', '.*');
+Route::get('/paiements/{any}', "HomeController@index")->where('any', '.*');
+
+
 
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
