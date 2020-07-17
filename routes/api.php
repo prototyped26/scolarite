@@ -38,4 +38,5 @@ Route::apiResources([
 
 Route::group(['prefix' => 'users'], function (){
    Route::get('current', 'Api\UserController@currentUser');
+   Route::put('editpassword/{id}', 'Api\UserController@editPassword');
 });
