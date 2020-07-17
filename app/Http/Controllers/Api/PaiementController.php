@@ -35,7 +35,7 @@ class PaiementController extends Controller
      */
     public function index(Request $request)
     {
-        return response()->json($this->paiementRepository->index($request), Response::HTTP_OK);
+        return response()->json($this->paiementRepository->getAll(), Response::HTTP_OK);
     }
 
     /**

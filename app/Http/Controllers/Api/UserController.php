@@ -40,7 +40,7 @@ class UserController extends Controller
      */
     public function index(Request $request)
     {
-        return response()->json($this->userRepository->getAll($request), Response::HTTP_OK);
+        return response()->json($this->userRepository->getAll()->load('role'), Response::HTTP_OK);
     }
 
     /**

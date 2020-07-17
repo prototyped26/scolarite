@@ -43,7 +43,7 @@ class Paiement extends Model
 	protected $casts = [
 		'caracteristique_id' => 'int',
 		'user_id' => 'int',
-		'parent_id' => 'int',
+		'parent_eleve_id' => 'int',
 		'motif_id' => 'int',
 		'parcours_id' => 'int',
 		'montant' => 'float'
@@ -56,7 +56,7 @@ class Paiement extends Model
 	protected $fillable = [
 		'caracteristique_id',
 		'user_id',
-		'parent_id',
+		'parent_eleve_id',
 		'motif_id',
 		'parcours_id',
 		'date',
@@ -67,7 +67,7 @@ class Paiement extends Model
 
 	public function parent()
 	{
-		return $this->belongsTo(Parent::class);
+		return $this->belongsTo(ParentEleve::class);
 	}
 
 	public function parcour()

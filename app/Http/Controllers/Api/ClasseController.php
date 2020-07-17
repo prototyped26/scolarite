@@ -35,7 +35,7 @@ class ClasseController extends Controller
      */
     public function index(Request $request)
     {
-        return response()->json($this->classeRepository->index($request), Response::HTTP_OK);
+        return response()->json($this->classeRepository->getAll(), Response::HTTP_OK);
     }
 
     /**

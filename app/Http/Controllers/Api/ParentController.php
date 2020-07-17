@@ -35,7 +35,7 @@ class ParentController extends Controller
      */
     public function index(Request $request)
     {
-        return response()->json($this->parentEleveRepository->index($request), Response::HTTP_OK);
+        return response()->json($this->parentEleveRepository->getAll()->load(['familles',  'paiements']), Response::HTTP_OK);
 
     }
 

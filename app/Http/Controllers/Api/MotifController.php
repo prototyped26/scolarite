@@ -35,7 +35,7 @@ class MotifController extends Controller
      */
     public function index(Request $request)
     {
-        return response()->json($this->motifRepository->index($request), Response::HTTP_OK);
+        return response()->json($this->motifRepository->getAll(), Response::HTTP_OK);
     }
 
     /**
