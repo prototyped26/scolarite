@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Repositories\UserRepository;
-use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -39,7 +38,7 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\JsonResponse
      */
-    public function index(Request $request)
+    public function index()
     {
         return response()->json($this->userRepository->getAll()->load('role'), Response::HTTP_OK);
     }
@@ -71,6 +70,8 @@ class UserController extends Controller
         }
     }
 
+
+
     public function editPassword(Request $request, $id){
         $user = $this->userRepository->getById($id);
         if ($user) {
@@ -82,10 +83,11 @@ class UserController extends Controller
                 if($user)
                     return response()->json($user, Response::HTTP_OK);
 
-                return response()->json(['message' => __('message.errors.update')], Response::HTTP_BAD_REQUEST);
+
 
             }
         }
+        return response()->json(['message' => __('message.errors.update')], Response::HTTP_BAD_REQUEST);
     }
 
     /**
@@ -95,9 +97,8 @@ class UserController extends Controller
      * @param int $id
      * @return \Illuminate\Http\JsonResponse
      */
-    public function show(Request $request, $id)
+    public function show($id)
     {
-        $relations = []; //todo specified model relation to eager load
         $user = $this->userRepository->getById($id);
         return response()->json($user, Response::HTTP_OK);
 
