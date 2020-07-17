@@ -2644,6 +2644,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "App"
 });
@@ -3490,8 +3494,134 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  name: "AddAndEdit"
+  name: "AddAndEdit",
+  data: function data() {
+    return {
+      utilisateur: null,
+      open: false,
+      loading: false,
+      headerTitle: '',
+      roles: []
+    };
+  },
+  mounted: function mounted() {
+    feather.replace();
+    this.getRoles();
+    this.lookUrl();
+  },
+  methods: {
+    lookUrl: function lookUrl() {
+      if (this.$route.params.id === undefined) {
+        this.utilisateur = {};
+        this.headerTitle = 'Ajout d\'un nouvel utilisateur';
+        this.open = true;
+      } else {
+        this.getUser(this.$route.params.id);
+      }
+    },
+    getRoles: function getRoles() {
+      var _this = this;
+
+      axios.get('/api/roles').then(function (res) {
+        _this.roles = res.data;
+      })["catch"](function (err) {
+        console.log(err);
+      });
+    },
+    getUser: function getUser(id) {
+      var _this2 = this;
+
+      axios.get('/api/users/' + id).then(function (res) {
+        _this2.utilisateur = res.data;
+        _this2.headerTitle = 'Modification de l\'utilisateur : ' + _this2.utilisateur.nom;
+        _this2.open = true;
+      })["catch"](function (err) {
+        console.log(err);
+      });
+    },
+    action: function action() {
+      this.utilisateur.email = this.utilisateur.login;
+
+      if (this.utilisateur.id !== undefined) {
+        this.update();
+      } else {
+        this.save();
+      }
+    },
+    save: function save() {
+      var _this3 = this;
+
+      axios.post('/api/users', this.utilisateur).then(function (res) {
+        _this3.utilisateur = res.data;
+      })["catch"](function (err) {
+        console.log(err);
+      });
+    },
+    update: function update() {
+      var _this4 = this;
+
+      axios.put('/api/users/' + this.utilisateur.id, this.utilisateur).then(function (res) {
+        _this4.utilisateur = res.data;
+      }).cache(function (err) {
+        console.log(err);
+      });
+    }
+  }
 });
 
 /***/ }),
@@ -3594,15 +3724,41 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "List",
   data: function data() {
-    return {};
+    return {
+      utilisateurs: [],
+      utilisateursSort: [],
+      utilisateur: null
+    };
   },
   mounted: function mounted() {
     feather.replace();
+    this.getUtilisateurs();
   },
-  methods: {}
+  methods: {
+    getUtilisateurs: function getUtilisateurs() {
+      var _this = this;
+
+      axios.get('/api/users').then(function (res) {
+        _this.utilisateurs = res.data;
+        _this.utilisateursSort = res.data;
+        setTimeout(function () {
+          feather.replace();
+        }, 200);
+      })["catch"](function (err) {
+        console.log(err);
+      });
+    }
+  }
 });
 
 /***/ }),
@@ -40734,24 +40890,13 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "top-bar" }, [
-      _c("div", { staticClass: "-intro-x breadcrumb mr-auto hidden sm:flex" }, [
-        _c("a", { attrs: { href: "" } }, [_vm._v("Application")]),
-        _vm._v(" "),
-        _c("i", {
-          staticClass: "breadcrumb__icon",
-          attrs: { "data-feather": "chevron-right" }
-        }),
-        _vm._v(" "),
-        _c("a", { staticClass: "breadcrumb--active", attrs: { href: "" } }, [
-          _vm._v("Dashboard")
-        ])
-      ]),
+      _c("div", { staticClass: "-intro-x breadcrumb mr-auto hidden sm:flex" }),
       _vm._v(" "),
       _c("div", { staticClass: "intro-x relative mr-3 sm:mr-6" }, [
         _c("div", { staticClass: "search hidden sm:block" }, [
           _c("input", {
             staticClass: "search__input input placeholder-theme-13",
-            attrs: { type: "text", placeholder: "Search..." }
+            attrs: { type: "text", placeholder: "Recherche système..." }
           }),
           _vm._v(" "),
           _c("i", {
@@ -41101,324 +41246,10 @@ var staticRenderFns = [
           ]
         ),
         _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass:
-              "notification-content dropdown-box mt-8 absolute top-0 left-0 sm:left-auto sm:right-0 z-20 -ml-10 sm:ml-0"
-          },
-          [
-            _c(
-              "div",
-              {
-                staticClass:
-                  "notification-content__box dropdown-box__content box"
-              },
-              [
-                _c("div", { staticClass: "notification-content__title" }, [
-                  _vm._v("Notifications")
-                ]),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "cursor-pointer relative flex items-center " },
-                  [
-                    _c(
-                      "div",
-                      { staticClass: "w-12 h-12 flex-none image-fit mr-1" },
-                      [
-                        _c("img", {
-                          staticClass: "rounded-full",
-                          attrs: {
-                            alt: "Midone Tailwind HTML Admin Template",
-                            src: "dist/images/profile-13.jpg"
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("div", {
-                          staticClass:
-                            "w-3 h-3 bg-theme-9 absolute right-0 bottom-0 rounded-full border-2 border-white"
-                        })
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "ml-2 overflow-hidden" }, [
-                      _c("div", { staticClass: "flex items-center" }, [
-                        _c(
-                          "a",
-                          {
-                            staticClass: "font-medium truncate mr-5",
-                            attrs: { href: "javascript:;" }
-                          },
-                          [_vm._v("Angelina Jolie")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          {
-                            staticClass:
-                              "text-xs text-gray-500 ml-auto whitespace-no-wrap"
-                          },
-                          [_vm._v("05:09 AM")]
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "w-full truncate text-gray-600" },
-                        [
-                          _vm._v(
-                            "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 20"
-                          )
-                        ]
-                      )
-                    ])
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "cursor-pointer relative flex items-center mt-5"
-                  },
-                  [
-                    _c(
-                      "div",
-                      { staticClass: "w-12 h-12 flex-none image-fit mr-1" },
-                      [
-                        _c("img", {
-                          staticClass: "rounded-full",
-                          attrs: {
-                            alt: "Midone Tailwind HTML Admin Template",
-                            src: "dist/images/profile-2.jpg"
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("div", {
-                          staticClass:
-                            "w-3 h-3 bg-theme-9 absolute right-0 bottom-0 rounded-full border-2 border-white"
-                        })
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "ml-2 overflow-hidden" }, [
-                      _c("div", { staticClass: "flex items-center" }, [
-                        _c(
-                          "a",
-                          {
-                            staticClass: "font-medium truncate mr-5",
-                            attrs: { href: "javascript:;" }
-                          },
-                          [_vm._v("Johnny Depp")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          {
-                            staticClass:
-                              "text-xs text-gray-500 ml-auto whitespace-no-wrap"
-                          },
-                          [_vm._v("05:09 AM")]
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "w-full truncate text-gray-600" },
-                        [
-                          _vm._v(
-                            "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem "
-                          )
-                        ]
-                      )
-                    ])
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "cursor-pointer relative flex items-center mt-5"
-                  },
-                  [
-                    _c(
-                      "div",
-                      { staticClass: "w-12 h-12 flex-none image-fit mr-1" },
-                      [
-                        _c("img", {
-                          staticClass: "rounded-full",
-                          attrs: {
-                            alt: "Midone Tailwind HTML Admin Template",
-                            src: "dist/images/profile-14.jpg"
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("div", {
-                          staticClass:
-                            "w-3 h-3 bg-theme-9 absolute right-0 bottom-0 rounded-full border-2 border-white"
-                        })
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "ml-2 overflow-hidden" }, [
-                      _c("div", { staticClass: "flex items-center" }, [
-                        _c(
-                          "a",
-                          {
-                            staticClass: "font-medium truncate mr-5",
-                            attrs: { href: "javascript:;" }
-                          },
-                          [_vm._v("Russell Crowe")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          {
-                            staticClass:
-                              "text-xs text-gray-500 ml-auto whitespace-no-wrap"
-                          },
-                          [_vm._v("01:10 PM")]
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "w-full truncate text-gray-600" },
-                        [
-                          _vm._v(
-                            "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 20"
-                          )
-                        ]
-                      )
-                    ])
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "cursor-pointer relative flex items-center mt-5"
-                  },
-                  [
-                    _c(
-                      "div",
-                      { staticClass: "w-12 h-12 flex-none image-fit mr-1" },
-                      [
-                        _c("img", {
-                          staticClass: "rounded-full",
-                          attrs: {
-                            alt: "Midone Tailwind HTML Admin Template",
-                            src: "dist/images/profile-6.jpg"
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("div", {
-                          staticClass:
-                            "w-3 h-3 bg-theme-9 absolute right-0 bottom-0 rounded-full border-2 border-white"
-                        })
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "ml-2 overflow-hidden" }, [
-                      _c("div", { staticClass: "flex items-center" }, [
-                        _c(
-                          "a",
-                          {
-                            staticClass: "font-medium truncate mr-5",
-                            attrs: { href: "javascript:;" }
-                          },
-                          [_vm._v("Al Pacino")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          {
-                            staticClass:
-                              "text-xs text-gray-500 ml-auto whitespace-no-wrap"
-                          },
-                          [_vm._v("05:09 AM")]
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "w-full truncate text-gray-600" },
-                        [
-                          _vm._v(
-                            "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomi"
-                          )
-                        ]
-                      )
-                    ])
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass:
-                      "cursor-pointer relative flex items-center mt-5"
-                  },
-                  [
-                    _c(
-                      "div",
-                      { staticClass: "w-12 h-12 flex-none image-fit mr-1" },
-                      [
-                        _c("img", {
-                          staticClass: "rounded-full",
-                          attrs: {
-                            alt: "Midone Tailwind HTML Admin Template",
-                            src: "dist/images/profile-5.jpg"
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c("div", {
-                          staticClass:
-                            "w-3 h-3 bg-theme-9 absolute right-0 bottom-0 rounded-full border-2 border-white"
-                        })
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "ml-2 overflow-hidden" }, [
-                      _c("div", { staticClass: "flex items-center" }, [
-                        _c(
-                          "a",
-                          {
-                            staticClass: "font-medium truncate mr-5",
-                            attrs: { href: "javascript:;" }
-                          },
-                          [_vm._v("Edward Norton")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "div",
-                          {
-                            staticClass:
-                              "text-xs text-gray-500 ml-auto whitespace-no-wrap"
-                          },
-                          [_vm._v("01:10 PM")]
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        { staticClass: "w-full truncate text-gray-600" },
-                        [
-                          _vm._v(
-                            "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500"
-                          )
-                        ]
-                      )
-                    ])
-                  ]
-                )
-              ]
-            )
-          ]
-        )
+        _c("div", {
+          staticClass:
+            "notification-content dropdown-box mt-8 absolute top-0 left-0 sm:left-auto sm:right-0 z-20 -ml-10 sm:ml-0"
+        })
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "intro-x dropdown w-8 h-8 relative" }, [
@@ -41473,7 +41304,7 @@ var staticRenderFns = [
                         staticClass: "w-4 h-4 mr-2",
                         attrs: { "data-feather": "user" }
                       }),
-                      _vm._v(" Profile ")
+                      _vm._v(" Profil ")
                     ]
                   ),
                   _vm._v(" "),
@@ -41489,7 +41320,7 @@ var staticRenderFns = [
                         staticClass: "w-4 h-4 mr-2",
                         attrs: { "data-feather": "edit" }
                       }),
-                      _vm._v(" Add Account ")
+                      _vm._v(" Utilisateurs ")
                     ]
                   ),
                   _vm._v(" "),
@@ -41505,7 +41336,7 @@ var staticRenderFns = [
                         staticClass: "w-4 h-4 mr-2",
                         attrs: { "data-feather": "lock" }
                       }),
-                      _vm._v(" Reset Password ")
+                      _vm._v(" Mot de passe ")
                     ]
                   ),
                   _vm._v(" "),
@@ -41521,27 +41352,31 @@ var staticRenderFns = [
                         staticClass: "w-4 h-4 mr-2",
                         attrs: { "data-feather": "help-circle" }
                       }),
-                      _vm._v(" Help ")
+                      _vm._v(" Aide ")
                     ]
                   )
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "p-2 border-t border-theme-40" }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass:
-                        "flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md",
-                      attrs: { href: "" }
-                    },
-                    [
-                      _c("i", {
-                        staticClass: "w-4 h-4 mr-2",
-                        attrs: { "data-feather": "toggle-right" }
-                      }),
-                      _vm._v(" Logout ")
-                    ]
-                  )
+                  _c("form", { attrs: { method: "post", action: "/logout" } }, [
+                    _c(
+                      "button",
+                      {
+                        staticClass:
+                          "flex items-center block p-2 transition duration-300 ease-in-out hover:bg-theme-1 rounded-md",
+                        attrs: { type: "submit" }
+                      },
+                      [
+                        _c("i", {
+                          staticClass: "w-4 h-4 mr-2",
+                          attrs: { "data-feather": "toggle-right" }
+                        }),
+                        _vm._v(
+                          " Déconnexion\n                                    "
+                        )
+                      ]
+                    )
+                  ])
                 ])
               ]
             )
@@ -44545,7 +44380,243 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div")
+  return _c("div", [
+    _c("div", { staticClass: "intro-y flex items-center mt-8" }, [
+      _c("h2", { staticClass: "text-lg font-medium mr-auto" }, [
+        _vm._v("\n            " + _vm._s(_vm.headerTitle) + "\n        ")
+      ])
+    ]),
+    _vm._v(" "),
+    _vm.open
+      ? _c("div", { staticClass: "grid grid-cols-12 gap-6 mt-5" }, [
+          _c("div", { staticClass: "intro-y col-span-12 lg:col-span-3" }),
+          _vm._v(" "),
+          _c("div", { staticClass: "intro-y col-span-12 lg:col-span-6" }, [
+            _c("div", { staticClass: "intro-y box p-5" }, [
+              _c("div", [
+                _c("label", [_vm._v("Nom")]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.utilisateur.nom,
+                      expression: "utilisateur.nom"
+                    }
+                  ],
+                  staticClass: "input w-full border mt-2",
+                  attrs: { type: "text", placeholder: "Saisir le nom" },
+                  domProps: { value: _vm.utilisateur.nom },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.utilisateur, "nom", $event.target.value)
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", [
+                _c("label", [_vm._v("Prénom")]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.utilisateur.prenom,
+                      expression: "utilisateur.prenom"
+                    }
+                  ],
+                  staticClass: "input w-full border mt-2",
+                  attrs: { type: "text", placeholder: "Le prénom" },
+                  domProps: { value: _vm.utilisateur.prenom },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.utilisateur, "prenom", $event.target.value)
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", [
+                _c("label", [_vm._v("Profession")]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.utilisateur.profession,
+                      expression: "utilisateur.profession"
+                    }
+                  ],
+                  staticClass: "input w-full border mt-2",
+                  attrs: { type: "text", placeholder: "..." },
+                  domProps: { value: _vm.utilisateur.profession },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(
+                        _vm.utilisateur,
+                        "profession",
+                        $event.target.value
+                      )
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", [
+                _c("label", [_vm._v("Téléphone")]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.utilisateur.telephone,
+                      expression: "utilisateur.telephone"
+                    }
+                  ],
+                  staticClass: "input w-full border mt-2",
+                  attrs: { type: "number", placeholder: "685xxxx" },
+                  domProps: { value: _vm.utilisateur.telephone },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(
+                        _vm.utilisateur,
+                        "telephone",
+                        $event.target.value
+                      )
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", [
+                _c("label", [_vm._v("Rôle")]),
+                _vm._v(" "),
+                _c(
+                  "select",
+                  {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.utilisateur.role_id,
+                        expression: "utilisateur.role_id"
+                      }
+                    ],
+                    staticClass: "input w-full border mt-2",
+                    attrs: { name: "role", id: "role" },
+                    on: {
+                      change: function($event) {
+                        var $$selectedVal = Array.prototype.filter
+                          .call($event.target.options, function(o) {
+                            return o.selected
+                          })
+                          .map(function(o) {
+                            var val = "_value" in o ? o._value : o.value
+                            return val
+                          })
+                        _vm.$set(
+                          _vm.utilisateur,
+                          "role_id",
+                          $event.target.multiple
+                            ? $$selectedVal
+                            : $$selectedVal[0]
+                        )
+                      }
+                    }
+                  },
+                  _vm._l(_vm.roles, function(role) {
+                    return _c("option", { domProps: { value: role.id } }, [
+                      _vm._v(" " + _vm._s(role.libelle) + " ")
+                    ])
+                  }),
+                  0
+                )
+              ]),
+              _vm._v(" "),
+              _c("div", [
+                _c("label", [_vm._v("Login")]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.utilisateur.login,
+                      expression: "utilisateur.login"
+                    }
+                  ],
+                  staticClass: "input w-full border mt-2",
+                  attrs: {
+                    type: "email",
+                    placeholder: "email de connexion / login"
+                  },
+                  domProps: { value: _vm.utilisateur.login },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.utilisateur, "login", $event.target.value)
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "text-right mt-5" },
+                [
+                  _c(
+                    "router-link",
+                    {
+                      staticClass: "button w-24 border text-gray-700 mr-1",
+                      attrs: { to: "/utilisateurs", tag: "button" }
+                    },
+                    [
+                      _vm._v(
+                        "\n                        Annuler\n                    "
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    {
+                      staticClass: "button w-24 bg-theme-1 text-white",
+                      attrs: { type: "button" },
+                      on: {
+                        click: function($event) {
+                          return _vm.action()
+                        }
+                      }
+                    },
+                    [_vm._v("Enregistrer")]
+                  )
+                ],
+                1
+              )
+            ])
+          ])
+        ])
+      : _vm._e()
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -44600,10 +44671,141 @@ var render = function() {
         1
       ),
       _vm._v(" "),
-      _vm._m(2)
+      _c(
+        "div",
+        {
+          staticClass: "intro-y col-span-12 overflow-auto lg:overflow-visible"
+        },
+        [
+          _vm.utilisateurs.length === 0
+            ? _c(
+                "div",
+                {
+                  staticClass:
+                    "rounded-md flex items-center px-5 py-4 mb-2 bg-gray-200 text-gray-600 mt-5 "
+                },
+                [
+                  _c("i", {
+                    staticClass: "w-6 h-6 mr-2",
+                    attrs: { "data-feather": "alert-triangle" }
+                  }),
+                  _vm._v(" Aucune données dans le système. "),
+                  _c("i", {
+                    staticClass: "w-4 h-4 ml-auto",
+                    attrs: { "data-feather": "x" }
+                  })
+                ]
+              )
+            : _c("table", { staticClass: "table table-report -mt-2" }, [
+                _vm._m(2),
+                _vm._v(" "),
+                _c(
+                  "tbody",
+                  _vm._l(_vm.utilisateursSort, function(utilisateur, index) {
+                    return _c("tr", { staticClass: "intro-x" }, [
+                      _c("td", [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "font-medium whitespace-no-wrap",
+                            attrs: { href: "javascript:void(0)" }
+                          },
+                          [
+                            _vm._v(
+                              " " +
+                                _vm._s(
+                                  utilisateur.nom === null
+                                    ? ""
+                                    : utilisateur.nom
+                                ) +
+                                " " +
+                                _vm._s(
+                                  utilisateur.prenom === null
+                                    ? ""
+                                    : " " + utilisateur.prenom
+                                ) +
+                                " "
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "text-gray-600 text-xs whitespace-no-wrap"
+                          },
+                          [_vm._v(_vm._s(utilisateur.role.libelle))]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "text-center" }, [
+                        _vm._v(_vm._s(utilisateur.login))
+                      ]),
+                      _vm._v(" "),
+                      _c("td", [
+                        _vm._v(
+                          "\n                            " +
+                            _vm._s(
+                              utilisateur.profession === null
+                                ? "non définie"
+                                : utilisateur.profession
+                            ) +
+                            "\n                        "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("td", [
+                        _vm._v(
+                          "\n                            " +
+                            _vm._s(
+                              utilisateur.telephone === null
+                                ? "non définie"
+                                : utilisateur.telephone
+                            ) +
+                            "\n                        "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "table-report__action w-56" }, [
+                        _c(
+                          "div",
+                          { staticClass: "flex justify-center items-center" },
+                          [
+                            _c(
+                              "router-link",
+                              {
+                                staticClass: "flex items-center mr-3",
+                                attrs: {
+                                  to: "/utilisateurs/edit/" + utilisateur.id,
+                                  tag: "a",
+                                  href: "javascript:;"
+                                }
+                              },
+                              [
+                                _c("i", {
+                                  staticClass: "w-4 h-4 mr-1",
+                                  attrs: { "data-feather": "check-square" }
+                                }),
+                                _vm._v(" Modifier ")
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _vm._m(3, true)
+                          ],
+                          1
+                        )
+                      ])
+                    ])
+                  }),
+                  0
+                )
+              ])
+        ]
+      )
     ]),
     _vm._v(" "),
-    _vm._m(3)
+    _vm._m(4)
   ])
 }
 var staticRenderFns = [
@@ -44696,127 +44898,50 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "intro-y col-span-12 overflow-auto lg:overflow-visible" },
-      [
-        _c(
-          "div",
-          {
-            staticClass:
-              "rounded-md flex items-center px-5 py-4 mb-2 bg-gray-200 text-gray-600 mt-5 "
-          },
-          [
-            _c("i", {
-              staticClass: "w-6 h-6 mr-2",
-              attrs: { "data-feather": "alert-triangle" }
-            }),
-            _vm._v(" Aucune données dans le système. "),
-            _c("i", {
-              staticClass: "w-4 h-4 ml-auto",
-              attrs: { "data-feather": "x" }
-            })
-          ]
-        ),
+    return _c("thead", [
+      _c("tr", [
+        _c("th", { staticClass: "whitespace-no-wrap" }, [
+          _vm._v("NOM & PRENOM")
+        ]),
         _vm._v(" "),
-        _c("table", { staticClass: "table table-report -mt-2" }, [
-          _c("thead", [
-            _c("tr", [
-              _c("th", { staticClass: "whitespace-no-wrap" }, [
-                _vm._v("PRODUCT NAME")
-              ]),
-              _vm._v(" "),
-              _c("th", { staticClass: "text-center whitespace-no-wrap" }, [
-                _vm._v("STOCK")
-              ]),
-              _vm._v(" "),
-              _c("th", { staticClass: "text-center whitespace-no-wrap" }, [
-                _vm._v("STATUS")
-              ]),
-              _vm._v(" "),
-              _c("th", { staticClass: "text-center whitespace-no-wrap" }, [
-                _vm._v("ACTIONS")
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("tbody", [
-            _c("tr", { staticClass: "intro-x" }, [
-              _c("td", [
-                _c(
-                  "a",
-                  {
-                    staticClass: "font-medium whitespace-no-wrap",
-                    attrs: { href: "" }
-                  },
-                  [_vm._v("Sony A7 III")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  { staticClass: "text-gray-600 text-xs whitespace-no-wrap" },
-                  [_vm._v("Photography")]
-                )
-              ]),
-              _vm._v(" "),
-              _c("td", { staticClass: "text-center" }, [_vm._v("50")]),
-              _vm._v(" "),
-              _c("td", { staticClass: "w-40" }, [
-                _c(
-                  "div",
-                  {
-                    staticClass: "flex items-center justify-center text-theme-6"
-                  },
-                  [
-                    _c("i", {
-                      staticClass: "w-4 h-4 mr-2",
-                      attrs: { "data-feather": "check-square" }
-                    }),
-                    _vm._v(" Inactive ")
-                  ]
-                )
-              ]),
-              _vm._v(" "),
-              _c("td", { staticClass: "table-report__action w-56" }, [
-                _c("div", { staticClass: "flex justify-center items-center" }, [
-                  _c(
-                    "a",
-                    {
-                      staticClass: "flex items-center mr-3",
-                      attrs: { href: "javascript:;" }
-                    },
-                    [
-                      _c("i", {
-                        staticClass: "w-4 h-4 mr-1",
-                        attrs: { "data-feather": "check-square" }
-                      }),
-                      _vm._v(" Edit ")
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass: "flex items-center text-theme-6",
-                      attrs: {
-                        href: "javascript:;",
-                        "data-toggle": "modal",
-                        "data-target": "#delete-confirmation-modal"
-                      }
-                    },
-                    [
-                      _c("i", {
-                        staticClass: "w-4 h-4 mr-1",
-                        attrs: { "data-feather": "trash-2" }
-                      }),
-                      _vm._v(" Delete ")
-                    ]
-                  )
-                ])
-              ])
-            ])
-          ])
+        _c("th", { staticClass: "text-center whitespace-no-wrap" }, [
+          _vm._v("LOGIN")
+        ]),
+        _vm._v(" "),
+        _c("th", { staticClass: "text-center whitespace-no-wrap" }, [
+          _vm._v("PROFESSION")
+        ]),
+        _vm._v(" "),
+        _c("th", { staticClass: "text-center whitespace-no-wrap" }, [
+          _vm._v("TELEPHONE")
+        ]),
+        _vm._v(" "),
+        _c("th", { staticClass: "text-center whitespace-no-wrap" }, [
+          _vm._v("ACTIONS")
         ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "a",
+      {
+        staticClass: "flex items-center text-theme-6",
+        attrs: {
+          href: "javascript:;",
+          "data-toggle": "modal",
+          "data-target": "#delete-confirmation-modal"
+        }
+      },
+      [
+        _c("i", {
+          staticClass: "w-4 h-4 mr-1",
+          attrs: { "data-feather": "trash-2" }
+        }),
+        _vm._v(" Supprimer ")
       ]
     )
   },
@@ -54414,7 +54539,7 @@ function createPatchFunction (backend) {
                 !hydrationBailed
               ) {
                 hydrationBailed = true;
-                console.warn('ParentEleve: ', elm);
+                console.warn('Parent: ', elm);
                 console.warn('server innerHTML: ', i);
                 console.warn('client innerHTML: ', elm.innerHTML);
               }
@@ -54439,7 +54564,7 @@ function createPatchFunction (backend) {
                 !hydrationBailed
               ) {
                 hydrationBailed = true;
-                console.warn('ParentEleve: ', elm);
+                console.warn('Parent: ', elm);
                 console.warn('Mismatching childNodes vs. VNodes: ', elm.childNodes, children);
               }
               return false
@@ -60188,7 +60313,7 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   null,
   "332fccf4",
   null
-
+  
 )
 
 /* hot reload */
@@ -60208,7 +60333,7 @@ component.options.__file = "resources/js/components/App.vue"
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./App.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/App.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]);
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_App_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -60257,7 +60382,7 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
   null,
   null,
   null
-
+  
 )
 
 /* hot reload */
@@ -60277,7 +60402,7 @@ component.options.__file = "resources/js/components/ExampleComponent.vue"
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./ExampleComponent.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ExampleComponent.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]);
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ExampleComponent_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -60333,7 +60458,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   }, {
     path: '/utilisateurs/new',
     name: 'utilisateurs.add',
-    component: _views_utilisateurs_List__WEBPACK_IMPORTED_MODULE_3__["default"]
+    component: _views_utilisateurs_AddAndEdit__WEBPACK_IMPORTED_MODULE_4__["default"]
   }, {
     path: '/utilisateurs/edit/:id',
     name: 'utilisateurs.edit',

@@ -23,7 +23,7 @@ const router =new VueRouter({
         {
             path: '/utilisateurs/new',
             name: 'utilisateurs.add',
-            component: UserList
+            component: UserAdd
         },
         {
             path: '/utilisateurs/edit/:id',

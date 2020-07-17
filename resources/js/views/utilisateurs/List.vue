@@ -33,32 +33,39 @@
             <!-- BEGIN: Data List -->
             <div class="intro-y col-span-12 overflow-auto lg:overflow-visible">
 
-                <div class="rounded-md flex items-center px-5 py-4 mb-2 bg-gray-200 text-gray-600 mt-5 "> <i data-feather="alert-triangle" class="w-6 h-6 mr-2"></i> Aucune données dans le système. <i data-feather="x" class="w-4 h-4 ml-auto"></i> </div>
+                <div v-if="utilisateurs.length === 0" class="rounded-md flex items-center px-5 py-4 mb-2 bg-gray-200 text-gray-600 mt-5 "> <i data-feather="alert-triangle" class="w-6 h-6 mr-2"></i> Aucune données dans le système. <i data-feather="x" class="w-4 h-4 ml-auto"></i> </div>
 
 
-                <table class="table table-report -mt-2">
+                <table v-else class="table table-report -mt-2">
                     <thead>
                     <tr>
-                        <th class="whitespace-no-wrap">PRODUCT NAME</th>
-                        <th class="text-center whitespace-no-wrap">STOCK</th>
-                        <th class="text-center whitespace-no-wrap">STATUS</th>
+                        <th class="whitespace-no-wrap">NOM & PRENOM</th>
+                        <th class="text-center whitespace-no-wrap">LOGIN</th>
+                        <th class="text-center whitespace-no-wrap">PROFESSION</th>
+                        <th class="text-center whitespace-no-wrap">TELEPHONE</th>
                         <th class="text-center whitespace-no-wrap">ACTIONS</th>
                     </tr>
                     </thead>
                     <tbody>
-                        <tr class="intro-x">
+                        <tr v-for="(utilisateur, index) in utilisateursSort" class="intro-x">
                             <td>
-                                <a href="" class="font-medium whitespace-no-wrap">Sony A7 III</a>
-                                <div class="text-gray-600 text-xs whitespace-no-wrap">Photography</div>
+                                <a href="javascript:void(0)" class="font-medium whitespace-no-wrap"> {{ utilisateur.nom === null ? '' : utilisateur.nom }} {{ utilisateur.prenom === null ? '' : ' ' + utilisateur.prenom }} </a>
+                                <div class="text-gray-600 text-xs whitespace-no-wrap">{{ utilisateur.role.libelle }}</div>
                             </td>
-                            <td class="text-center">50</td>
-                            <td class="w-40">
+                            <td class="text-center">{{ utilisateur.login }}</td>
+                            <td>
+                                {{ utilisateur.profession === null ? 'non définie' : utilisateur.profession }}
+                            </td>
+                            <td>
+                                {{ utilisateur.telephone === null ? 'non définie' : utilisateur.telephone }}
+                            </td>
+                           <!-- <td class="w-40">
                                 <div class="flex items-center justify-center text-theme-6"> <i data-feather="check-square" class="w-4 h-4 mr-2"></i> Inactive </div>
-                            </td>
+                            </td>-->
                             <td class="table-report__action w-56">
                                 <div class="flex justify-center items-center">
-                                    <a class="flex items-center mr-3" href="javascript:;"> <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Edit </a>
-                                    <a class="flex items-center text-theme-6" href="javascript:;" data-toggle="modal" data-target="#delete-confirmation-modal"> <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> Delete </a>
+                                    <router-link  :to="'/utilisateurs/edit/' + utilisateur.id" tag="a" class="flex items-center mr-3" href="javascript:;"> <i data-feather="check-square" class="w-4 h-4 mr-1"></i> Modifier </router-link>
+                                    <a class="flex items-center text-theme-6" href="javascript:;" data-toggle="modal" data-target="#delete-confirmation-modal"> <i data-feather="trash-2" class="w-4 h-4 mr-1"></i> Supprimer </a>
                                 </div>
                             </td>
                         </tr>
@@ -93,16 +100,31 @@
 
         data() {
             return {
-
+                utilisateurs: [],
+                utilisateursSort: [],
+                utilisateur: null,
             }
         },
 
         mounted() {
             feather.replace();
+
+            this.getUtilisateurs();
         },
 
         methods: {
+            getUtilisateurs() {
+                axios.get('/api/users').then(res => {
+                    this.utilisateurs = res.data;
+                    this.utilisateursSort = res.data;
 
+                    setTimeout(() => {
+                        feather.replace();
+                    }, 200);
+                }).catch(err => {
+                    console.log(err);
+                });
+            }
         },
 
     }
