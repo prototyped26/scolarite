@@ -4,9 +4,9 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Repositories\UserRepository;
-use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -38,7 +38,7 @@ class UserController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\JsonResponse
      */
-    public function index(Request $request)
+    public function index()
     {
         return response()->json($this->userRepository->getAll()->load('role'), Response::HTTP_OK);
     }
@@ -59,13 +59,35 @@ class UserController extends Controller
                 'message' => __('message.errors.field'), 'errors' => $validator->errors()
             ], Response::HTTP_UNPROCESSABLE_ENTITY);
         else {
-            $user = $this->userRepository->store($request->all());
+            $data = $request->all();
+            $data['password'] = Hash::make($data['password']);
+            $user = $this->userRepository->store($data);
             if ($user) {
                 //todo process to model eager load
                 return response()->json($user, Response::HTTP_OK);
             }
             return response()->json(['message' => __('message.errors.store')], Response::HTTP_BAD_REQUEST);
         }
+    }
+
+
+
+    public function editPassword(Request $request, $id){
+        $user = $this->userRepository->getById($id);
+        if ($user) {
+            if(strcmp($request['password'], $request['confirm_password'])  !== 0 ){
+                return \response()->json(['message' => 'Veuillez confirmer le mot de passe'], Response::HTTP_BAD_REQUEST);
+            } else {
+                $request['password'] = Hash::make($request['password']);
+                $user = $this->userRepository->update($id, $request->all());
+                if($user)
+                    return response()->json($user, Response::HTTP_OK);
+
+
+
+            }
+        }
+        return response()->json(['message' => __('message.errors.update')], Response::HTTP_BAD_REQUEST);
     }
 
     /**
@@ -75,9 +97,8 @@ class UserController extends Controller
      * @param int $id
      * @return \Illuminate\Http\JsonResponse
      */
-    public function show(Request $request, $id)
+    public function show($id)
     {
-        $relations = []; //todo specified model relation to eager load
         $user = $this->userRepository->getById($id);
         return response()->json($user, Response::HTTP_OK);
 
